@@ -200,6 +200,7 @@ function initApp() {
     updateCartUI();
     setupInquiryForm();
     setupEmiCalculator();
+    setupGoogleReviews();
 }
 
 // Theme Toggle Functionality (Light / Dark mode)
@@ -651,3 +652,494 @@ function setupEmiCalculator() {
     if (amountInput) amountInput.addEventListener('input', calculateEMI);
     if (monthsSelect) monthsSelect.addEventListener('change', calculateEMI);
 }
+
+/* ==========================================================================
+   GOOGLE REVIEWS DATASET & INTERACTIVE ENGINE
+   Tailored specifically for Siddhi Marketing (Electronics & Appliances Showroom)
+   ========================================================================== */
+
+let REVIEWS_DATA = [
+    {
+        id: "rev-1",
+        name: "Rameshwar Dayal Verma",
+        initial: "R",
+        avatarBg: "#1a73e8", // Google Blue
+        isGuide: true,
+        guideLevel: "Local Guide · 38 reviews",
+        rating: 5,
+        timeAgo: "2 days ago",
+        category: "tv",
+        product: "Samsung 55\" Crystal 4K Smart TV",
+        text: "Bought Samsung 55-inch Crystal 4K Smart TV from Siddhi Marketing at Gali No. 4, Balaji Mandir Road. Got the best festive discount compared to online marketplace rates. They delivered safely within 3 hours and the installation technician did neat wall mounting without mess. Highly recommended showroom for genuine electronics!",
+        ownerReply: {
+            text: "Thank you so much Rameshwar ji for your trust! Enjoy the crystal 4K picture and sound with your family. For any query or service, our showroom desk is always at your service!",
+            timeAgo: "1 day ago"
+        },
+        helpfulCount: 18,
+        liked: false
+    },
+    {
+        id: "rev-2",
+        name: "Pooja Agarwal",
+        initial: "P",
+        avatarBg: "#e91e63", // Rose
+        isGuide: true,
+        guideLevel: "Local Guide · 19 reviews",
+        rating: 5,
+        timeAgo: "1 week ago",
+        category: "ac",
+        product: "Voltas 1.5 Ton 5 Star Inverter Split AC",
+        text: "Purchased a Voltas 1.5 Ton 5-Star Inverter AC for our master bedroom. The store team patiently calculated the power consumption savings for us. The best highlight was the Zero Down Payment EMI approval in under 10 minutes via Bajaj Finserv. Excellent customer treatment!",
+        ownerReply: {
+            text: "Thank you Pooja ji! Glad our fast 0% EMI process made your AC purchase seamless. Wishing you and your family cool comfort this season!",
+            timeAgo: "6 days ago"
+        },
+        helpfulCount: 14,
+        liked: false
+    },
+    {
+        id: "rev-3",
+        name: "Sunil K. Prajapati",
+        initial: "S",
+        avatarBg: "#0f9d58", // Google Green
+        isGuide: false,
+        guideLevel: "Verified Buyer · 8 reviews",
+        rating: 5,
+        timeAgo: "2 weeks ago",
+        category: "washing",
+        product: "Whirlpool 7.5 Kg Fully-Auto Washing Machine",
+        text: "Got a Whirlpool 7.5 Kg washing machine and a microwave oven from Siddhi Marketing. Received 100% authentic brand warranty cards, stamp and demo installation next morning. Trustworthy store with genuine wholesale pricing.",
+        ownerReply: {
+            text: "Thanks a lot Sunil ji! Authentic warranty and speedy after-sales demo are our core promises.",
+            timeAgo: "12 days ago"
+        },
+        helpfulCount: 9,
+        liked: false
+    },
+    {
+        id: "rev-4",
+        name: "Dr. Manish Choudhary",
+        initial: "M",
+        avatarBg: "#9c27b0", // Purple
+        isGuide: true,
+        guideLevel: "Local Guide · 42 reviews",
+        rating: 5,
+        timeAgo: "3 weeks ago",
+        category: "fridge",
+        product: "Samsung 324L Convertible Double Door Refrigerator",
+        text: "Best showroom for appliances. Upgraded my old refrigerator to Samsung 324L Convertible Double Door under their exchange scheme. They offered a very fair exchange appraisal for the old unit and delivered without a single scratch. 5 stars for honest dealing!",
+        ownerReply: {
+            text: "Thank you Dr. Manish ji! We are delighted that you liked our appliance exchange program. Always happy to assist!",
+            timeAgo: "3 weeks ago"
+        },
+        helpfulCount: 22,
+        liked: false
+    },
+    {
+        id: "rev-5",
+        name: "Neha Sharma",
+        initial: "N",
+        avatarBg: "#d97706", // Google Amber
+        isGuide: false,
+        guideLevel: "Verified Student Buyer",
+        rating: 5,
+        timeAgo: "1 month ago",
+        category: "gadgets",
+        product: "HP 15s Ryzen 5 Laptop & Accessories",
+        text: "Bought an HP 15s Ryzen 5 Laptop for college projects and brother's study. The owner personally guided me through processor and SSD differences within my budget. Plus they gifted a laptop backpack and wireless mouse! Great experience.",
+        ownerReply: {
+            text: "All the best for your studies and career Neha ji! Let us know whenever you need any software or hardware guidance.",
+            timeAgo: "1 month ago"
+        },
+        helpfulCount: 11,
+        liked: false
+    },
+    {
+        id: "rev-6",
+        name: "Vikram Singh Rathore",
+        initial: "V",
+        avatarBg: "#ea4335", // Google Red
+        isGuide: true,
+        guideLevel: "Local Guide · 51 reviews",
+        rating: 5,
+        timeAgo: "1 month ago",
+        category: "tv",
+        product: "Sony Bravia 65\" 4K Google TV",
+        text: "Sony Bravia 65-inch 4K purchase was top notch. Cinematic picture quality and punchy Dolby Atmos. The staff at Gali No. 4, Balaji Mandir Road is respectful, well-versed with specs, and doesn't rush you. If you want branded electronics with complete peace of mind, visit Siddhi Marketing.",
+        ownerReply: {
+            text: "Warm regards Vikram ji! Sony Bravia paired with high-definition audio is truly theater-grade. Thank you for your kind recommendation!",
+            timeAgo: "1 month ago"
+        },
+        helpfulCount: 27,
+        liked: false
+    },
+    {
+        id: "rev-7",
+        name: "Rajesh & Suman Gupta",
+        initial: "R",
+        avatarBg: "#0284c7", // Cyan/Blue
+        isGuide: false,
+        guideLevel: "Verified Local Customer",
+        rating: 5,
+        timeAgo: "2 months ago",
+        category: "service",
+        product: "Doorstep AC Servicing & Gas Refilling",
+        text: "Our Split AC had a sudden gas leakage during extreme peak summer heat. Siddhi Marketing service desk sent an experienced technician within 2 hours. Repaired quickly at very transparent rates without inflated charges. Superb service team!",
+        ownerReply: {
+            text: "Thank you Rajesh ji! Our quick response repair desk is dedicated to keeping your home appliances running smoothly all year.",
+            timeAgo: "2 months ago"
+        },
+        helpfulCount: 16,
+        liked: false
+    },
+    {
+        id: "rev-8",
+        name: "Amit Bansal",
+        initial: "A",
+        avatarBg: "#00897b", // Teal
+        isGuide: true,
+        guideLevel: "Local Guide · 27 reviews",
+        rating: 5,
+        timeAgo: "2 months ago",
+        category: "fridge",
+        product: "LG 260L Smart Inverter Frost Free Refrigerator",
+        text: "Purchased LG 260L Smart Inverter Frost Free Refrigerator. Very cordial behavior of store owners and instant same-day delivery. They also explained stabilizer-free operation and energy star ratings in detail. Best electronics shop near Balaji Mandir Road.",
+        ownerReply: {
+            text: "Thank you Amit ji! We appreciate your patronage and look forward to serving you again!",
+            timeAgo: "2 months ago"
+        },
+        helpfulCount: 13,
+        liked: false
+    }
+];
+
+let activeReviewFilter = 'all';
+
+// Main Google Reviews Initializer
+function setupGoogleReviews() {
+    renderReviews('all');
+    setupReviewFilterChips();
+    setupReviewsSlider();
+    setupWriteReviewModal();
+}
+
+// Render Review Cards
+function renderReviews(filter = 'all') {
+    const track = document.getElementById('reviewsTrack');
+    if (!track) return;
+
+    let filtered = REVIEWS_DATA;
+    if (filter !== 'all') {
+        filtered = REVIEWS_DATA.filter(r => r.category === filter);
+    }
+
+    if (filtered.length === 0) {
+        track.innerHTML = `
+            <div style="padding: 40px 20px; text-align: center; color: var(--text-muted); width: 100%;">
+                <i class="fa-solid fa-comments" style="font-size: 2.5rem; margin-bottom: 12px; color: var(--primary-blue);"></i>
+                <p>No reviews found under this category.</p>
+            </div>
+        `;
+        renderReviewDots(0);
+        return;
+    }
+
+    track.innerHTML = filtered.map(review => {
+        const starIcons = Array(review.rating).fill('<i class="fa-solid fa-star"></i>').join('');
+        
+        let guideBadge = review.isGuide 
+            ? `<span class="guide-pill"><i class="fa-solid fa-shield-halved"></i> ${review.guideLevel}</span>`
+            : `<span class="guide-pill"><i class="fa-solid fa-circle-check"></i> ${review.guideLevel}</span>`;
+
+        let ownerReplyHtml = '';
+        if (review.ownerReply) {
+            ownerReplyHtml = `
+                <div class="owner-reply-box">
+                    <div class="owner-reply-header">
+                        <i class="fa-solid fa-reply"></i>
+                        <span>Response from Siddhi Marketing</span>
+                        <span class="owner-reply-time">${review.ownerReply.timeAgo}</span>
+                    </div>
+                    <div class="owner-reply-text">${review.ownerReply.text}</div>
+                </div>
+            `;
+        }
+
+        return `
+            <div class="review-card" data-review-id="${review.id}">
+                <div>
+                    <div class="review-card-header">
+                        <div class="reviewer-profile">
+                            <div class="reviewer-avatar" style="background-color: ${review.avatarBg};">
+                                ${review.initial}
+                            </div>
+                            <div class="reviewer-meta">
+                                <h4>
+                                    ${review.name}
+                                    <i class="fa-solid fa-circle-check verified-icon" title="Google Verified Profile"></i>
+                                </h4>
+                                ${guideBadge}
+                            </div>
+                        </div>
+                        <svg class="google-mini-logo" viewBox="0 0 24 24" width="18" height="18">
+                            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                        </svg>
+                    </div>
+
+                    <div class="card-rating-row">
+                        <div class="card-stars">${starIcons}</div>
+                        <span class="review-time">${review.timeAgo}</span>
+                    </div>
+
+                    ${review.product ? `<span class="review-product-pill"><i class="fa-solid fa-tag"></i> Purchased: ${review.product}</span>` : ''}
+
+                    <p class="review-body-text">“${review.text}”</p>
+
+                    ${ownerReplyHtml}
+                </div>
+
+                <div class="review-card-footer">
+                    <button class="btn-helpful ${review.liked ? 'liked' : ''}" onclick="toggleHelpful('${review.id}')" title="Helpful review">
+                        <i class="fa-regular fa-thumbs-up"></i> Helpful (${review.helpfulCount})
+                    </button>
+                    <span class="review-verified-badge"><i class="fa-solid fa-shield-check"></i> Verified Purchase</span>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    renderReviewDots(filtered.length);
+}
+
+// Render Pagination Dots
+function renderReviewDots(count) {
+    const dotsContainer = document.getElementById('reviewsDots');
+    if (!dotsContainer) return;
+    
+    if (count <= 1) {
+        dotsContainer.innerHTML = '';
+        return;
+    }
+
+    const dotCount = Math.min(count, 6);
+    let html = '';
+    for (let i = 0; i < dotCount; i++) {
+        html += `<span class="review-dot ${i === 0 ? 'active' : ''}" onclick="scrollToReviewCard(${i})"></span>`;
+    }
+    dotsContainer.innerHTML = html;
+}
+
+// Scroll to specific index
+function scrollToReviewCard(index) {
+    const container = document.getElementById('reviewsTrackContainer');
+    if (!container) return;
+    const cardWidth = 380 + 24; // width + gap
+    container.scrollTo({
+        left: index * cardWidth,
+        behavior: 'smooth'
+    });
+    updateActiveDot(index);
+}
+
+function updateActiveDot(index) {
+    const dots = document.querySelectorAll('.review-dot');
+    dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === index);
+    });
+}
+
+// Setup Slider Buttons
+function setupReviewsSlider() {
+    const container = document.getElementById('reviewsTrackContainer');
+    const prevBtn = document.getElementById('reviewsPrevBtn');
+    const nextBtn = document.getElementById('reviewsNextBtn');
+
+    if (!container) return;
+
+    const scrollAmount = 404; // 380 card width + 24 gap
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+    }
+
+    // Update active dot on scroll
+    container.addEventListener('scroll', () => {
+        const scrollLeft = container.scrollLeft;
+        const index = Math.round(scrollLeft / scrollAmount);
+        updateActiveDot(index);
+    });
+}
+
+// Setup Review Filter Chips
+function setupReviewFilterChips() {
+    const chips = document.querySelectorAll('.review-chip');
+    chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            chips.forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            activeReviewFilter = chip.dataset.filter;
+            renderReviews(activeReviewFilter);
+
+            // Reset container scroll to left
+            const container = document.getElementById('reviewsTrackContainer');
+            if (container) container.scrollTo({ left: 0, behavior: 'smooth' });
+        });
+    });
+}
+
+// Toggle Review Helpful Count
+function toggleHelpful(reviewId) {
+    const review = REVIEWS_DATA.find(r => r.id === reviewId);
+    if (!review) return;
+
+    if (review.liked) {
+        review.liked = false;
+        review.helpfulCount -= 1;
+    } else {
+        review.liked = true;
+        review.helpfulCount += 1;
+    }
+
+    renderReviews(activeReviewFilter);
+}
+
+// Setup Write Review Modal & Interactive Rating
+function setupWriteReviewModal() {
+    const openBtn = document.getElementById('openWriteReviewBtn');
+    const closeBtn = document.getElementById('closeReviewModal');
+    const modal = document.getElementById('writeReviewModal');
+    const form = document.getElementById('writeReviewForm');
+    const starPicker = document.getElementById('starRatingPicker');
+    const starFeedback = document.getElementById('starScoreFeedback');
+
+    let selectedRating = 5;
+
+    const ratingDescriptions = {
+        1: "1.0 / 5.0 - Poor Experience",
+        2: "2.0 / 5.0 - Below Average",
+        3: "3.0 / 5.0 - Average Experience",
+        4: "4.0 / 5.0 - Very Good Experience",
+        5: "5.0 / 5.0 - Excellent Experience"
+    };
+
+    if (openBtn && modal) {
+        openBtn.addEventListener('click', () => modal.classList.add('active'));
+    }
+
+    if (closeBtn && modal) {
+        closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+    }
+
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('active');
+        });
+    }
+
+    // Star Picker Interaction
+    if (starPicker) {
+        const stars = starPicker.querySelectorAll('i');
+
+        const updateStars = (val) => {
+            stars.forEach(star => {
+                const sVal = parseInt(star.dataset.val);
+                star.classList.toggle('active', sVal <= val);
+            });
+            if (starFeedback) {
+                starFeedback.textContent = ratingDescriptions[val] || `${val}.0 / 5.0`;
+            }
+        };
+
+        stars.forEach(star => {
+            star.addEventListener('mouseenter', () => {
+                const hoverVal = parseInt(star.dataset.val);
+                stars.forEach(s => {
+                    s.classList.toggle('hovered', parseInt(s.dataset.val) <= hoverVal);
+                });
+            });
+
+            star.addEventListener('mouseleave', () => {
+                stars.forEach(s => s.classList.remove('hovered'));
+            });
+
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.dataset.val);
+                updateStars(selectedRating);
+            });
+        });
+    }
+
+    // Form Submit Handler
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('reviewAuthorName').value.trim();
+            const category = document.getElementById('reviewProductCategory').value;
+            const item = document.getElementById('reviewItemName').value.trim();
+            const comment = document.getElementById('reviewCommentText').value.trim();
+
+            if (!name || !comment) return;
+
+            const avatarColors = ["#1a73e8", "#0f9d58", "#e91e63", "#9c27b0", "#ea4335", "#0284c7"];
+            const randomColor = avatarColors[Math.floor(Math.random() * avatarColors.length)];
+
+            // Create new review object
+            const newReview = {
+                id: "rev-user-" + Date.now(),
+                name: name,
+                initial: name.charAt(0).toUpperCase(),
+                avatarBg: randomColor,
+                isGuide: true,
+                guideLevel: "Verified Local Customer",
+                rating: selectedRating,
+                timeAgo: "Just now",
+                category: category,
+                product: item || "Electronics & Appliances",
+                text: comment,
+                ownerReply: {
+                    text: `Thank you so much ${name.split(' ')[0]} ji for choosing Siddhi Marketing! We value your review and are always here for your electronics service needs.`,
+                    timeAgo: "Just now"
+                },
+                helpfulCount: 1,
+                liked: true
+            };
+
+            // Prepend review to array
+            REVIEWS_DATA.unshift(newReview);
+
+            // Re-render and switch to 'all' or that category
+            activeReviewFilter = 'all';
+            document.querySelectorAll('.review-chip').forEach(c => {
+                c.classList.toggle('active', c.dataset.filter === 'all');
+            });
+
+            renderReviews('all');
+
+            // Scroll container to start
+            const container = document.getElementById('reviewsTrackContainer');
+            if (container) container.scrollTo({ left: 0, behavior: 'smooth' });
+
+            // Close modal & reset form
+            modal.classList.remove('active');
+            form.reset();
+
+            // Smooth scroll page to reviews section
+            const reviewsSec = document.getElementById('googleReviewsSection');
+            if (reviewsSec) {
+                reviewsSec.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+}
+
