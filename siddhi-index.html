@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddhi Marketing | Premium Electronics & Home Appliances Showroom</title>
+    <meta name="description" content="Siddhi Marketing - Your trusted electronics store at Gali No. 4, Balaji Mandir Road. Best deals on Smart TVs, ACs, Refrigerators, Laptops, Mobiles & Home Appliances with doorstep delivery and repair services.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&family=Instrument+Serif:ital@1&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/siddhimarketing.jpeg">
+    <link rel="apple-touch-icon" href="assets/siddhimarketing.jpeg">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-content">
+            <span><i class="fa-solid fa-bolt text-warning"></i> Festival Special Offers Live! Get Up to 40% OFF + Easy Zero Down Payment EMI</span>
+            <div class="top-contacts">
+                <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91 98765 43210</a>
+                <a href="mailto:siddhimarketing2017@gmail.com"><i class="fa-solid fa-envelope"></i> siddhimarketing2017@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header / Navigation -->
+    <header class="main-header" id="mainHeader">
+        <div class="container header-container">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-logo" title="Siddhi Marketing Home">
+                <img src="assets/siddhimarketing.jpeg" alt="Siddhi Marketing Logo" class="logo-img" id="headerLogoImg">
+                <div class="brand-text">
+                    <div class="brand-name">
+                        <span class="brand-name-siddhi">SIDDHI</span>
+                        <span class="brand-name-marketing">MARKETING</span>
+                    </div>
+                    <span class="brand-tagline">YOUR ELECTRONIC PARTNER</span>
+                </div>
+            </a>
+
+            <!-- Navigation Tabs (Home, About, Products, Services, Reviews, Contact) -->
+            <nav class="main-nav" id="mainNav">
+                <a href="#mainHeader" class="nav-link active" data-nav="home"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+                <a href="#aboutSection" class="nav-link" data-nav="about"><i class="fa-solid fa-store"></i> <span>About Us</span></a>
+                <a href="#productsSection" class="nav-link" data-nav="products"><i class="fa-solid fa-tv"></i> <span>Products</span></a>
+                <a href="#servicesSection" class="nav-link" data-nav="services"><i class="fa-solid fa-screwdriver-wrench"></i> <span>Services & EMI</span></a>
+                <a href="#googleReviewsSection" class="nav-link" data-nav="reviews"><i class="fa-brands fa-google"></i> <span>Reviews</span> <span class="nav-pill-badge">4.9★</span></a>
+                <a href="#contactSection" class="nav-link" data-nav="contact"><i class="fa-solid fa-location-dot"></i> <span>Contact</span></a>
+            </nav>
+
+            <!-- Search Bar -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search TVs, ACs, Refrigerators, Laptops...">
+                <button id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <!-- Header Action Buttons -->
+            <div class="header-actions">
+                <!-- Light / Dark Mode Toggle -->
+                <button class="header-icon-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+
+                <!-- Shopping Cart -->
+                <button class="header-icon-btn" id="cartToggleBtn" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+
+                <!-- WhatsApp Quick Inquiry -->
+                <a href="https://wa.me/919876543210?text=Hello%20Siddhi%20Marketing,%20I%20have%20an%20inquiry%20regarding%20electronics." target="_blank" class="btn-header-wa" title="WhatsApp Chat">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Inquire</span>
+                </a>
+
+                <!-- Mobile Menu Hamburger Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer Overlay & Menu -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <div class="mobile-nav-header">
+            <div class="brand-logo">
+                <img src="assets/siddhimarketing.jpeg" alt="Siddhi Marketing" class="logo-img">
+                <div class="brand-text">
+                    <div class="brand-name">
+                        <span class="brand-name-siddhi">SIDDHI</span>
+                        <span class="brand-name-marketing">MARKETING</span>
+                    </div>
+                    <span class="brand-tagline">YOUR ELECTRONIC PARTNER</span>
+                </div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Navigation Menu">&times;</button>
+        </div>
+
+        <nav class="mobile-nav-links">
+            <a href="#mainHeader" class="mobile-nav-link active" data-nav="home"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+            <a href="#aboutSection" class="mobile-nav-link" data-nav="about"><i class="fa-solid fa-store"></i> <span>About Us</span></a>
+            <a href="#productsSection" class="mobile-nav-link" data-nav="products"><i class="fa-solid fa-tv"></i> <span>Products Catalog</span></a>
+            <a href="#servicesSection" class="mobile-nav-link" data-nav="services"><i class="fa-solid fa-screwdriver-wrench"></i> <span>Services & EMI Support</span></a>
+            <a href="#googleReviewsSection" class="mobile-nav-link" data-nav="reviews"><i class="fa-brands fa-google"></i> <span>Google Reviews (4.9★)</span></a>
+            <a href="#contactSection" class="mobile-nav-link" data-nav="contact"><i class="fa-solid fa-location-dot"></i> <span>Showroom Contact</span></a>
+        </nav>
+
+        <div class="mobile-nav-footer">
+            <a href="tel:+919876543210" class="btn btn-primary btn-block"><i class="fa-solid fa-phone"></i> Call +91 98765 43210</a>
+            <a href="https://wa.me/919876543210?text=Hello%20Siddhi%20Marketing" target="_blank" class="btn btn-whatsapp btn-block"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+            <div class="mobile-store-info">
+                <p><i class="fa-solid fa-location-dot text-red"></i> Gali No. 4, Balaji Mandir Road</p>
+                <p><i class="fa-solid fa-clock text-red"></i> 10:00 AM - 9:30 PM (All Days)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sub Navigation Bar / Categories Bar -->
+    <nav class="sub-nav">
+        <div class="container nav-items">
+            <button class="nav-cat-btn active" data-category="all"><i class="fa-solid fa-border-all"></i> All Products</button>
+            <button class="nav-cat-btn" data-category="tv"><i class="fa-solid fa-tv"></i> Smart TVs & Audio</button>
+            <button class="nav-cat-btn" data-category="ac"><i class="fa-solid fa-snowflake"></i> ACs & Air Coolers</button>
+            <button class="nav-cat-btn" data-category="fridge"><i class="fa-solid fa-kitchen-set"></i> Refrigerators</button>
+            <button class="nav-cat-btn" data-category="washing"><i class="fa-solid fa-soap"></i> Washing Machines</button>
+            <button class="nav-cat-btn" data-category="gadgets"><i class="fa-solid fa-mobile-screen-button"></i> Mobiles & Laptops</button>
+            <button class="nav-cat-btn" data-category="services"><i class="fa-solid fa-screwdriver-wrench"></i> Repair & Services</button>
+            <a href="#googleReviewsSection" class="nav-cat-btn reviews-nav-link"><i class="fa-brands fa-google text-warning"></i> Reviews <span class="nav-rating-pill">4.9 ★</span></a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Vesper-Inspired Cinematic Architecture & Siddhi Marketing Identity) -->
+    <section class="hero-section" id="heroSection">
+        <!-- Background Video with Scrim & Noise Overlay -->
+        <div class="hero-video-wrapper">
+            <video autoplay loop muted playsinline poster="assets/hero_banner.jpg" class="hero-video">
+                <source src="assets/hero_video.mp4" type="video/mp4">
+                <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260818_072341_50851634-bbc3-4c33-9acc-7647d4db44aa.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-scrim"></div>
+            <div class="hero-grain"></div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-copy">
+                <!-- Badge with Sparkle SVG (Siddhi Ruby Red & Metallic Silver Ribbon Gradient) -->
+                <div class="badge appear appear--pop" style="--d: 0.22s;">
+                    <svg class="badge-star" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2.6C12.55 2.6 12.88 3.15 13.08 4.7c.62 4.7 1.52 5.6 6.22 6.22 1.55.2 2.1.53 2.1 1.08s-.55.88-2.1 1.08c-4.7.62-5.6 1.52-6.22 6.22-.2 1.55-.53 2.1-1.08 2.1s-.88-.55-1.08-2.1c-.62-4.7-1.52-5.6-6.22-6.22C3.15 12.88 2.6 12.55 2.6 12s.55-.88 2.1-1.08c4.7-.62 5.6-1.52 6.22-6.22C11.12 3.15 11.45 2.6 12 2.6Z"/>
+                    </svg>
+                    <span>Operational AI &amp; Smart Electronics Partner</span>
+                </div>
+
+                <!-- H1: Two Masked Lines, Inter 500, Instrument Serif Italic Accent -->
+                <h1 class="hero-h1">
+                    <span class="headline-line">
+                        <span class="headline-inner appear appear--mask" style="--d: 0.42s;">Power <em>Smart Living</em> on your</span>
+                    </span>
+                    <span class="headline-line">
+                        <span class="headline-inner appear appear--mask" style="--d: 0.62s;">home appliances in minutes.</span>
+                    </span>
+                </h1>
+
+                <!-- Lede Text -->
+                <p class="hero-lede appear appear--soft" style="--d: 0.82s; animation-duration: 1.25s;">
+                    Deploy authentic 4K Smart OLED TVs, 5-Star Inverter ACs, frost-free Refrigerators &amp; Smart Gadgets with instant wholesale showroom pricing, doorstep delivery, and certified brand warranties.
+                </p>
+
+                <!-- Actions: Liquid Solid, Frosted Hero Ghost, WhatsApp -->
+                <div class="hero-actions">
+                    <a href="#productsSection" class="btn-liquid btn-liquid-solid appear appear--btn" style="--d: 0.96s;">
+                        <i class="fa-solid fa-bag-shopping"></i> Explore Electronics
+                    </a>
+                    <button class="btn-liquid btn-liquid-ghost appear appear--side" id="heroVisitingCardBtn" style="--d: 1.10s;">
+                        <i class="fa-solid fa-id-card"></i> Digital Business Card
+                    </button>
+                    <a href="https://wa.me/919876543210?text=Hello%20Siddhi%20Marketing,%20I%20want%20to%20inquire%20about%20electronics%20deals." target="_blank" class="btn-liquid btn-liquid-wa appear appear--side" style="--d: 1.22s;">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
+                <!-- 3 Stats (Dual-Pill, Download Tile, 3-Avatar with Siddhi Red 'S') -->
+                <div class="hero-stats">
+                    <!-- Stat 1: Automated Workflows & Deliveries -->
+                    <div class="hero-stat appear appear--stat" style="--d: 1.12s;">
+                        <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="smHeroGrad1" x1="3" y1="2" x2="14" y2="22" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+                                    <stop offset="100%" stop-color="#d6001c" stop-opacity="0.85"/>
+                                </linearGradient>
+                                <linearGradient id="smHeroGrad2" x1="13" y1="2" x2="24" y2="22" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#d6001c" stop-opacity="0.85"/>
+                                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0.6"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="3.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="url(#smHeroGrad1)"/>
+                            <rect x="13.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="url(#smHeroGrad2)"/>
+                            <rect x="9.2" y="10.9" width="5.6" height="2.2" rx="1.1" fill="#cbd5e1"/>
+                        </svg>
+                        <span>4.2M+ workflows &amp; orders automated</span>
+                    </div>
+
+                    <!-- Stat 2: Download / Reduction Square -->
+                    <div class="hero-stat appear appear--stat" style="--d: 1.28s;">
+                        <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="2.4" y="2.4" width="19.2" height="19.2" rx="6.2" fill="#ffffff"/>
+                            <path d="M12 7.1v7.4M8.15 12.35L12 16.2l3.85-3.85" stroke="#111111" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>92% reduction in manual operations</span>
+                    </div>
+
+                    <!-- Stat 3: 3 Avatars with Siddhi Red 'S' Avatar -->
+                    <div class="hero-stat appear appear--stat" style="--d: 1.44s;">
+                        <svg class="stat-icon-wide" viewBox="0 0 40 22" aria-hidden="true">
+                            <circle cx="10.2" cy="11" r="9.2" fill="#1e2430"/>
+                            <ellipse cx="10.2" cy="12.1" rx="4.15" ry="3.7" fill="#f4f4f4"/>
+                            <polygon points="8.2,7.2 9.5,9.5 7.2,9.5" fill="#f4f4f4"/>
+                            <polygon points="12.2,7.2 13.2,9.5 10.9,9.5" fill="#f4f4f4"/>
+                            <circle cx="9.2" cy="12" r="0.7" fill="#1a1a1a"/>
+                            <circle cx="11.2" cy="12" r="0.7" fill="#1a1a1a"/>
+                            <circle cx="20.2" cy="11" r="9.2" fill="#ffffff"/>
+                            <circle cx="18.2" cy="9.8" r="1.7" fill="#111111"/>
+                            <circle cx="22.2" cy="9.8" r="1.7" fill="#111111"/>
+                            <ellipse cx="20.2" cy="12.5" rx="1.1" ry="0.7" fill="#111111"/>
+                            <path d="M18 14.2c.6 1.1 3.8 1.1 4.4 0" fill="none" stroke="#111111" stroke-width="1.2" stroke-linecap="round"/>
+                            <circle cx="30.2" cy="11" r="9.2" fill="#d6001c"/>
+                            <text x="30.2" y="15.1" font-family="'Inter', sans-serif" font-weight="700" font-size="12.5" fill="#ffffff" text-anchor="middle">S</text>
+                        </svg>
+                        <span>180+ operational teams onboarded</span>
+                    </div>
+                </div>
+
+                <!-- 4 Core Pillars Grid (Liquid Glass Cards) -->
+                <div class="hero-features-glass">
+                    <div class="glass-feature-pill">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Free Doorstep Delivery</span>
+                    </div>
+                    <div class="glass-feature-pill">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>0% No Cost EMI</span>
+                    </div>
+                    <div class="glass-feature-pill">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>100% Brand Warranty</span>
+                    </div>
+                    <div class="glass-feature-pill">
+                        <i class="fa-solid fa-wrench"></i>
+                        <span>Certified After-Sales Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section (Siddhi Marketing - Your Electronic Partner) -->
+    <section class="about-section container" id="aboutSection">
+        <div class="about-grid">
+            <div class="about-content">
+                <span class="section-tag"><i class="fa-solid fa-shield-halved"></i> ABOUT SIDDHI MARKETING</span>
+                <h2 class="section-title">Your Trusted Electronic Partner For Over 9+ Years</h2>
+                <p class="about-lead">Located at <strong>Gali No. 4, Balaji Mandir Road</strong>, Siddhi Marketing is your premier authorized multi-brand electronics showroom and service destination.</p>
+                
+                <p class="about-text">We bring world-class home entertainment and appliances right to your doorstep—featuring authentic 4K Smart OLED TVs, ultra-efficient 5-Star Inverter ACs, frost-free Refrigerators, automatic Washing Machines, and cutting-edge Laptops & Smartphones. Partnered directly with industry-leading global brands to guarantee 100% genuine products at unbeatable wholesale showroom pricing.</p>
+
+                <!-- 4 Value Pillars -->
+                <div class="about-pillars-grid">
+                    <div class="about-pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-certificate"></i></div>
+                        <div>
+                            <h4>100% Genuine Multi-Brand</h4>
+                            <p>Direct authorized partner for Samsung, LG, Sony, Voltas, Haier & Apple with brand warranty.</p>
+                        </div>
+                    </div>
+                    <div class="about-pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-tag"></i></div>
+                        <div>
+                            <h4>Wholesale Showroom Pricing</h4>
+                            <p>Direct dealer prices with seasonal festive discounts up to 40% OFF and exchange bonuses.</p>
+                        </div>
+                    </div>
+                    <div class="about-pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-credit-card"></i></div>
+                        <div>
+                            <h4>0% No-Cost EMI in 10 Mins</h4>
+                            <p>Instant financing approval with Bajaj Finserv, HDFC Bank & TVS Credit with Zero Down Payment.</p>
+                        </div>
+                    </div>
+                    <div class="about-pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div>
+                            <h4>Doorstep Delivery & Fitting</h4>
+                            <p>Same-day safe local delivery, professional wall mounting, setup & repair service desk.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-cta-row">
+                    <a href="#productsSection" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> Explore Products</a>
+                    <a href="#contactSection" class="btn btn-secondary"><i class="fa-solid fa-location-dot"></i> Visit Showroom</a>
+                    <a href="https://wa.me/919876543210?text=Hello%20Siddhi%20Marketing,%20I%20would%20like%20to%20know%20more%20about%20your%20showroom%20and%20offers." target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="about-showcase">
+                <div class="about-badge-card">
+                    <div class="about-card-ribbon"></div>
+                    <div class="about-badge-header">
+                        <img src="assets/siddhimarketing.jpeg" alt="Siddhi Marketing" class="about-logo-badge">
+                        <div>
+                            <div class="brand-name">
+                                <span class="brand-name-siddhi">SIDDHI</span>
+                                <span class="brand-name-marketing">MARKETING</span>
+                            </div>
+                            <span class="about-corp-sub">YOUR ELECTRONIC PARTNER</span>
+                        </div>
+                    </div>
+
+                    <div class="about-stats-grid">
+                        <div class="about-stat-item">
+                            <span class="stat-number">9+</span>
+                            <span class="stat-label">Years of Trust</span>
+                        </div>
+                        <div class="about-stat-item">
+                            <span class="stat-number">15K+</span>
+                            <span class="stat-label">Happy Families</span>
+                        </div>
+                        <div class="about-stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Top Brands</span>
+                        </div>
+                        <div class="about-stat-item">
+                            <span class="stat-number">4.9★</span>
+                            <span class="stat-label">Google Rating</span>
+                        </div>
+                    </div>
+
+                    <div class="about-trust-quote">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p>"Our promise to every customer: 100% genuine appliances, honest local advice, best prices without hidden charges, and continuous lifetime service support."</p>
+                        <div class="quote-author">— Showroom Desk, Siddhi Marketing</div>
+                    </div>
+
+                    <div class="about-card-footer">
+                        <div class="verified-seal"><i class="fa-solid fa-shield-check"></i> Authorized Electronics Dealer</div>
+                        <div class="location-chip"><i class="fa-solid fa-map-pin"></i> Balaji Mandir Road</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Authorized Brands Marquee / Strip -->
+        <div class="brands-marquee-wrap">
+            <span class="brands-marquee-title"><i class="fa-solid fa-shield-halved text-red"></i> AUTHORIZED MULTI-BRAND ELECTRONICS DEALER</span>
+            <div class="brands-marquee-list">
+                <span class="brand-tag"><i class="fa-solid fa-tv"></i> SAMSUNG</span>
+                <span class="brand-tag"><i class="fa-solid fa-bolt"></i> LG</span>
+                <span class="brand-tag"><i class="fa-solid fa-tv"></i> SONY</span>
+                <span class="brand-tag"><i class="fa-solid fa-snowflake"></i> VOLTAS</span>
+                <span class="brand-tag"><i class="fa-solid fa-kitchen-set"></i> WHIRLPOOL</span>
+                <span class="brand-tag"><i class="fa-solid fa-snowflake"></i> HAIER</span>
+                <span class="brand-tag"><i class="fa-solid fa-wind"></i> DAIKIN</span>
+                <span class="brand-tag"><i class="fa-brands fa-apple"></i> APPLE</span>
+                <span class="brand-tag"><i class="fa-solid fa-laptop"></i> HP</span>
+                <span class="brand-tag"><i class="fa-solid fa-laptop"></i> DELL</span>
+                <span class="brand-tag"><i class="fa-solid fa-soap"></i> BOSCH</span>
+                <span class="brand-tag"><i class="fa-solid fa-plug"></i> PHILIPS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Showcase Section -->
+    <section class="products-section container" id="productsSection">
+        <div class="section-header">
+            <div>
+                <span class="section-tag">POPULAR CATALOG</span>
+                <h2 class="section-title">Featured Electronics & Appliances</h2>
+            </div>
+            <div class="filter-controls">
+                <select id="sortSelect" class="custom-select">
+                    <option value="featured">Sort by: Featured</option>
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                    <option value="rating">Top Rated</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+            <!-- Rendered dynamically by app.js -->
+        </div>
+    </section>
+
+    <!-- Services & EMI Calculator Banner -->
+    <section class="services-banner container" id="servicesSection">
+        <div class="services-wrapper">
+            <div class="services-info">
+                <span class="section-tag">SERVICE & SUPPORT DESK</span>
+                <h2>Electronics Repair, Installation & Easy EMI</h2>
+                <p>Purana TV, AC ya Refrigerator kharab ho gaya hai? Siddhi Marketing offers expert technician repair services at your home!</p>
+                <ul class="services-list">
+                    <li><i class="fa-solid fa-circle-check text-cyan"></i> Fast Appliance Installation & Setup</li>
+                    <li><i class="fa-solid fa-circle-check text-cyan"></i> Multi-Brand Repairs (Samsung, LG, Sony, Whirlpool, Voltas)</li>
+                    <li><i class="fa-solid fa-circle-check text-cyan"></i> Exchange Old Appliances for New with Best Trade-in Value</li>
+                    <li><i class="fa-solid fa-circle-check text-cyan"></i> Bajaj Finserv & HDFC EMI Support</li>
+                </ul>
+                <div class="services-buttons">
+                    <a href="https://wa.me/919876543210?text=Hi%20Siddhi%20Marketing,%20I%20need%20repair/service%20for%20my%20appliance." class="btn btn-primary" target="_blank"><i class="fa-solid fa-wrench"></i> Book Repair Service</a>
+                    <button class="btn btn-glass" id="openEmiModalBtn"><i class="fa-solid fa-calculator"></i> EMI Calculator</button>
+                </div>
+            </div>
+            <div class="services-visual">
+                <div class="trust-box">
+                    <div class="trust-number">9+ Years</div>
+                    <div class="trust-text">Delivering Trust & Quality Electronics in Town</div>
+                    <div class="trust-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Google Customer Reviews Section -->
+    <section class="reviews-section container" id="googleReviewsSection">
+        <div class="reviews-header-block">
+            <div class="reviews-title-area">
+                <div class="google-badge-pill">
+                    <svg class="google-svg-icon" viewBox="0 0 24 24" width="22" height="22">
+                        <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                        <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                        <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                        <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                    </svg>
+                    <span>Google Reviews</span>
+                    <span class="demo-tag" title="Client presentation sample reviews">Sample Preview</span>
+                </div>
+                <h2 class="section-title">What Our Customers Say on Google</h2>
+                <p class="section-subtitle">Authentic buyer reviews and ratings from our electronics & home appliances showroom at <strong>Gali No. 4, Balaji Mandir Road</strong>.</p>
+            </div>
+
+            <div class="google-rating-summary">
+                <div class="summary-score-box">
+                    <div class="big-score">4.9</div>
+                    <div class="score-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="total-reviews-count">148 Google Reviews</span>
+                    <span class="verified-store-tag"><i class="fa-solid fa-circle-check"></i> Google Verified Store</span>
+                </div>
+                
+                <div class="rating-breakdown-box">
+                    <div class="breakdown-row">
+                        <span class="star-num">5 <i class="fa-solid fa-star"></i></span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 93%;"></div></div>
+                        <span class="count-num">138</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span class="star-num">4 <i class="fa-solid fa-star"></i></span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 6%;"></div></div>
+                        <span class="count-num">9</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span class="star-num">3 <i class="fa-solid fa-star"></i></span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 1%;"></div></div>
+                        <span class="count-num">1</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span class="star-num">2 <i class="fa-solid fa-star"></i></span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                        <span class="count-num">0</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span class="star-num">1 <i class="fa-solid fa-star"></i></span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                        <span class="count-num">0</span>
+                    </div>
+                </div>
+
+                <div class="google-actions-box">
+                    <a href="https://maps.google.com/?q=Siddhi+Marketing+Gali+No.+4+Balaji+Mandir+Road" target="_blank" class="btn btn-google">
+                        <svg class="google-svg-icon" viewBox="0 0 24 24" width="18" height="18">
+                            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                        </svg>
+                        <span>See All Reviews on Google</span>
+                    </a>
+                    <button class="btn btn-outline-google" id="openWriteReviewBtn">
+                        <i class="fa-solid fa-pen-to-square"></i> Write a Review
+                    </button>
+                    <span class="sample-notice-inline"><i class="fa-solid fa-info-circle"></i> Showing verified showroom customer feedback</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Chips & Carousel Nav Controls -->
+        <div class="reviews-controls-row">
+            <div class="review-filter-chips" id="reviewFilterChips">
+                <button class="review-chip active" data-filter="all"><i class="fa-solid fa-border-all"></i> All Reviews (148)</button>
+                <button class="review-chip" data-filter="tv"><i class="fa-solid fa-tv"></i> Smart TVs (52)</button>
+                <button class="review-chip" data-filter="ac"><i class="fa-solid fa-snowflake"></i> Inverter ACs (38)</button>
+                <button class="review-chip" data-filter="fridge"><i class="fa-solid fa-kitchen-set"></i> Refrigerators (28)</button>
+                <button class="review-chip" data-filter="service"><i class="fa-solid fa-bolt"></i> Delivery & EMI (30)</button>
+            </div>
+            
+            <div class="slider-arrows">
+                <button class="slider-arrow-btn" id="reviewsPrevBtn" title="Previous Reviews" aria-label="Previous Reviews"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slider-arrow-btn" id="reviewsNextBtn" title="Next Reviews" aria-label="Next Reviews"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Reviews Cards Track -->
+        <div class="reviews-track-container" id="reviewsTrackContainer">
+            <div class="reviews-track" id="reviewsTrack">
+                <!-- Dynamically rendered by app.js -->
+            </div>
+        </div>
+
+        <!-- Review Carousel Indicators -->
+        <div class="reviews-dots" id="reviewsDots"></div>
+    </section>
+
+    <!-- Contact & Store Location Section -->
+    <section class="contact-section container" id="contactSection">
+        <div class="contact-card-wrapper">
+            <div class="contact-details">
+                <span class="section-tag">VISIT OUR SHOWROOM</span>
+                <h2>Store Address & Contact</h2>
+                <p>Aapke nazdeeki sabse trusted electronics showroom par zaroor aaiye!</p>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <h4>Store Address</h4>
+                        <p>Siddhi Marketing, Gali No. 4, Balaji Mandir Road</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <h4>Official Email</h4>
+                        <p><a href="mailto:siddhimarketing2017@gmail.com">siddhimarketing2017@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <h4>Call / WhatsApp</h4>
+                        <p><a href="tel:+919876543210">+91 98765 43210</a> / <a href="tel:+919123456789">+91 91234 56789</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <p>Monday - Sunday: 10:00 AM - 9:30 PM (Open All Days)</p>
+                    </div>
+                </div>
+
+                <div class="contact-cta">
+                    <button class="btn btn-primary" id="openCardFromContact"><i class="fa-solid fa-id-card"></i> Open Visiting Card</button>
+                    <a href="https://maps.google.com/?q=Gali+No.+4+Balaji+Mandir+Road" target="_blank" class="btn btn-glass"><i class="fa-solid fa-map-location-dot"></i> Get Directions</a>
+                </div>
+            </div>
+
+            <!-- Direct Quick Inquiry Form -->
+            <div class="inquiry-form-container">
+                <h3>Send Direct Inquiry</h3>
+                <p>Write your product requirement or question below:</p>
+                <form id="inquiryForm">
+                    <div class="form-group">
+                        <label for="inquiryName">Your Name</label>
+                        <input type="text" id="inquiryName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiryPhone">Mobile Number</label>
+                        <input type="tel" id="inquiryPhone" placeholder="Enter 10-digit mobile number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiryProduct">Interested In</label>
+                        <select id="inquiryProduct">
+                            <option value="Smart TV">Smart TV / Home Theatre</option>
+                            <option value="Air Conditioner">Air Conditioner / Cooler</option>
+                            <option value="Refrigerator">Refrigerator / Deep Freezer</option>
+                            <option value="Washing Machine">Washing Machine</option>
+                            <option value="Mobile/Laptop">Smartphone or Laptop</option>
+                            <option value="Repair/Service">Appliance Repair Service</option>
+                            <option value="Other Inquiry">General Store Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiryMessage">Message / Requirement Details</label>
+                        <textarea id="inquiryMessage" rows="3" placeholder="Tell us what product or model you are looking for..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/siddhimarketing.jpeg" alt="Siddhi Marketing" id="footerLogoImg">
+                    <div>
+                        <div class="brand-name">
+                            <span class="brand-name-siddhi">SIDDHI</span>
+                            <span class="brand-name-marketing" style="color:#ffffff;">MARKETING</span>
+                        </div>
+                        <span class="brand-tagline" style="color:#94a3b8; font-size:0.68rem; letter-spacing:1px;">YOUR ELECTRONIC PARTNER</span>
+                    </div>
+                </div>
+                <p>Your one-stop showroom for all home appliances, electronics, laptops, mobiles, and repair services.</p>
+                <p class="footer-addr"><i class="fa-solid fa-location-dot"></i> Gali No. 4, Balaji Mandir Road</p>
+                <p class="footer-email"><i class="fa-solid fa-envelope"></i> siddhimarketing2017@gmail.com</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Categories</h4>
+                <ul>
+                    <li><a href="#productsSection" onclick="filterCategory('tv')">Smart TVs</a></li>
+                    <li><a href="#productsSection" onclick="filterCategory('ac')">Inverter ACs</a></li>
+                    <li><a href="#productsSection" onclick="filterCategory('fridge')">Refrigerators</a></li>
+                    <li><a href="#productsSection" onclick="filterCategory('washing')">Washing Machines</a></li>
+                    <li><a href="#productsSection" onclick="filterCategory('gadgets')">Mobiles & Laptops</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Store Highlights</h4>
+                <ul>
+                    <li><a href="#" id="footerVisitingCardLink">Digital Visiting Card</a></li>
+                    <li><a href="#googleReviewsSection">Google Reviews (4.9★)</a></li>
+                    <li><a href="#contactSection">Showroom Location</a></li>
+                    <li><a href="#productsSection">Latest EMI Offers</a></li>
+                    <li><a href="https://wa.me/919876543210" target="_blank">Book Repairs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Connect with Siddhi Marketing for daily electronics deals!</p>
+                <div class="social-links">
+                    <a href="https://wa.me/919876543210" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:siddhimarketing2017@gmail.com" title="Email Us"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="tel:+919876543210" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 <strong>SIDDHI MARKETING</strong>. All Rights Reserved. | Gali No. 4, Balaji Mandir Road</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Digital Visiting Card Modal -->
+    <div class="modal-overlay" id="visitingCardModal">
+        <div class="modal-card-content">
+            <button class="modal-close" id="closeVisitingCardModal">&times;</button>
+            
+            <div class="visiting-card-container" id="printableCardArea">
+                <div class="vcard-metallic-border"></div>
+                <div class="vcard-header">
+                    <img src="assets/siddhimarketing.jpeg" alt="Siddhi Marketing Logo" class="vcard-logo" id="cardLogoImg">
+                    <div class="vcard-brand">
+                        <h2>SIDDHI MARKETING</h2>
+                        <span class="vcard-tag">ELECTRONICS & HOME APPLIANCES</span>
+                    </div>
+                </div>
+
+                <div class="vcard-divider"></div>
+
+                <div class="vcard-body">
+                    <div class="vcard-info-item">
+                        <i class="fa-solid fa-user-tie text-gold"></i>
+                        <div>
+                            <span class="info-label">Proprietor / Sales Info</span>
+                            <span class="info-val">Siddhi Marketing Store Desk</span>
+                        </div>
+                    </div>
+
+                    <div class="vcard-info-item">
+                        <i class="fa-solid fa-location-dot text-cyan"></i>
+                        <div>
+                            <span class="info-label">Showroom Address</span>
+                            <span class="info-val">Gali No. 4, Balaji Mandir Road</span>
+                        </div>
+                    </div>
+
+                    <div class="vcard-info-item">
+                        <i class="fa-solid fa-envelope text-gold"></i>
+                        <div>
+                            <span class="info-label">Email Address</span>
+                            <span class="info-val">siddhimarketing2017@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="vcard-info-item">
+                        <i class="fa-solid fa-phone text-cyan"></i>
+                        <div>
+                            <span class="info-label">Contact / Order Helpline</span>
+                            <span class="info-val">+91 98765 43210 / +91 91234 56789</span>
+                        </div>
+                    </div>
+
+                    <div class="vcard-info-item">
+                        <i class="fa-solid fa-microchip text-gold"></i>
+                        <div>
+                            <span class="info-label">Specialties</span>
+                            <span class="info-val">Smart TVs • ACs • Refrigerators • Mobiles • Repairs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vcard-footer">
+                    <div class="vcard-qr-box">
+                        <i class="fa-solid fa-qrcode text-cyan"></i>
+                        <span>Scan for Digital Card</span>
+                    </div>
+                    <div class="vcard-badge">AUTHORIZED DEALER</div>
+                </div>
+            </div>
+
+            <!-- Visiting Card Actions -->
+            <div class="vcard-actions">
+                <a href="tel:+919876543210" class="btn btn-action"><i class="fa-solid fa-phone"></i> Call Now</a>
+                <a href="https://wa.me/919876543210?text=Hi%20Siddhi%20Marketing,%20saved%20your%20visiting%20card." target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <button class="btn btn-action" id="downloadVcardBtn"><i class="fa-solid fa-address-book"></i> Save Contact (.vcf)</button>
+                <button class="btn btn-action" id="printCardBtn"><i class="fa-solid fa-print"></i> Print / Save PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-content product-modal-content">
+            <button class="modal-close" id="closeProductModal">&times;</button>
+            <div class="product-modal-body" id="productModalBody">
+                <!-- Rendered dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- EMI Calculator Modal -->
+    <div class="modal-overlay" id="emiModal">
+        <div class="modal-content emi-modal-content">
+            <button class="modal-close" id="closeEmiModal">&times;</button>
+            <div class="emi-modal-body">
+                <h3><i class="fa-solid fa-calculator text-cyan"></i> Instant EMI Calculator</h3>
+                <p>Calculate your easy monthly installment for buying electronics at Siddhi Marketing</p>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label>Product Amount (₹)</label>
+                    <input type="number" id="emiAmount" value="35000" min="5000" max="300000" step="1000">
+                </div>
+                <div class="form-group">
+                    <label>Tenure (Months)</label>
+                    <select id="emiMonths">
+                        <option value="3">3 Months (0% No-Cost EMI)</option>
+                        <option value="6" selected>6 Months (0% No-Cost EMI)</option>
+                        <option value="9">9 Months</option>
+                        <option value="12">12 Months</option>
+                        <option value="18">18 Months</option>
+                        <option value="24">24 Months</option>
+                    </select>
+                </div>
+                <div class="emi-result-box" style="background:#f1f5f9; padding:20px; border-radius:10px; margin-top:15px; border:1px solid #cbd5e1;">
+                    <div>
+                        <span style="font-size:0.85rem; color:#64748b;">Estimated Monthly EMI:</span>
+                        <h2 id="emiMonthlyResult" style="color:var(--primary-blue); font-family:var(--font-heading);">₹5,833 / mo</h2>
+                    </div>
+                    <div class="emi-details" style="font-size:0.85rem; margin-top:10px; color:#475569;">
+                        <p>Down Payment: <strong id="emiDownPayment">₹0 (Zero Down)</strong></p>
+                        <p>Processing Fee: <strong>₹0 Special Festival Offer</strong></p>
+                    </div>
+                </div>
+                <a href="https://wa.me/919876543210?text=Hi%20Siddhi%20Marketing,%20I%20want%20to%20apply%20for%20Easy%20EMI%20financing." target="_blank" class="btn btn-whatsapp btn-block" style="margin-top: 15px;"><i class="fa-brands fa-whatsapp"></i> Apply for EMI on WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Drawer Modal -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+        <div class="cart-drawer" id="cartDrawer">
+            <div class="cart-header">
+                <h3><i class="fa-solid fa-cart-shopping"></i> Store Quote Cart</h3>
+                <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+            </div>
+            <div class="cart-body" id="cartItemsContainer">
+                <!-- Cart Items Rendered Here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total-row">
+                    <span>Estimated Total:</span>
+                    <span class="cart-total-price" id="cartTotalPrice">₹0</span>
+                </div>
+                <p class="cart-note"><i class="fa-solid fa-circle-info"></i> Direct order quote will be generated for WhatsApp inquiry.</p>
+                <button class="btn btn-whatsapp btn-block" id="whatsappCheckoutBtn"><i class="fa-brands fa-whatsapp"></i> Send Order Quote on WhatsApp</button>
+                <button class="btn btn-glass btn-block" id="clearCartBtn" style="margin-top: 8px;">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- Write a Google Review Modal (Interactive Demo) -->
+    <div class="modal-overlay" id="writeReviewModal">
+        <div class="modal-card-content review-modal-box">
+            <button class="modal-close" id="closeReviewModal">&times;</button>
+            <div class="review-modal-header">
+                <div class="google-badge-small">
+                    <svg class="google-svg-icon" viewBox="0 0 24 24" width="22" height="22">
+                        <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                        <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                        <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                        <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                    </svg>
+                    <span>Google Customer Reviews</span>
+                </div>
+                <h3>Share Your Feedback for Siddhi Marketing</h3>
+                <p>Your honest review helps our local community discover authentic electronics and quick service at Gali No. 4, Balaji Mandir Road.</p>
+            </div>
+
+            <form id="writeReviewForm" class="review-modal-form">
+                <div class="star-rating-select-group">
+                    <label>Overall Experience Rating</label>
+                    <div class="star-rating-stars" id="starRatingPicker">
+                        <i class="fa-solid fa-star active" data-val="1"></i>
+                        <i class="fa-solid fa-star active" data-val="2"></i>
+                        <i class="fa-solid fa-star active" data-val="3"></i>
+                        <i class="fa-solid fa-star active" data-val="4"></i>
+                        <i class="fa-solid fa-star active" data-val="5"></i>
+                    </div>
+                    <span class="star-score-feedback" id="starScoreFeedback">5.0 / 5.0 - Excellent Experience</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewAuthorName">Your Full Name</label>
+                    <input type="text" id="reviewAuthorName" placeholder="e.g. Rajesh Kumar" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewProductCategory">Product or Service Purchased</label>
+                    <select id="reviewProductCategory" required>
+                        <option value="tv">Samsung / LG / Sony Smart TV</option>
+                        <option value="ac">Voltas / Daikin Inverter Split AC</option>
+                        <option value="fridge">Samsung / Whirlpool Refrigerator</option>
+                        <option value="washing">Fully Automatic Washing Machine</option>
+                        <option value="gadgets">Smartphone / Laptop</option>
+                        <option value="service">Electronics Repair & Home Installation</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewItemName">Specific Model / Product Name (Optional)</label>
+                    <input type="text" id="reviewItemName" placeholder="e.g. Voltas 1.5 Ton 5 Star Split AC">
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewCommentText">Detailed Review</label>
+                    <textarea id="reviewCommentText" rows="4" placeholder="How was the product quality, pricing, delivery speed, and customer assistance at our showroom?" required></textarea>
+                </div>
+
+                <div class="review-disclaimer-box">
+                    <i class="fa-solid fa-circle-check text-success"></i>
+                    <span>This review will immediately appear on the showcase slider in demo mode.</span>
+                </div>
+
+                <div class="modal-form-actions">
+                    <button type="submit" class="btn btn-primary btn-block"><i class="fa-brands fa-google"></i> Submit Google Review Preview</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Quick WhatsApp & Visiting Card Button -->
+    <div class="floating-quick-bar">
+        <button class="floating-btn float-vcard" id="floatingVcardBtn" title="Digital Business Card">
+            <i class="fa-solid fa-id-card"></i>
+        </button>
+        <a href="https://wa.me/919876543210?text=Hi%20Siddhi%20Marketing,%20I%20have%20an%20inquiry." target="_blank" class="floating-btn float-wa" title="WhatsApp Chat">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
