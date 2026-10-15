@@ -735,8 +735,9 @@ button {
    ========================================================================== */
 .hero-section {
     position: relative;
-    padding: 90px 20px 80px;
-    min-height: 85vh;
+    padding: 0;
+    height: 85vh;
+    min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
