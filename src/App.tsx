@@ -158,7 +158,7 @@ function CentralNodes() {
         <span className="font-manrope text-white text-[13px] leading-[15.6px] whitespace-nowrap block">
           [ CONNECTIVITY ]
         </span>
-        <p className="font-manrope text-white/50 text-[11px] leading-[14px] mt-[4px] max-w-[180px]">
+        <p className="font-manrope text-white/50 text-[11px] leading-[14px] mt-[4px] max-w-[calc(100vw-78%-20px)] lg:max-w-[180px]">
           Latency-free transmission across distributed networks.
         </p>
       </div>
@@ -177,7 +177,7 @@ export default function App() {
   ];
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-black">
+    <section className="relative w-full h-screen h-[100dvh] overflow-hidden bg-black select-none">
       {/* Background Video (layer 0) */}
       <video
         className="absolute inset-0 w-full h-full object-cover anim-fade-in"
@@ -191,7 +191,7 @@ export default function App() {
       {/* Content Layer */}
       <div className="relative z-10 w-full h-full">
         {/* Top Navigation */}
-        <nav className="absolute top-0 left-0 w-full flex items-center px-5 md:px-[35px] py-5 md:py-[27px]">
+        <nav className="absolute top-0 left-0 w-full flex items-center px-5 md:px-[35px] py-5 md:py-[27px] z-30">
           {/* Left group */}
           <div className="flex items-center gap-[40px]">
             {/* Wordmark */}
@@ -237,7 +237,7 @@ export default function App() {
 
           {/* Hamburger button */}
           <button
-            className="lg:hidden ml-auto relative w-[40px] h-[40px] flex items-center justify-center anim-fade-in"
+            className="lg:hidden ml-auto relative w-[40px] h-[40px] flex items-center justify-center active:scale-95 transition-transform anim-fade-in"
             style={{ animationDelay: '400ms' }}
             aria-label="Toggle menu"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -275,13 +275,13 @@ export default function App() {
 
           {/* Panel */}
           <div
-            className={`relative h-full flex flex-col px-5 pt-24 pb-10 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${
+            className={`relative h-full flex flex-col px-5 pt-20 sm:pt-24 pb-8 sm:pb-10 overflow-y-auto transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${
               menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
             }`}
           >
             {/* Close button */}
             <button
-              className="absolute top-5 right-5 w-[40px] h-[40px] flex items-center justify-center"
+              className="absolute top-5 right-5 w-[40px] h-[40px] flex items-center justify-center active:scale-95 transition-transform"
               aria-label="Close menu"
               onClick={() => setMenuOpen(false)}
             >
@@ -289,7 +289,7 @@ export default function App() {
             </button>
 
             {/* Nav list */}
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-6 sm:gap-8 my-auto sm:my-0">
               {navItems.map((item, i) => (
                 <div
                   key={item.number}
@@ -299,11 +299,11 @@ export default function App() {
                   style={{ transitionDelay: menuOpen ? `${150 + i * 75}ms` : '0ms' }}
                   onClick={() => setMenuOpen(false)}
                 >
-                  <div className="flex items-center gap-3 cursor-pointer">
+                  <div className="flex items-center gap-3 cursor-pointer group">
                     <span className="font-manrope text-[#AFDDFF]/80 text-[14px] leading-[1]">
                       {item.number}.
                     </span>
-                    <span className="font-manrope text-white text-[28px] leading-[1.2] tracking-tight hover:text-[#AFDDFF] transition-colors">
+                    <span className="font-manrope text-white text-[24px] sm:text-[28px] leading-[1.2] tracking-tight group-hover:text-[#AFDDFF] transition-colors">
                       {item.label}
                     </span>
                   </div>
@@ -313,14 +313,14 @@ export default function App() {
 
             {/* Wallet block pinned bottom */}
             <div
-              className={`mt-auto pt-10 border-t border-white/10 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${
+              className={`mt-auto pt-8 sm:pt-10 border-t border-white/10 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${
                 menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
               style={{ transitionDelay: menuOpen ? '450ms' : '0ms' }}
             >
               {/* Row 1 */}
-              <div className="flex items-center gap-[10px] mb-3">
-                <Wallet className="w-[15px] h-[15px] text-white" strokeWidth={1.5} />
+              <div className="flex items-center gap-[10px] mb-3 flex-wrap">
+                <Wallet className="w-[15px] h-[15px] text-white shrink-0" strokeWidth={1.5} />
                 <span className="font-manrope text-white text-[13px] leading-[15.6px]">
                   0x71...f4e2
                 </span>
@@ -344,7 +344,7 @@ export default function App() {
 
         {/* Main Heading */}
         <h1
-          className="font-graphik text-white font-normal leading-[1em] absolute anim-fade-up text-[32px] sm:text-[48px] md:text-[68px] top-[140px] sm:top-[160px] md:top-[178px] left-5 md:left-[35px] max-w-[300px] sm:max-w-[420px] md:max-w-[554px]"
+          className="font-graphik text-white font-normal leading-[1em] absolute anim-fade-up text-[32px] sm:text-[48px] md:text-[68px] top-[135px] sm:top-[160px] md:top-[178px] left-5 md:left-[35px] max-w-[calc(100vw-40px)] sm:max-w-[420px] md:max-w-[554px]"
           style={{ animationDelay: '400ms' }}
         >
           Liquid Assets. Luminous Returns.
@@ -357,10 +357,10 @@ export default function App() {
         <CentralNodes />
 
         {/* Bottom row */}
-        <div className="absolute bottom-5 md:bottom-[35px] left-5 md:left-[35px] right-5 md:right-[35px] flex flex-col md:flex-row items-start md:items-end justify-between gap-5 md:gap-0">
+        <div className="absolute bottom-5 md:bottom-[35px] left-5 md:left-[35px] right-5 md:right-[35px] flex flex-col md:flex-row items-start md:items-end justify-between gap-5 md:gap-0 z-20">
           {/* Left CTA button */}
           <button
-            className="bg-[#AFDDFF] px-[16px] md:px-[20px] py-[10px] md:py-[12px] flex items-center gap-[10px] hover:bg-[#c8e8ff] transition-colors anim-fade-up"
+            className="bg-[#AFDDFF] px-[16px] md:px-[20px] py-[10px] md:py-[12px] flex items-center gap-[10px] hover:bg-[#c8e8ff] active:scale-[0.98] transition-all anim-fade-up"
             style={{ animationDelay: '900ms' }}
           >
             <span className="text-black text-[16px] leading-none">&#10022;</span>
