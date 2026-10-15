@@ -195,12 +195,138 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initApp() {
     setupThemeToggle();
+    setupNavigation();
+    setupEntranceAnimations();
     renderProducts(PRODUCTS);
     setupEventListeners();
     updateCartUI();
     setupInquiryForm();
     setupEmiCalculator();
     setupGoogleReviews();
+}
+
+// Vesper-Inspired Entrance Animations & Fallback
+function setupEntranceAnimations() {
+    const appears = document.querySelectorAll('.appear');
+    appears.forEach(el => {
+        el.addEventListener('animationend', () => {
+            el.classList.add('is-in');
+        }, { once: true });
+    });
+
+    // Fallback check after two rAFs so elements are never invisible if animations don't trigger
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            let anyRunning = false;
+            appears.forEach(el => {
+                if (typeof el.getAnimations === 'function') {
+                    const anims = el.getAnimations();
+                    anims.forEach(a => {
+                        if (a.playState === 'running' || a.playState === 'finished') {
+                            anyRunning = true;
+                        }
+                    });
+                }
+            });
+            if (!anyRunning) {
+                appears.forEach(el => el.classList.add('is-in'));
+            }
+        });
+    });
+}
+
+// Navigation Tabs & Mobile Menu Drawer Engine
+function setupNavigation() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+
+    const toggleMobileMenu = (open) => {
+        if (!mobileNavDrawer || !mobileNavOverlay) return;
+        if (open) {
+            mobileNavDrawer.classList.add('active');
+            mobileNavOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        } else {
+            mobileNavDrawer.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    };
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => toggleMobileMenu(true));
+    }
+    if (mobileNavClose) {
+        mobileNavClose.addEventListener('click', () => toggleMobileMenu(false));
+    }
+    if (mobileNavOverlay) {
+        mobileNavOverlay.addEventListener('click', () => toggleMobileMenu(false));
+    }
+
+    // Smooth Scroll & Active Indicator
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const targetId = link.getAttribute('href');
+            if (targetId && targetId.startsWith('#')) {
+                const targetEl = targetId === '#' || targetId === '#mainHeader' 
+                    ? document.body 
+                    : document.querySelector(targetId);
+                
+                if (targetEl) {
+                    e.preventDefault();
+                    toggleMobileMenu(false);
+                    targetEl.scrollIntoView({ behavior: 'smooth' });
+
+                    // Set active link
+                    const navKey = link.getAttribute('data-nav');
+                    document.querySelectorAll(`.nav-link, .mobile-nav-link`).forEach(l => {
+                        if (l.getAttribute('data-nav') === navKey) {
+                            l.classList.add('active');
+                        } else {
+                            l.classList.remove('active');
+                        }
+                    });
+                }
+            }
+        });
+    });
+
+    // ScrollSpy to highlight active tab as user scrolls
+    const sections = [
+        { id: 'mainHeader', nav: 'home' },
+        { id: 'aboutSection', nav: 'about' },
+        { id: 'productsSection', nav: 'products' },
+        { id: 'servicesSection', nav: 'services' },
+        { id: 'googleReviewsSection', nav: 'reviews' },
+        { id: 'contactSection', nav: 'contact' }
+    ];
+
+    window.addEventListener('scroll', () => {
+        let currentNav = 'home';
+        const scrollPos = window.scrollY + 220;
+
+        sections.forEach(sec => {
+            const el = document.getElementById(sec.id);
+            if (el) {
+                const top = el.offsetTop;
+                const height = el.offsetHeight;
+                if (scrollPos >= top && scrollPos < top + height) {
+                    currentNav = sec.nav;
+                }
+            }
+        });
+
+        document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+            if (link.getAttribute('data-nav') === currentNav) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }, { passive: true });
 }
 
 // Theme Toggle Functionality (Light / Dark mode)
