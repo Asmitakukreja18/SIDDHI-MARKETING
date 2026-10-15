@@ -435,13 +435,59 @@ function filterCategory(cat) {
     renderProducts(filtered);
 }
 
+// Toast Notification System
+function showToast(message, icon = 'fa-circle-check', actionLabel = null, actionCallback = null) {
+    let container = document.getElementById('siddhiToastContainer');
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'siddhiToastContainer';
+        container.className = 'siddhi-toast-container';
+        document.body.appendChild(container);
+    }
+
+    const toast = document.createElement('div');
+    toast.className = 'siddhi-toast';
+    toast.innerHTML = `
+        <i class="fa-solid ${icon} siddhi-toast-icon"></i>
+        <span>${message}</span>
+        ${actionLabel ? `<button class="siddhi-toast-action">${actionLabel}</button>` : ''}
+    `;
+
+    if (actionLabel && actionCallback) {
+        const actionBtn = toast.querySelector('.siddhi-toast-action');
+        if (actionBtn) {
+            actionBtn.addEventListener('click', () => {
+                actionCallback();
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 350);
+            });
+        }
+    }
+
+    container.appendChild(toast);
+    requestAnimationFrame(() => toast.classList.add('show'));
+
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 350);
+    }, 3800);
+}
+
 // Event Listeners Setup
 function setupEventListeners() {
     // Category Nav Click
     document.querySelectorAll('.nav-cat-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const cat = e.currentTarget.dataset.category;
-            filterCategory(cat);
+            if (cat) {
+                filterCategory(cat);
+                const prodSec = document.getElementById('productsSection');
+                if (prodSec) {
+                    const headerOffset = 80;
+                    const pos = prodSec.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+                    window.scrollTo({ top: pos, behavior: 'smooth' });
+                }
+            }
         });
     });
 
@@ -450,7 +496,7 @@ function setupEventListeners() {
     const searchBtn = document.getElementById('searchBtn');
 
     const handleSearch = () => {
-        const query = searchInput.value.trim().toLowerCase();
+        const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
         if (!query) {
             filterCategory(activeCategory);
             return;
@@ -461,9 +507,18 @@ function setupEventListeners() {
             p.specs.some(s => s.toLowerCase().includes(query))
         );
         renderProducts(results);
+        const prodSec = document.getElementById('productsSection');
+        if (prodSec) {
+            const headerOffset = 80;
+            const pos = prodSec.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: pos, behavior: 'smooth' });
+        }
     };
 
-    if (searchInput) searchInput.addEventListener('keyup', handleSearch);
+    if (searchInput) searchInput.addEventListener('keyup', (e) => {
+        if (e.key === 'Enter') handleSearch();
+        else handleSearch();
+    });
     if (searchBtn) searchBtn.addEventListener('click', handleSearch);
 
     // Sorting Dropdown
@@ -498,9 +553,11 @@ function setupEventListeners() {
 
     const openVcard = (e) => {
         if(e) e.preventDefault();
-        vcardModal.classList.add('active');
+        if (vcardModal) vcardModal.classList.add('active');
     };
-    const closeVcard = () => vcardModal.classList.remove('active');
+    const closeVcard = () => {
+        if (vcardModal) vcardModal.classList.remove('active');
+    };
 
     if (openCardBtn) openCardBtn.addEventListener('click', openVcard);
     if (heroCardBtn) heroCardBtn.addEventListener('click', openVcard);
@@ -533,7 +590,7 @@ function setupEventListeners() {
     const closeProductModalBtn = document.getElementById('closeProductModal');
     if (closeProductModalBtn) {
         closeProductModalBtn.addEventListener('click', () => {
-            productModal.classList.remove('active');
+            if (productModal) productModal.classList.remove('active');
         });
     }
     if (productModal) {
@@ -547,8 +604,12 @@ function setupEventListeners() {
     const closeCartBtn = document.getElementById('closeCartBtn');
     const cartOverlay = document.getElementById('cartDrawerOverlay');
 
-    if (cartToggleBtn) cartToggleBtn.addEventListener('click', () => cartOverlay.classList.add('active'));
-    if (closeCartBtn) closeCartBtn.addEventListener('click', () => cartOverlay.classList.remove('active'));
+    if (cartToggleBtn) cartToggleBtn.addEventListener('click', () => {
+        if (cartOverlay) cartOverlay.classList.add('active');
+    });
+    if (closeCartBtn) closeCartBtn.addEventListener('click', () => {
+        if (cartOverlay) cartOverlay.classList.remove('active');
+    });
     if (cartOverlay) {
         cartOverlay.addEventListener('click', (e) => {
             if (e.target === cartOverlay) cartOverlay.classList.remove('active');
@@ -564,6 +625,133 @@ function setupEventListeners() {
     if (clearCartBtn) clearCartBtn.addEventListener('click', () => {
         cart = [];
         updateCartUI();
+        showToast('Cart cleared', 'fa-trash');
+    });
+
+    // Hero Stat Items: Interactive Click & Smooth Scroll
+    const heroStats = document.querySelectorAll('.hero-stat');
+    if (heroStats.length >= 3) {
+        heroStats[0].title = "Click to view customer Google Reviews";
+        heroStats[0].addEventListener('click', () => {
+            const el = document.getElementById('googleReviewsSection');
+            if (el) {
+                const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                window.scrollTo({ top: pos, behavior: 'smooth' });
+            }
+        });
+
+        heroStats[1].title = "Click to explore Wholesale Electronics Deals";
+        heroStats[1].addEventListener('click', () => {
+            const el = document.getElementById('productsSection');
+            if (el) {
+                const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                window.scrollTo({ top: pos, behavior: 'smooth' });
+            }
+        });
+
+        heroStats[2].title = "Click to view Siddhi Marketing Story & Warranty Details";
+        heroStats[2].addEventListener('click', () => {
+            const el = document.getElementById('aboutSection');
+            if (el) {
+                const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                window.scrollTo({ top: pos, behavior: 'smooth' });
+            }
+        });
+    }
+
+    // Hero Feature Glass Pills: Interactive Actions
+    const featurePills = document.querySelectorAll('.glass-feature-pill');
+    if (featurePills.length >= 4) {
+        featurePills[0].title = "Click for Doorstep Delivery & Showroom Location";
+        featurePills[0].addEventListener('click', () => {
+            const el = document.getElementById('contactSection');
+            if (el) {
+                const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                window.scrollTo({ top: pos, behavior: 'smooth' });
+            }
+        });
+
+        featurePills[1].title = "Click to Calculate Easy 0% EMI";
+        featurePills[1].addEventListener('click', () => {
+            const modal = document.getElementById('emiModal');
+            if (modal) modal.classList.add('active');
+        });
+
+        featurePills[2].title = "Click for Authorized Brand Warranty Details";
+        featurePills[2].addEventListener('click', () => {
+            const el = document.getElementById('aboutSection');
+            if (el) {
+                const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                window.scrollTo({ top: pos, behavior: 'smooth' });
+            }
+        });
+
+        featurePills[3].title = "Click for After-Sales Support & Service Desk";
+        featurePills[3].addEventListener('click', () => {
+            const el = document.getElementById('servicesSection');
+            if (el) {
+                const pos = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                window.scrollTo({ top: pos, behavior: 'smooth' });
+            }
+        });
+    }
+
+    // Brand Marquee Tags: Click to filter & scroll
+    document.querySelectorAll('.brand-tag').forEach(tag => {
+        const brandName = tag.textContent.trim();
+        tag.title = `Click to view ${brandName} products`;
+        tag.addEventListener('click', () => {
+            const query = brandName.toLowerCase();
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) searchInput.value = brandName;
+            const results = PRODUCTS.filter(p => 
+                p.name.toLowerCase().includes(query) || 
+                p.categoryLabel.toLowerCase().includes(query)
+            );
+            renderProducts(results.length > 0 ? results : PRODUCTS);
+            const prodSec = document.getElementById('productsSection');
+            if (prodSec) {
+                const pos = prodSec.getBoundingClientRect().top + window.pageYOffset - 80;
+                window.scrollTo({ top: pos, behavior: 'smooth' });
+            }
+            showToast(`Filtered products for ${brandName}`, 'fa-filter');
+        });
+    });
+
+    // Universal Smooth Scrolling for all anchor links starting with #
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    // Close mobile drawer if active
+                    const drawer = document.getElementById('mobileNavDrawer');
+                    const overlay = document.getElementById('mobileNavOverlay');
+                    if (drawer && overlay) {
+                        drawer.classList.remove('active');
+                        overlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                    const headerOffset = 80;
+                    const pos = targetEl.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+                    window.scrollTo({ top: pos, behavior: 'smooth' });
+                }
+            }
+        });
+    });
+
+    // Close all modals with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-overlay.active, .cart-drawer-overlay.active, .mobile-nav-drawer.active').forEach(el => {
+                el.classList.remove('active');
+            });
+            const overlay = document.getElementById('mobileNavOverlay');
+            if (overlay) overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     });
 }
 
@@ -588,6 +776,7 @@ END:VCARD`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    showToast("Contact card saved! Open the downloaded .vcf file to add to contacts.", "fa-address-book");
 }
 
 // Product Modal Popup Renderer
@@ -616,7 +805,7 @@ function openProductModal(productId) {
                 </div>
                 <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">${product.description}</p>
                 
-                <h4 style="font-size: 0.9rem; margin-bottom: 8px; color: var(--primary-blue);">Key Specifications:</h4>
+                <h4 style="font-size: 0.9rem; margin-bottom: 8px; color: var(--primary-red);">Key Specifications:</h4>
                 <ul style="list-style: disc; margin-left: 20px; font-size: 0.85rem; color: var(--text-main); margin-bottom: 25px;">
                     ${product.specs.map(s => `<li>${s}</li>`).join('')}
                 </ul>
@@ -649,11 +838,29 @@ function addToCart(productId) {
     }
 
     updateCartUI();
-    document.getElementById('cartDrawerOverlay').classList.add('active');
+    showToast(`${product.name.slice(0, 30)}... added to quote cart!`, 'fa-cart-plus', 'View Cart', () => {
+        const overlay = document.getElementById('cartDrawerOverlay');
+        if (overlay) overlay.classList.add('active');
+    });
 }
 
 function removeFromCart(productId) {
+    const item = cart.find(i => i.id === productId);
     cart = cart.filter(item => item.id !== productId);
+    updateCartUI();
+    if (item) {
+        showToast(`Item removed from quote cart`, 'fa-trash');
+    }
+}
+
+function changeQty(productId, delta) {
+    const item = cart.find(i => i.id === productId);
+    if (!item) return;
+    item.qty += delta;
+    if (item.qty <= 0) {
+        cart = cart.filter(i => i.id !== productId);
+        showToast(`Item removed from cart`, 'fa-trash');
+    }
     updateCartUI();
 }
 
@@ -673,7 +880,7 @@ function updateCartUI() {
     if (cart.length === 0) {
         container.innerHTML = `
             <div style="text-align:center; padding: 40px 10px; color: var(--text-muted);">
-                <i class="fa-solid fa-basket-shopping" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 10px;"></i>
+                <i class="fa-solid fa-basket-shopping" style="font-size: 2.5rem; color: var(--primary-red); margin-bottom: 10px;"></i>
                 <p>Your quote cart is empty.</p>
                 <p style="font-size: 0.8rem;">Add products from catalog to get direct price quotes!</p>
             </div>
@@ -686,9 +893,15 @@ function updateCartUI() {
             <img src="${item.image}" alt="${item.name}" class="cart-item-img">
             <div class="cart-item-details">
                 <div class="cart-item-title">${item.name}</div>
-                <div class="cart-item-price">Qty: ${item.qty} × ₹${item.price.toLocaleString('en-IN')}</div>
+                <div class="cart-item-price">₹${item.price.toLocaleString('en-IN')} each</div>
+                <div class="cart-qty-ctrls">
+                    <button class="cart-qty-btn" onclick="changeQty('${item.id}', -1)" title="Decrease Quantity"><i class="fa-solid fa-minus"></i></button>
+                    <span class="cart-qty-val">${item.qty}</span>
+                    <button class="cart-qty-btn" onclick="changeQty('${item.id}', 1)" title="Increase Quantity"><i class="fa-solid fa-plus"></i></button>
+                    <span style="font-size:0.78rem; color:var(--text-muted); margin-left:6px;">= ₹${(item.price * item.qty).toLocaleString('en-IN')}</span>
+                </div>
             </div>
-            <button class="cart-remove-btn" onclick="removeFromCart('${item.id}')" title="Remove">
+            <button class="cart-remove-btn" onclick="removeFromCart('${item.id}')" title="Remove Item">
                 <i class="fa-solid fa-trash"></i>
             </button>
         </div>
@@ -698,7 +911,7 @@ function updateCartUI() {
 // Send Cart Summary to WhatsApp
 function sendCartToWhatsApp() {
     if (cart.length === 0) {
-        alert("Your quote cart is empty! Please add products first.");
+        showToast("Your quote cart is empty! Please add products first.", "fa-triangle-exclamation");
         return;
     }
 
@@ -717,6 +930,7 @@ function sendCartToWhatsApp() {
     text += `\nPlease confirm availability and delivery timeframe to Gali No. 4, Balaji Mandir Road. Thank you!`;
 
     const encoded = encodeURIComponent(text);
+    showToast("Opening WhatsApp with your order quote...", "fa-brands fa-whatsapp");
     window.open(`https://wa.me/${STORE_DATA.whatsappNumber}?text=${encoded}`, '_blank');
 }
 
@@ -740,6 +954,7 @@ function setupInquiryForm() {
         text += `\n*Address Reference:* Gali No. 4, Balaji Mandir Road`;
 
         const encoded = encodeURIComponent(text);
+        showToast("Sending inquiry on WhatsApp...", "fa-brands fa-whatsapp");
         window.open(`https://wa.me/${STORE_DATA.whatsappNumber}?text=${encoded}`, '_blank');
     });
 }
@@ -753,6 +968,7 @@ function setupEmiCalculator() {
     const monthsSelect = document.getElementById('emiMonths');
     const resultEl = document.getElementById('emiMonthlyResult');
     const downPayEl = document.getElementById('emiDownPayment');
+    const emiWaBtn = document.querySelector('#emiModal .btn-whatsapp');
 
     if (openEmiBtn && emiModal) {
         openEmiBtn.addEventListener('click', () => emiModal.classList.add('active'));
@@ -773,10 +989,16 @@ function setupEmiCalculator() {
         let monthly = Math.round(amt / months);
         if (resultEl) resultEl.textContent = `₹${monthly.toLocaleString('en-IN')} / mo`;
         if (downPayEl) downPayEl.textContent = `₹0 (Zero Down Payment Special)`;
+
+        if (emiWaBtn) {
+            const msg = `Hi Siddhi Marketing, I want to apply for Easy 0% EMI financing for ₹${amt.toLocaleString('en-IN')} for ${months} Months (Estimated EMI: ₹${monthly.toLocaleString('en-IN')}/mo). Please guide me on documentation required.`;
+            emiWaBtn.href = `https://wa.me/${STORE_DATA.whatsappNumber}?text=${encodeURIComponent(msg)}`;
+        }
     };
 
     if (amountInput) amountInput.addEventListener('input', calculateEMI);
     if (monthsSelect) monthsSelect.addEventListener('change', calculateEMI);
+    calculateEMI();
 }
 
 /* ==========================================================================
@@ -1259,6 +1481,7 @@ function setupWriteReviewModal() {
             // Close modal & reset form
             modal.classList.remove('active');
             form.reset();
+            showToast("Thank you! Your Google Review has been published in preview mode.", "fa-star");
 
             // Smooth scroll page to reviews section
             const reviewsSec = document.getElementById('googleReviewsSection');
@@ -1268,4 +1491,28 @@ function setupWriteReviewModal() {
         });
     }
 }
+
+// ==========================================================================
+// EXPOSE ALL INTERACTIVE HANDLERS GLOBALLY ON WINDOW
+// Ensures 100% interoperability with inline HTML onclick handlers & modules
+// ==========================================================================
+window.addToCart = addToCart;
+window.removeFromCart = removeFromCart;
+window.changeQty = changeQty;
+window.openProductModal = openProductModal;
+window.closeProductModal = () => document.getElementById('productModal')?.classList.remove('active');
+window.filterCategory = filterCategory;
+window.toggleHelpful = toggleHelpful;
+window.scrollToReviewCard = scrollToReviewCard;
+window.openVisitingCard = () => document.getElementById('visitingCardModal')?.classList.add('active');
+window.closeVisitingCard = () => document.getElementById('visitingCardModal')?.classList.remove('active');
+window.openEmiModal = () => document.getElementById('emiModal')?.classList.add('active');
+window.closeEmiModal = () => document.getElementById('emiModal')?.classList.remove('active');
+window.openCart = () => document.getElementById('cartDrawerOverlay')?.classList.add('active');
+window.closeCart = () => document.getElementById('cartDrawerOverlay')?.classList.remove('active');
+window.openWriteReview = () => document.getElementById('writeReviewModal')?.classList.add('active');
+window.closeWriteReview = () => document.getElementById('writeReviewModal')?.classList.remove('active');
+window.sendCartToWhatsApp = sendCartToWhatsApp;
+window.showToast = showToast;
+
 
