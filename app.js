@@ -181,6 +181,146 @@ const PRODUCTS = [
         image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&auto=format&fit=crop&q=80",
         specs: ["Heavy Duty Wall Bracket Included", "Professional Drill & Fitting", "Hide Wire Management", "Safety Load Tested"],
         description: "Professional wall installation for 32 Inch to 75 Inch Smart TVs with heavy gauge tiltable wall mounts."
+    },
+    {
+        id: "p13",
+        name: "Apple iPhone 16 (128GB, Dynamic Island)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 69900,
+        originalPrice: 89900,
+        discount: "₹20,000 OFF",
+        badge: "FESTIVE DEAL",
+        rating: 5.0,
+        image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&auto=format&fit=crop&q=80",
+        specs: ["A18 Chip & Apple Intelligence", "48MP Fusion Camera + Control", "Super Retina XDR OLED", "USB-C MagSafe Fast Charging", "128GB Storage"],
+        description: "Experience Apple's latest generation flagship with Camera Control button and Apple Intelligence. Verified authorized showroom rate from Mobile Station."
+    },
+    {
+        id: "p14",
+        name: "Apple iPhone 17 Pro Max (256GB Titanium)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 149900,
+        originalPrice: 149900,
+        discount: "SHOWROOM SPECIAL",
+        badge: "PRO MAX",
+        rating: 5.0,
+        image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600&auto=format&fit=crop&q=80",
+        specs: ["6.9\" Super Retina XDR 120Hz", "Grade 5 Titanium & A19 Pro", "48MP Pro Triple Camera", "Periscope Telephoto 5x Zoom", "256GB Fast Storage"],
+        description: "The pinnacle of smartphone innovation. Grade 5 titanium chassis, ultra-fast A19 Pro silicon, and industry-leading cinematic 4K Dolby Vision video."
+    },
+    {
+        id: "p15",
+        name: "Nothing Phone 3 (5G) (12GB RAM, 256GB)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 79999,
+        originalPrice: 89999,
+        discount: "₹10,000 OFF",
+        badge: "TRUE FLAGSHIP",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80",
+        specs: ["Snapdragon 8s Flagship Chip", "2026 Glyph Matrix LED Interface", "50MP Dual OIS Optics", "12GB RAM + 256GB Storage", "120Hz LTPO OLED Display"],
+        description: "Nothing's flagship powerhouse with iconic transparent design and responsive Glyph Matrix lights. Complete brand warranty with authorized dealer invoice."
+    },
+    {
+        id: "p16",
+        name: "Nothing CMF Phone 1 (6GB RAM, 128GB)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 15999,
+        originalPrice: 19999,
+        discount: "20% OFF",
+        badge: "MODULAR ICON",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+        specs: ["Interchangeable Back Case", "MediaTek Dimensity 7300 5G", "50MP Sony Ultra-Clear Cam", "120Hz Super AMOLED Screen", "5000 mAh 33W Fast Charge"],
+        description: "Unique modular back cover with accessory attachment point. Vibrant 120Hz AMOLED display and powerful 5G MediaTek processing."
+    },
+    {
+        id: "p17",
+        name: "Xiaomi Redmi Note 15 Pro+ 5G (12GB/256GB)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 41999,
+        originalPrice: 47999,
+        discount: "₹6,000 OFF",
+        badge: "120W HYPER",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1567581935884-3349723552ca?w=600&auto=format&fit=crop&q=80",
+        specs: ["120W HyperCharge (19 Mins)", "200MP OIS Camera System", "1.5K 120Hz Curved AMOLED", "12GB RAM + 256GB Storage", "IP68 Water Resistance"],
+        description: "Unmatched performance with 120W blazing charge and 200MP detail. Includes official 1-year brand warranty and free tempered glass application."
+    },
+    {
+        id: "p18",
+        name: "POCO M8 5G (8GB RAM, 256GB Storage)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 28999,
+        originalPrice: 33999,
+        discount: "15% OFF",
+        badge: "2026 FLAGSHIP",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop&q=80",
+        specs: ["2026 M8 Turbo 5G Chipset", "120Hz Fluid AMOLED Display", "64MP OIS Dual Camera", "8GB RAM + 256GB Storage", "67W Fast Turbo Charger"],
+        description: "2026 POCO Flagship speed monster with huge storage and vibrant high refresh AMOLED screen. October festive scheme rate."
+    },
+    {
+        id: "p19",
+        name: "POCO C75 5G (4GB RAM, 128GB Storage)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 11499,
+        originalPrice: 14499,
+        discount: "21% OFF",
+        badge: "5G POPULAR",
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1533228100845-08145b01de14?w=600&auto=format&fit=crop&q=80",
+        specs: ["Fast 5G Dual SIM", "50MP AI Dual Camera", "6.88\" 120Hz Eye-Care Screen", "4GB RAM + 128GB Storage", "5160 mAh Massive Battery"],
+        description: "Affordable 5G speed with large immersive display and all-day battery life. Ideal budget smartphone with reliable service support."
+    },
+    {
+        id: "p20",
+        name: "Lava Blaze Dragon 5G (6GB RAM, 128GB)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 15499,
+        originalPrice: 18499,
+        discount: "16% OFF",
+        badge: "DRAGON 5G",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=600&auto=format&fit=crop&q=80",
+        specs: ["Blaze Fast 5G Speed", "Clean Bloatware-Free Android", "50MP AI Clear Night Camera", "6GB RAM + 128GB Storage", "Premium Glass Back Finish"],
+        description: "Proudly Indian crafted with zero bloatware and clean pure Android experience. High quality glass finish and smooth performance."
+    },
+    {
+        id: "p21",
+        name: "itel Color Pro 5G (6GB RAM, 128GB)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 9999,
+        originalPrice: 12499,
+        discount: "20% OFF",
+        badge: "COLOR PRO 5G",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=80",
+        specs: ["Color-Changing Sun-Sensitive Back", "Fast 5G Dual Standby", "50MP Ultra Clear Camera", "6GB RAM + 128GB Storage", "18W Fast USB-C Charging"],
+        description: "Unique chameleon color-changing back panel under sunlight. Most affordable 6GB+128GB 5G smartphone in town."
+    },
+    {
+        id: "p22",
+        name: "Apple 13\" MacBook Air M5 (16GB RAM, 512GB SSD)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 149900,
+        originalPrice: 149900,
+        discount: "M5 SILICON",
+        badge: "M5 AIR",
+        rating: 5.0,
+        image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+        specs: ["Apple M5 Silicon Next-Gen", "16GB Unified RAM Memory", "512GB High-Speed SSD", "13.6\" Liquid Retina Display", "18-Hour Battery Life"],
+        description: "Powerhouse efficiency in an impossibly thin fanless design. Official Indian billing with Apple India warranty."
     }
 ];
 
@@ -203,6 +343,7 @@ function initApp() {
     setupInquiryForm();
     setupEmiCalculator();
     setupGoogleReviews();
+    initPricingSection();
 }
 
 // Vesper-Inspired Entrance Animations & Fallback
@@ -299,6 +440,7 @@ function setupNavigation() {
         { id: 'mainHeader', nav: 'home' },
         { id: 'aboutSection', nav: 'about' },
         { id: 'productsSection', nav: 'products' },
+        { id: 'pricingSection', nav: 'pricing' },
         { id: 'servicesSection', nav: 'services' },
         { id: 'googleReviewsSection', nav: 'reviews' },
         { id: 'contactSection', nav: 'contact' }
@@ -827,7 +969,28 @@ function openProductModal(productId) {
 
 // Cart Logic
 function addToCart(productId) {
-    const product = PRODUCTS.find(p => p.id === productId);
+    let product = PRODUCTS.find(p => p.id === productId);
+    
+    // Support adding items directly from OFFICIAL_PRICE_LIST_2026 (Mobile Station rate sheets)
+    if (!product && typeof OFFICIAL_PRICE_LIST_2026 !== 'undefined') {
+        const rateItem = OFFICIAL_PRICE_LIST_2026.find(i => i.id === productId);
+        if (rateItem) {
+            product = {
+                id: rateItem.id,
+                name: `${rateItem.model} (${rateItem.specs})`,
+                category: rateItem.category || 'gadgets',
+                categoryLabel: rateItem.brand,
+                price: rateItem.mop,
+                originalPrice: rateItem.mrp || rateItem.mop,
+                discount: rateItem.mrp > rateItem.mop ? `Save ₹${(rateItem.mrp - rateItem.mop).toLocaleString('en-IN')}` : 'Festive Rate',
+                badge: rateItem.badge || 'FESTIVE',
+                image: getPricingDeviceImage(rateItem),
+                specs: [rateItem.specs, `Scheme: ${rateItem.schemePeriod}`],
+                description: `${rateItem.model} - ${rateItem.specs}. Verified October 2026 Festive Showroom Rate Sheet.`
+            };
+        }
+    }
+
     if (!product) return;
 
     const existingIndex = cart.findIndex(item => item.id === productId);
@@ -1492,6 +1655,417 @@ function setupWriteReviewModal() {
     }
 }
 
+/* ==========================================================================
+   OFFICIAL SHOWROOM BRAND PRICING ENGINE (OCTOBER 2026 FESTIVE RATE SHEETS)
+   Mobile Station Authorized Rates Integration for Siddhi Marketing
+   ========================================================================== */
+
+let pricingActiveBrand = 'all';
+let pricingActiveCategory = 'all';
+let pricingSearchQuery = '';
+let pricingSort = 'featured';
+let pricingViewMode = 'cards'; // 'cards' or 'table'
+
+// Helper for device fallback images based on brand & type
+function getPricingDeviceImage(item) {
+    const brand = (item.brand || '').toLowerCase();
+    const cat = (item.category || '').toLowerCase();
+    const model = (item.model || '').toLowerCase();
+
+    if (brand.includes('apple')) {
+        if (model.includes('macbook') || model.includes('mbp') || model.includes('mac mini')) {
+            return 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80';
+        }
+        if (model.includes('ipad')) {
+            return 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop&q=80';
+        }
+        if (model.includes('watch')) {
+            return 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop&q=80';
+        }
+        if (model.includes('airpods')) {
+            return 'https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&auto=format&fit=crop&q=80';
+        }
+        return 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&auto=format&fit=crop&q=80';
+    }
+    if (brand.includes('nothing') || brand.includes('cmf')) {
+        return 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80';
+    }
+    if (brand.includes('xiaomi') || brand.includes('redmi')) {
+        if (cat === 'tablets') {
+            return 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop&q=80';
+        }
+        return 'https://images.unsplash.com/photo-1567581935884-3349723552ca?w=600&auto=format&fit=crop&q=80';
+    }
+    if (brand.includes('poco')) {
+        return 'https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop&q=80';
+    }
+    if (brand.includes('lava')) {
+        return 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=600&auto=format&fit=crop&q=80';
+    }
+    if (brand.includes('itel')) {
+        if (cat === 'tablets') {
+            return 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop&q=80';
+        }
+        return 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=80';
+    }
+    return 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80';
+}
+
+function initPricingSection() {
+    const container = document.getElementById('pricingDisplayContainer');
+    if (!container) return; // Exit gracefully if section is not present
+
+    setupPricingEventListeners();
+    renderPricingList();
+}
+
+function setupPricingEventListeners() {
+    // Brand Filter Buttons
+    document.querySelectorAll('.pricing-brand-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.pricing-brand-pill').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            pricingActiveBrand = btn.dataset.brand || 'all';
+            renderPricingList();
+        });
+    });
+
+    // Category / Device Type Filter Buttons
+    document.querySelectorAll('.pricing-cat-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.pricing-cat-pill').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            pricingActiveCategory = btn.dataset.category || 'all';
+            renderPricingList();
+        });
+    });
+
+    // Search Input
+    const searchInput = document.getElementById('pricingSearchInput');
+    const searchClear = document.getElementById('pricingSearchClear');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            pricingSearchQuery = e.target.value.trim().toLowerCase();
+            if (searchClear) searchClear.style.display = pricingSearchQuery ? 'block' : 'none';
+            renderPricingList();
+        });
+    }
+    if (searchClear && searchInput) {
+        searchClear.addEventListener('click', () => {
+            searchInput.value = '';
+            pricingSearchQuery = '';
+            searchClear.style.display = 'none';
+            searchInput.focus();
+            renderPricingList();
+        });
+    }
+
+    // Sort Dropdown
+    const sortSelect = document.getElementById('pricingSortSelect');
+    if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+            pricingSort = e.target.value;
+            renderPricingList();
+        });
+    }
+
+    // View Mode Switcher
+    const viewCardsBtn = document.getElementById('pricingViewCardsBtn');
+    const viewTableBtn = document.getElementById('pricingViewTableBtn');
+
+    if (viewCardsBtn) {
+        viewCardsBtn.addEventListener('click', () => {
+            pricingViewMode = 'cards';
+            viewCardsBtn.classList.add('active');
+            if (viewTableBtn) viewTableBtn.classList.remove('active');
+            renderPricingList();
+        });
+    }
+
+    if (viewTableBtn) {
+        viewTableBtn.addEventListener('click', () => {
+            pricingViewMode = 'table';
+            viewTableBtn.classList.add('active');
+            if (viewCardsBtn) viewCardsBtn.classList.remove('active');
+            renderPricingList();
+        });
+    }
+}
+
+function renderPricingList() {
+    const container = document.getElementById('pricingDisplayContainer');
+    const countEl = document.getElementById('pricingResultCount');
+    if (!container) return;
+
+    if (typeof OFFICIAL_PRICE_LIST_2026 === 'undefined' || !Array.isArray(OFFICIAL_PRICE_LIST_2026)) {
+        container.innerHTML = `
+            <div class="pricing-empty-state">
+                <i class="fa-solid fa-triangle-exclamation" style="font-size:2rem; color:var(--primary-red); margin-bottom:12px;"></i>
+                <p>Price list data is currently loading. Please refresh the page.</p>
+            </div>
+        `;
+        return;
+    }
+
+    // Filter Items
+    let items = OFFICIAL_PRICE_LIST_2026.filter(item => {
+        // Brand filter
+        if (pricingActiveBrand !== 'all') {
+            const b = (item.brand || '').toLowerCase();
+            const target = pricingActiveBrand.toLowerCase();
+            if (target === 'apple' && !b.includes('apple')) return false;
+            if (target === 'nothing' && !(b.includes('nothing') || (item.subBrand && item.subBrand.toLowerCase().includes('cmf')))) return false;
+            if (target === 'xiaomi' && !(b.includes('xiaomi') || b.includes('redmi'))) return false;
+            if (target === 'poco' && !b.includes('poco')) return false;
+            if (target === 'lava' && !b.includes('lava')) return false;
+            if (target === 'itel' && !b.includes('itel')) return false;
+        }
+
+        // Category filter
+        if (pricingActiveCategory !== 'all') {
+            const cat = (item.category || '').toLowerCase();
+            if (pricingActiveCategory === 'smartphones' && cat !== 'smartphones') return false;
+            if (pricingActiveCategory === 'laptops' && cat !== 'laptops') return false;
+            if (pricingActiveCategory === 'tablets' && cat !== 'tablets') return false;
+            if (pricingActiveCategory === 'audio-wearables' && !(cat === 'wearables' || cat === 'audio')) return false;
+        }
+
+        // Search Query
+        if (pricingSearchQuery) {
+            const text = `${item.brand} ${item.subBrand || ''} ${item.model} ${item.specs} ${item.badge || ''}`.toLowerCase();
+            if (!text.includes(pricingSearchQuery)) return false;
+        }
+
+        return true;
+    });
+
+    // Sorting
+    if (pricingSort === 'price-low') {
+        items.sort((a, b) => a.mop - b.mop);
+    } else if (pricingSort === 'price-high') {
+        items.sort((a, b) => b.mop - a.mop);
+    } else if (pricingSort === 'savings') {
+        items.sort((a, b) => ((b.mrp || b.mop) - b.mop) - ((a.mrp || a.mop) - a.mop));
+    }
+
+    // Update count display
+    if (countEl) {
+        countEl.innerHTML = `Showing <strong>${items.length}</strong> of <strong>${OFFICIAL_PRICE_LIST_2026.length}</strong> verified devices`;
+    }
+
+    if (items.length === 0) {
+        container.innerHTML = `
+            <div class="pricing-empty-state">
+                <i class="fa-solid fa-magnifying-glass" style="font-size:2.4rem; color:var(--text-muted); margin-bottom:12px;"></i>
+                <h4>No matching devices found</h4>
+                <p>Try searching with another keyword (e.g. "iPhone", "Note 15", "5G", "128GB") or reset filters.</p>
+                <button class="btn btn-primary" onclick="resetPricingFilters()" style="margin-top:14px;">
+                    <i class="fa-solid fa-rotate-left"></i> Reset All Filters
+                </button>
+            </div>
+        `;
+        return;
+    }
+
+    if (pricingViewMode === 'table') {
+        renderPricingTable(items, container);
+    } else {
+        renderPricingCards(items, container);
+    }
+}
+
+function renderPricingCards(items, container) {
+    container.innerHTML = `
+        <div class="pricing-cards-grid">
+            ${items.map(item => {
+                const savings = (item.mrp || item.mop) - item.mop;
+                const monthlyEmi = Math.round(item.mop / 6);
+                const img = getPricingDeviceImage(item);
+                const brandClass = item.brand.toLowerCase().replace(/[^a-z0-9]/g, '-');
+                
+                return `
+                    <div class="pricing-device-card" data-id="${item.id}">
+                        <div class="device-card-header">
+                            <span class="device-brand-badge brand-${brandClass}">${item.brand}</span>
+                            <span class="device-scheme-pill"><i class="fa-solid fa-calendar-check"></i> ${item.schemePeriod.includes('Festive') ? 'Festive Scheme' : 'Oct Rate Sheet'}</span>
+                        </div>
+
+                        <div class="device-card-visual" onclick="openEmiWithAmount(${item.mop})" title="Click to calculate 0% EMI">
+                            <img src="${img}" alt="${item.model}" class="device-img" loading="lazy">
+                            ${item.badge ? `<span class="device-badge-tag">${item.badge}</span>` : ''}
+                        </div>
+
+                        <div class="device-card-body">
+                            <h3 class="device-model-name">${item.model}</h3>
+                            <div class="device-specs-chip"><i class="fa-solid fa-microchip"></i> ${item.specs}</div>
+
+                            <div class="device-pricing-box">
+                                <div class="device-mop-wrap">
+                                    <span class="mop-label">SHOWROOM MOP</span>
+                                    <span class="mop-amount">₹${item.mop.toLocaleString('en-IN')}</span>
+                                </div>
+                                ${item.mrp && item.mrp > item.mop ? `
+                                    <div class="device-mrp-wrap">
+                                        <span class="mrp-strikethrough">MRP ₹${item.mrp.toLocaleString('en-IN')}</span>
+                                        <span class="savings-tag">Save ₹${savings.toLocaleString('en-IN')}</span>
+                                    </div>
+                                ` : `
+                                    <div class="device-mrp-wrap">
+                                        <span class="savings-tag official-rate-tag">Official Brand MOP</span>
+                                    </div>
+                                `}
+                            </div>
+
+                            <div class="device-emi-calc-pill" onclick="openEmiWithAmount(${item.mop})" title="Click for EMI breakdown">
+                                <i class="fa-solid fa-calculator text-red"></i>
+                                <span>Zero-Down EMI from <strong>₹${monthlyEmi.toLocaleString('en-IN')}/mo</strong></span>
+                            </div>
+
+                            <div class="device-actions-row">
+                                <button class="btn btn-primary btn-block" onclick="addToCart('${item.id}')" title="Add to Siddhi Marketing Quote Cart">
+                                    <i class="fa-solid fa-cart-plus"></i> Add to Quote
+                                </button>
+                                <button class="btn btn-whatsapp-icon" onclick="inquirePricingWhatsApp('${item.id}')" title="Inquire on WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </button>
+                                <button class="btn btn-icon-glass" onclick="openEmiWithAmount(${item.mop})" title="Calculate 0% EMI">
+                                    <i class="fa-solid fa-calculator"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('')}
+        </div>
+    `;
+}
+
+function renderPricingTable(items, container) {
+    container.innerHTML = `
+        <div class="pricing-table-wrapper">
+            <table class="pricing-rate-table">
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Device Model & Variant</th>
+                        <th>Key Specifications</th>
+                        <th>Showroom MOP</th>
+                        <th>MRP</th>
+                        <th>Scheme Period</th>
+                        <th>Zero-Down EMI</th>
+                        <th style="text-align:center;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${items.map(item => {
+                        const monthlyEmi = Math.round(item.mop / 6);
+                        const savings = (item.mrp || item.mop) - item.mop;
+                        return `
+                            <tr class="pricing-table-row">
+                                <td>
+                                    <span class="table-brand-pill">${item.brand}</span>
+                                </td>
+                                <td>
+                                    <div class="table-model-wrap">
+                                        <strong>${item.model}</strong>
+                                        ${item.badge ? `<span class="table-badge-mini">${item.badge}</span>` : ''}
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="table-specs-text">${item.specs}</span>
+                                </td>
+                                <td>
+                                    <span class="table-mop-price">₹${item.mop.toLocaleString('en-IN')}</span>
+                                </td>
+                                <td>
+                                    ${item.mrp && item.mrp > item.mop ? `
+                                        <div class="table-mrp-group">
+                                            <span class="table-mrp-strike">₹${item.mrp.toLocaleString('en-IN')}</span>
+                                            <span class="table-save-tag">-₹${savings.toLocaleString('en-IN')}</span>
+                                        </div>
+                                    ` : `<span class="text-muted">₹${item.mop.toLocaleString('en-IN')}</span>`}
+                                </td>
+                                <td>
+                                    <span class="table-scheme-badge"><i class="fa-solid fa-clock"></i> ${item.schemePeriod}</span>
+                                </td>
+                                <td>
+                                    <button class="table-emi-btn" onclick="openEmiWithAmount(${item.mop})">
+                                        ₹${monthlyEmi.toLocaleString('en-IN')}/mo
+                                    </button>
+                                </td>
+                                <td>
+                                    <div class="table-actions-cell">
+                                        <button class="table-btn-quote" onclick="addToCart('${item.id}')" title="Add to Quote Cart">
+                                            <i class="fa-solid fa-cart-plus"></i> Quote
+                                        </button>
+                                        <button class="table-btn-wa" onclick="inquirePricingWhatsApp('${item.id}')" title="Inquire on WhatsApp">
+                                            <i class="fa-brands fa-whatsapp"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        `;
+                    }).join('')}
+                </tbody>
+            </table>
+        </div>
+    `;
+}
+
+function resetPricingFilters() {
+    pricingActiveBrand = 'all';
+    pricingActiveCategory = 'all';
+    pricingSearchQuery = '';
+    pricingSort = 'featured';
+
+    const searchInput = document.getElementById('pricingSearchInput');
+    const searchClear = document.getElementById('pricingSearchClear');
+    const sortSelect = document.getElementById('pricingSortSelect');
+
+    if (searchInput) searchInput.value = '';
+    if (searchClear) searchClear.style.display = 'none';
+    if (sortSelect) sortSelect.value = 'featured';
+
+    document.querySelectorAll('.pricing-brand-pill').forEach(b => {
+        b.classList.toggle('active', b.dataset.brand === 'all');
+    });
+    document.querySelectorAll('.pricing-cat-pill').forEach(b => {
+        b.classList.toggle('active', b.dataset.category === 'all');
+    });
+
+    renderPricingList();
+}
+
+function openEmiWithAmount(amt) {
+    const emiModal = document.getElementById('emiModal');
+    const amountInput = document.getElementById('emiAmount');
+    if (amountInput) {
+        amountInput.value = amt;
+        // Trigger calculate
+        amountInput.dispatchEvent(new Event('input'));
+    }
+    if (emiModal) {
+        emiModal.classList.add('active');
+    }
+}
+
+function inquirePricingWhatsApp(itemId) {
+    if (typeof OFFICIAL_PRICE_LIST_2026 === 'undefined') return;
+    const item = OFFICIAL_PRICE_LIST_2026.find(i => i.id === itemId);
+    if (!item) return;
+
+    const msg = `Hello Siddhi Marketing,\n\nI want to inquire about the official festive pricing from your rate sheet:\n` +
+        `📱 *Device:* ${item.model}\n` +
+        `⚙️ *Specifications:* ${item.specs}\n` +
+        `🏷️ *Brand:* ${item.brand}\n` +
+        `💰 *Official MOP:* ₹${item.mop.toLocaleString('en-IN')}\n` +
+        (item.mrp && item.mrp > item.mop ? `🏷️ *MRP:* ₹${item.mrp.toLocaleString('en-IN')} (Festive Saving: ₹${(item.mrp - item.mop).toLocaleString('en-IN')})\n` : ``) +
+        `📅 *Scheme Period:* ${item.schemePeriod}\n\n` +
+        `Please confirm available colors, zero-down EMI options, and delivery to Gali No. 4, Balaji Mandir Road. Thank you!`;
+
+    window.open(`https://wa.me/${STORE_DATA.whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
 // ==========================================================================
 // EXPOSE ALL INTERACTIVE HANDLERS GLOBALLY ON WINDOW
 // Ensures 100% interoperability with inline HTML onclick handlers & modules
@@ -1514,5 +2088,11 @@ window.openWriteReview = () => document.getElementById('writeReviewModal')?.clas
 window.closeWriteReview = () => document.getElementById('writeReviewModal')?.classList.remove('active');
 window.sendCartToWhatsApp = sendCartToWhatsApp;
 window.showToast = showToast;
+window.initPricingSection = initPricingSection;
+window.renderPricingList = renderPricingList;
+window.resetPricingFilters = resetPricingFilters;
+window.openEmiWithAmount = openEmiWithAmount;
+window.inquirePricingWhatsApp = inquirePricingWhatsApp;
+
 
 

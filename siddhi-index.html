@@ -54,6 +54,7 @@
                 <a href="#mainHeader" class="nav-link active" data-nav="home"><i class="fa-solid fa-house"></i> <span>Home</span></a>
                 <a href="#aboutSection" class="nav-link" data-nav="about"><i class="fa-solid fa-store"></i> <span>About Us</span></a>
                 <a href="#productsSection" class="nav-link" data-nav="products"><i class="fa-solid fa-tv"></i> <span>Products</span></a>
+                <a href="#pricingSection" class="nav-link" data-nav="pricing"><i class="fa-solid fa-tags"></i> <span>Brand Pricing</span> <span class="nav-pill-badge" style="background:var(--primary-red);color:#fff;font-weight:700;">Festive</span></a>
                 <a href="#servicesSection" class="nav-link" data-nav="services"><i class="fa-solid fa-screwdriver-wrench"></i> <span>Services & EMI</span></a>
                 <a href="#googleReviewsSection" class="nav-link" data-nav="reviews"><i class="fa-brands fa-google"></i> <span>Reviews</span> <span class="nav-pill-badge">4.9★</span></a>
                 <a href="#contactSection" class="nav-link" data-nav="contact"><i class="fa-solid fa-location-dot"></i> <span>Contact</span></a>
@@ -113,6 +114,7 @@
             <a href="#mainHeader" class="mobile-nav-link active" data-nav="home"><i class="fa-solid fa-house"></i> <span>Home</span></a>
             <a href="#aboutSection" class="mobile-nav-link" data-nav="about"><i class="fa-solid fa-store"></i> <span>About Us</span></a>
             <a href="#productsSection" class="mobile-nav-link" data-nav="products"><i class="fa-solid fa-tv"></i> <span>Products Catalog</span></a>
+            <a href="#pricingSection" class="mobile-nav-link" data-nav="pricing"><i class="fa-solid fa-tags"></i> <span>Official Price List (Mobile Station)</span> <span style="background:var(--primary-red);color:#fff;font-size:0.7rem;padding:2px 7px;border-radius:10px;margin-left:6px;font-weight:700;">Oct '26</span></a>
             <a href="#servicesSection" class="mobile-nav-link" data-nav="services"><i class="fa-solid fa-screwdriver-wrench"></i> <span>Services & EMI Support</span></a>
             <a href="#googleReviewsSection" class="mobile-nav-link" data-nav="reviews"><i class="fa-brands fa-google"></i> <span>Google Reviews (4.9★)</span></a>
             <a href="#contactSection" class="mobile-nav-link" data-nav="contact"><i class="fa-solid fa-location-dot"></i> <span>Showroom Contact</span></a>
@@ -138,6 +140,7 @@
             <button class="nav-cat-btn" data-category="washing"><i class="fa-solid fa-soap"></i> Washing Machines</button>
             <button class="nav-cat-btn" data-category="gadgets"><i class="fa-solid fa-mobile-screen-button"></i> Mobiles & Laptops</button>
             <button class="nav-cat-btn" data-category="services"><i class="fa-solid fa-screwdriver-wrench"></i> Repair & Services</button>
+            <a href="#pricingSection" class="nav-cat-btn" style="border: 1px solid rgba(214,0,28,0.3); background: rgba(214,0,28,0.08); color: var(--primary-red); font-weight: 600;"><i class="fa-solid fa-tags text-red"></i> 2026 Price List <span class="nav-rating-pill" style="background:var(--primary-red);color:#fff;">LIVE</span></a>
             <a href="#googleReviewsSection" class="nav-cat-btn reviews-nav-link"><i class="fa-brands fa-google text-warning"></i> Reviews <span class="nav-rating-pill">4.9 ★</span></a>
         </div>
     </nav>
@@ -406,6 +409,124 @@
         </div>
     </section>
 
+    <!-- Official Brand Price List & Schemes Section (Mobile Station Authorized Rate Sheets) -->
+    <section class="pricing-section container" id="pricingSection">
+        <div class="pricing-header-card">
+            <div class="pricing-header-top">
+                <div>
+                    <span class="section-tag"><i class="fa-solid fa-shield-check"></i> AUTHORIZED SHOWROOM RATE SHEETS</span>
+                    <h2 class="section-title">Official Brand Price List &amp; Festive Schemes</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px; max-width: 740px;">
+                        Verified authorized showroom rates sourced directly from October 2026 rate sheets (Mobile Station partnership). Enjoy genuine brand warranty, 0% paperless EMI, instant exchange bonus, and same-day delivery to Gali No. 4, Balaji Mandir Road.
+                    </p>
+                </div>
+                <div class="pricing-validity-pill">
+                    <span class="pulse-dot"></span>
+                    <span>Valid: 01-OCT-26 to 31-OCT-26</span>
+                </div>
+            </div>
+
+            <!-- 4 Trust Pills -->
+            <div class="pricing-stats-strip">
+                <div class="pricing-stat-pill">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>120+ Verified Showroom Rates</span>
+                </div>
+                <div class="pricing-stat-pill">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>0% Paperless No-Cost EMI</span>
+                </div>
+                <div class="pricing-stat-pill">
+                    <i class="fa-solid fa-certificate"></i>
+                    <span>100% Genuine Brand Warranty</span>
+                </div>
+                <div class="pricing-stat-pill">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Instant WhatsApp Doorstep Booking</span>
+                </div>
+            </div>
+
+            <!-- Brand Filter Buttons -->
+            <div class="pricing-filter-group">
+                <span class="pricing-filter-label"><i class="fa-solid fa-filter"></i> Select Brand</span>
+                <div class="pricing-brand-pills-row" id="pricingBrandRow">
+                    <button class="pricing-brand-pill active" data-brand="all"><i class="fa-solid fa-border-all"></i> All Brands (120+)</button>
+                    <button class="pricing-brand-pill" data-brand="Apple"><i class="fa-brands fa-apple"></i> Apple (iPhone, Mac, iPad)</button>
+                    <button class="pricing-brand-pill" data-brand="Nothing"><i class="fa-solid fa-circle-dot"></i> Nothing &amp; CMF</button>
+                    <button class="pricing-brand-pill" data-brand="Xiaomi"><i class="fa-solid fa-bolt"></i> Xiaomi / Redmi</button>
+                    <button class="pricing-brand-pill" data-brand="POCO"><i class="fa-solid fa-fire"></i> POCO</button>
+                    <button class="pricing-brand-pill" data-brand="Lava"><i class="fa-solid fa-shield"></i> Lava</button>
+                    <button class="pricing-brand-pill" data-brand="itel"><i class="fa-solid fa-mobile"></i> itel</button>
+                </div>
+            </div>
+
+            <!-- Category / Device Type Filter Buttons -->
+            <div class="pricing-filter-group" style="margin-bottom: 0;">
+                <span class="pricing-filter-label"><i class="fa-solid fa-layer-group"></i> Device Category</span>
+                <div class="pricing-cat-pills-row" id="pricingCatRow">
+                    <button class="pricing-cat-pill active" data-category="all"><i class="fa-solid fa-grip"></i> All Types</button>
+                    <button class="pricing-cat-pill" data-category="smartphones"><i class="fa-solid fa-mobile-screen"></i> 5G &amp; Smartphones</button>
+                    <button class="pricing-cat-pill" data-category="laptops"><i class="fa-solid fa-laptop"></i> MacBooks &amp; Laptops</button>
+                    <button class="pricing-cat-pill" data-category="tablets"><i class="fa-solid fa-tablet-screen-button"></i> iPads &amp; Tablets</button>
+                    <button class="pricing-cat-pill" data-category="audio-wearables"><i class="fa-solid fa-headphones"></i> Apple Watch &amp; AirPods</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls Bar (Search, Result Count, Sort, View Toggle) -->
+        <div class="pricing-controls-bar">
+            <div class="pricing-search-wrap">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="pricingSearchInput" class="pricing-search-input" placeholder="Search model, specs, 5G, 256GB, Pro Max...">
+                <button id="pricingSearchClear" class="pricing-search-clear" title="Clear Search">&times;</button>
+            </div>
+
+            <div class="pricing-count-text" id="pricingResultCount">
+                Loading verified showroom rate items...
+            </div>
+
+            <div class="pricing-actions-group">
+                <select id="pricingSortSelect" class="pricing-sort-select" aria-label="Sort Devices">
+                    <option value="featured">Sort: Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="savings">Biggest Festive Discount</option>
+                </select>
+
+                <div class="pricing-view-toggle">
+                    <button class="view-toggle-btn active" id="pricingViewCardsBtn" title="Cards View">
+                        <i class="fa-solid fa-grip"></i>
+                    </button>
+                    <button class="view-toggle-btn" id="pricingViewTableBtn" title="Rate Sheet Table View">
+                        <i class="fa-solid fa-table-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Container for Cards or Rate Sheet Table -->
+        <div id="pricingDisplayContainer">
+            <!-- Dynamically rendered by app.js -->
+        </div>
+
+        <!-- Showroom Rate Guarantee Callout Box -->
+        <div style="margin-top: 30px; background: linear-gradient(135deg, rgba(214,0,28,0.06) 0%, rgba(37,211,102,0.06) 100%); border: 1px solid rgba(214,0,28,0.18); border-radius: var(--radius-md); padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--primary-gradient); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+                <div>
+                    <h4 style="font-size: 1.05rem; margin-bottom: 4px; color: var(--heading-color);">Showroom Price Guarantee &amp; GST Invoicing</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">All MOP prices strictly adhere to authorized October 2026 festive dealer sheets. 100% brand warranty stamp with original retail invoice.</p>
+                </div>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="btn btn-glass" onclick="openEmiModal()"><i class="fa-solid fa-calculator"></i> EMI Calculator</button>
+                <a href="https://wa.me/919876543210?text=Hello%20Siddhi%20Marketing,%20please%20send%20the%20latest%20October%202026%20Mobile%20Station%20rate%20sheet%20PDF." target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Concierge</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Services & EMI Calculator Banner -->
     <section class="services-banner container" id="servicesSection">
         <div class="services-wrapper">
@@ -598,6 +719,7 @@
                 <h4>Store Highlights</h4>
                 <ul>
                     <li><a href="#" id="footerVisitingCardLink">Digital Visiting Card</a></li>
+                    <li><a href="#pricingSection">Brand Price List &amp; Schemes</a></li>
                     <li><a href="#googleReviewsSection">Google Reviews (4.9★)</a></li>
                     <li><a href="#contactSection">Showroom Location</a></li>
                     <li><a href="#productsSection">Latest EMI Offers</a></li>
@@ -850,6 +972,7 @@
     </div>
 
     <!-- Custom JS -->
+    <script src="pricing-data.js"></script>
     <script type="module" src="app.js"></script>
 </body>
 </html>

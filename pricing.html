@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Showroom Price List &amp; Festive Schemes (October 2026) | Siddhi Marketing</title>
+    <meta name="description" content="Explore official verified showroom MOP rates, 0% paperless EMI, and festive schemes for Apple iPhone, Nothing, Xiaomi, POCO, Lava & itel at Siddhi Marketing.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&family=Instrument+Serif:ital@1&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/siddhimarketing.jpeg">
+    <link rel="apple-touch-icon" href="assets/siddhimarketing.jpeg">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-content">
+            <span><i class="fa-solid fa-bolt text-warning"></i> October 2026 Festive Scheme Period: 01-OCT-26 to 31-OCT-26 • 0% Paperless EMI Live</span>
+            <div class="top-contacts">
+                <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91 98765 43210</a>
+                <a href="mailto:siddhimarketing2017@gmail.com"><i class="fa-solid fa-envelope"></i> siddhimarketing2017@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header / Navigation -->
+    <header class="main-header" id="mainHeader">
+        <div class="container header-container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-logo" title="Siddhi Marketing Home">
+                <img src="assets/siddhimarketing.jpeg" alt="Siddhi Marketing Logo" class="logo-img" id="headerLogoImg">
+                <div class="brand-text">
+                    <div class="brand-name">
+                        <span class="brand-name-siddhi">SIDDHI</span>
+                        <span class="brand-name-marketing">MARKETING</span>
+                    </div>
+                    <span class="brand-tagline">YOUR ELECTRONIC PARTNER</span>
+                </div>
+            </a>
+
+            <!-- Navigation Tabs -->
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html" class="nav-link" data-nav="home"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+                <a href="index.html#aboutSection" class="nav-link" data-nav="about"><i class="fa-solid fa-store"></i> <span>About Us</span></a>
+                <a href="index.html#productsSection" class="nav-link" data-nav="products"><i class="fa-solid fa-tv"></i> <span>Products</span></a>
+                <a href="pricing.html" class="nav-link active" data-nav="pricing"><i class="fa-solid fa-tags"></i> <span>Brand Pricing</span> <span class="nav-pill-badge" style="background:var(--primary-red);color:#fff;font-weight:700;">Oct '26</span></a>
+                <a href="index.html#servicesSection" class="nav-link" data-nav="services"><i class="fa-solid fa-screwdriver-wrench"></i> <span>Services &amp; EMI</span></a>
+                <a href="index.html#googleReviewsSection" class="nav-link" data-nav="reviews"><i class="fa-brands fa-google"></i> <span>Reviews</span> <span class="nav-pill-badge">4.9★</span></a>
+                <a href="index.html#contactSection" class="nav-link" data-nav="contact"><i class="fa-solid fa-location-dot"></i> <span>Contact</span></a>
+            </nav>
+
+            <!-- Search Bar -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search TVs, ACs, Mobiles...">
+                <button id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <!-- Header Action Buttons -->
+            <div class="header-actions">
+                <button class="header-icon-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+
+                <button class="header-icon-btn" id="cartToggleBtn" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+
+                <a href="https://wa.me/919876543210?text=Hello%20Siddhi%20Marketing,%20I%20have%20an%20inquiry%20regarding%20the%20October%202026%20Price%20List." target="_blank" class="btn-header-wa" title="WhatsApp Chat">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Inquire</span>
+                </a>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer Overlay & Menu -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <div class="mobile-nav-header">
+            <div class="brand-logo">
+                <img src="assets/siddhimarketing.jpeg" alt="Siddhi Marketing" class="logo-img">
+                <div class="brand-text">
+                    <div class="brand-name">
+                        <span class="brand-name-siddhi">SIDDHI</span>
+                        <span class="brand-name-marketing">MARKETING</span>
+                    </div>
+                    <span class="brand-tagline">YOUR ELECTRONIC PARTNER</span>
+                </div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Navigation Menu">&times;</button>
+        </div>
+
+        <nav class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+            <a href="index.html#aboutSection" class="mobile-nav-link"><i class="fa-solid fa-store"></i> <span>About Us</span></a>
+            <a href="index.html#productsSection" class="mobile-nav-link"><i class="fa-solid fa-tv"></i> <span>Products Catalog</span></a>
+            <a href="pricing.html" class="mobile-nav-link active"><i class="fa-solid fa-tags"></i> <span>Official Price List (Mobile Station)</span> <span style="background:var(--primary-red);color:#fff;font-size:0.7rem;padding:2px 7px;border-radius:10px;margin-left:6px;font-weight:700;">Oct '26</span></a>
+            <a href="index.html#servicesSection" class="mobile-nav-link"><i class="fa-solid fa-screwdriver-wrench"></i> <span>Services &amp; EMI Support</span></a>
+            <a href="index.html#googleReviewsSection" class="mobile-nav-link"><i class="fa-brands fa-google"></i> <span>Google Reviews (4.9★)</span></a>
+            <a href="index.html#contactSection" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> <span>Showroom Contact</span></a>
+        </nav>
+
+        <div class="mobile-nav-footer">
+            <a href="tel:+919876543210" class="btn btn-primary btn-block"><i class="fa-solid fa-phone"></i> Call +91 98765 43210</a>
+            <a href="https://wa.me/919876543210?text=Hello%20Siddhi%20Marketing" target="_blank" class="btn btn-whatsapp btn-block"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+            <div class="mobile-store-info">
+                <p><i class="fa-solid fa-location-dot text-red"></i> Gali No. 4, Balaji Mandir Road</p>
+                <p><i class="fa-solid fa-clock text-red"></i> 10:00 AM - 9:30 PM (All Days)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Official Brand Price List & Schemes Section -->
+    <main class="pricing-section container" id="pricingSection" style="margin-top: 30px;">
+        <div class="pricing-header-card">
+            <div class="pricing-header-top">
+                <div>
+                    <span class="section-tag"><i class="fa-solid fa-shield-check"></i> AUTHORIZED SHOWROOM RATE SHEETS</span>
+                    <h1 class="section-title" style="margin-top: 4px;">Official Brand Price List &amp; Festive Schemes</h1>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px; max-width: 760px;">
+                        Verified authorized showroom rates sourced directly from October 2026 dealer rate sheets (Mobile Station partnership). Enjoy genuine brand warranty, 0% paperless EMI, instant exchange bonus, and same-day delivery to Gali No. 4, Balaji Mandir Road.
+                    </p>
+                </div>
+                <div class="pricing-validity-pill">
+                    <span class="pulse-dot"></span>
+                    <span>Valid: 01-OCT-26 to 31-OCT-26</span>
+                </div>
+            </div>
+
+            <!-- 4 Trust Pills -->
+            <div class="pricing-stats-strip">
+                <div class="pricing-stat-pill">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>120+ Verified Showroom Rates</span>
+                </div>
+                <div class="pricing-stat-pill">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>0% Paperless No-Cost EMI</span>
+                </div>
+                <div class="pricing-stat-pill">
+                    <i class="fa-solid fa-certificate"></i>
+                    <span>100% Genuine Brand Warranty</span>
+                </div>
+                <div class="pricing-stat-pill">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Instant WhatsApp Doorstep Booking</span>
+                </div>
+            </div>
+
+            <!-- Brand Filter Buttons -->
+            <div class="pricing-filter-group">
+                <span class="pricing-filter-label"><i class="fa-solid fa-filter"></i> Select Brand</span>
+                <div class="pricing-brand-pills-row" id="pricingBrandRow">
+                    <button class="pricing-brand-pill active" data-brand="all"><i class="fa-solid fa-border-all"></i> All Brands (120+)</button>
+                    <button class="pricing-brand-pill" data-brand="Apple"><i class="fa-brands fa-apple"></i> Apple (iPhone, Mac, iPad)</button>
+                    <button class="pricing-brand-pill" data-brand="Nothing"><i class="fa-solid fa-circle-dot"></i> Nothing &amp; CMF</button>
+                    <button class="pricing-brand-pill" data-brand="Xiaomi"><i class="fa-solid fa-bolt"></i> Xiaomi / Redmi</button>
+                    <button class="pricing-brand-pill" data-brand="POCO"><i class="fa-solid fa-fire"></i> POCO</button>
+                    <button class="pricing-brand-pill" data-brand="Lava"><i class="fa-solid fa-shield"></i> Lava</button>
+                    <button class="pricing-brand-pill" data-brand="itel"><i class="fa-solid fa-mobile"></i> itel</button>
+                </div>
+            </div>
+
+            <!-- Category / Device Type Filter Buttons -->
+            <div class="pricing-filter-group" style="margin-bottom: 0;">
+                <span class="pricing-filter-label"><i class="fa-solid fa-layer-group"></i> Device Category</span>
+                <div class="pricing-cat-pills-row" id="pricingCatRow">
+                    <button class="pricing-cat-pill active" data-category="all"><i class="fa-solid fa-grip"></i> All Types</button>
+                    <button class="pricing-cat-pill" data-category="smartphones"><i class="fa-solid fa-mobile-screen"></i> 5G &amp; Smartphones</button>
+                    <button class="pricing-cat-pill" data-category="laptops"><i class="fa-solid fa-laptop"></i> MacBooks &amp; Laptops</button>
+                    <button class="pricing-cat-pill" data-category="tablets"><i class="fa-solid fa-tablet-screen-button"></i> iPads &amp; Tablets</button>
+                    <button class="pricing-cat-pill" data-category="audio-wearables"><i class="fa-solid fa-headphones"></i> Apple Watch &amp; AirPods</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls Bar (Search, Result Count, Sort, View Toggle) -->
+        <div class="pricing-controls-bar">
+            <div class="pricing-search-wrap">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="pricingSearchInput" class="pricing-search-input" placeholder="Search model, specs, 5G, 256GB, Pro Max...">
+                <button id="pricingSearchClear" class="pricing-search-clear" title="Clear Search">&times;</button>
+            </div>
+
+            <div class="pricing-count-text" id="pricingResultCount">
+                Loading verified showroom rate items...
+            </div>
+
+            <div class="pricing-actions-group">
+                <select id="pricingSortSelect" class="pricing-sort-select" aria-label="Sort Devices">
+                    <option value="featured">Sort: Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="savings">Biggest Festive Discount</option>
+                </select>
+
+                <div class="pricing-view-toggle">
+                    <button class="view-toggle-btn active" id="pricingViewCardsBtn" title="Cards View">
+                        <i class="fa-solid fa-grip"></i>
+                    </button>
+                    <button class="view-toggle-btn" id="pricingViewTableBtn" title="Rate Sheet Table View">
+                        <i class="fa-solid fa-table-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Container for Cards or Rate Sheet Table -->
+        <div id="pricingDisplayContainer">
+            <!-- Dynamically rendered by app.js -->
+        </div>
+
+        <!-- Showroom Rate Guarantee Callout Box -->
+        <div style="margin-top: 30px; background: linear-gradient(135deg, rgba(214,0,28,0.06) 0%, rgba(37,211,102,0.06) 100%); border: 1px solid rgba(214,0,28,0.18); border-radius: var(--radius-md); padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--primary-gradient); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+                <div>
+                    <h4 style="font-size: 1.05rem; margin-bottom: 4px; color: var(--heading-color);">Showroom Price Guarantee &amp; GST Invoicing</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">All MOP prices strictly adhere to authorized October 2026 festive dealer sheets. 100% brand warranty stamp with original retail invoice.</p>
+                </div>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="btn btn-glass" onclick="openEmiModal()"><i class="fa-solid fa-calculator"></i> EMI Calculator</button>
+                <a href="https://wa.me/919876543210?text=Hello%20Siddhi%20Marketing,%20please%20send%20the%20latest%20October%202026%20Mobile%20Station%20rate%20sheet%20PDF." target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Concierge</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Shopping Cart Drawer Modal -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+        <div class="cart-drawer" id="cartDrawer">
+            <div class="cart-header">
+                <h3><i class="fa-solid fa-cart-shopping"></i> Store Quote Cart</h3>
+                <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+            </div>
+            <div class="cart-body" id="cartItemsContainer">
+                <!-- Cart Items Rendered Here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total-row">
+                    <span>Estimated Total:</span>
+                    <span class="cart-total-price" id="cartTotalPrice">₹0</span>
+                </div>
+                <p class="cart-note"><i class="fa-solid fa-circle-info"></i> Direct order quote will be generated for WhatsApp inquiry.</p>
+                <button class="btn btn-whatsapp btn-block" id="whatsappCheckoutBtn"><i class="fa-brands fa-whatsapp"></i> Send Order Quote on WhatsApp</button>
+                <button class="btn btn-glass btn-block" id="clearCartBtn" style="margin-top: 8px;">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EMI Calculator Modal -->
+    <div class="modal-overlay" id="emiModal">
+        <div class="modal-content emi-modal-content">
+            <button class="modal-close" id="closeEmiModal">&times;</button>
+            <div class="emi-modal-body">
+                <h3><i class="fa-solid fa-calculator text-cyan"></i> Instant EMI Calculator</h3>
+                <p>Calculate your easy monthly installment for buying electronics at Siddhi Marketing</p>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label>Product Amount (₹)</label>
+                    <input type="number" id="emiAmount" value="35000" min="5000" max="300000" step="1000">
+                </div>
+                <div class="form-group">
+                    <label>Tenure (Months)</label>
+                    <select id="emiMonths">
+                        <option value="3">3 Months (0% No-Cost EMI)</option>
+                        <option value="6" selected>6 Months (0% No-Cost EMI)</option>
+                        <option value="9">9 Months</option>
+                        <option value="12">12 Months</option>
+                    </select>
+                </div>
+                <div class="emi-results-box" style="margin-top: 15px; padding: 15px; background: var(--silver-bg); border-radius: 8px; border: 1px solid var(--border-light);">
+                    <div style="display:flex; justify-content:space-between; margin-bottom: 8px;">
+                        <span>Estimated Monthly EMI:</span>
+                        <strong id="emiMonthlyResult" style="color: var(--primary-red); font-size: 1.2rem;">₹5,833 / mo</strong>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; font-size: 0.85rem; color: var(--text-muted);">
+                        <span>Down Payment:</span>
+                        <span id="emiDownPayment">₹0 (Zero Down Payment Special)</span>
+                    </div>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px;">
+                    *0% No-Cost EMI approval in 10 minutes with Bajaj Finserv, HDFC Bank, TVS Credit or Credit Card.
+                </p>
+                <div style="margin-top: 18px; display: flex; gap: 10px;">
+                    <a href="https://wa.me/919876543210?text=Hello%20Siddhi%20Marketing,%20I%20want%20to%20apply%20for%200%25%20EMI." target="_blank" class="btn btn-whatsapp btn-block"><i class="fa-brands fa-whatsapp"></i> Apply via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer" style="margin-top: 60px;">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/siddhimarketing.jpeg" alt="Siddhi Marketing" id="footerLogoImg">
+                    <div>
+                        <div class="brand-name">
+                            <span class="brand-name-siddhi">SIDDHI</span>
+                            <span class="brand-name-marketing" style="color:#ffffff;">MARKETING</span>
+                        </div>
+                        <span class="brand-tagline" style="color:#94a3b8; font-size:0.68rem; letter-spacing:1px;">YOUR ELECTRONIC PARTNER</span>
+                    </div>
+                </div>
+                <p>Your one-stop showroom for all home appliances, electronics, laptops, mobiles, and repair services.</p>
+                <p class="footer-addr"><i class="fa-solid fa-location-dot"></i> Gali No. 4, Balaji Mandir Road</p>
+                <p class="footer-email"><i class="fa-solid fa-envelope"></i> siddhimarketing2017@gmail.com</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Official Price Lists</h4>
+                <ul>
+                    <li><a href="pricing.html">All Brands (120+ Models)</a></li>
+                    <li><a href="pricing.html" onclick="filterPricingBrand('Apple')">Apple iPhone &amp; Mac</a></li>
+                    <li><a href="pricing.html" onclick="filterPricingBrand('Nothing')">Nothing &amp; CMF Series</a></li>
+                    <li><a href="pricing.html" onclick="filterPricingBrand('Xiaomi')">Xiaomi &amp; Redmi Note</a></li>
+                    <li><a href="pricing.html" onclick="filterPricingBrand('POCO')">POCO 5G Speed Series</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Store Highlights</h4>
+                <ul>
+                    <li><a href="index.html#mainHeader">Showroom Home</a></li>
+                    <li><a href="index.html#productsSection">Featured Appliances</a></li>
+                    <li><a href="index.html#googleReviewsSection">Google Reviews (4.9★)</a></li>
+                    <li><a href="index.html#contactSection">Showroom Location</a></li>
+                    <li><a href="https://wa.me/919876543210" target="_blank">Book Repairs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Connect with Siddhi Marketing for daily electronics deals!</p>
+                <div class="social-links">
+                    <a href="https://wa.me/919876543210" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:siddhimarketing2017@gmail.com" title="Email Us"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="tel:+919876543210" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 <strong>SIDDHI MARKETING</strong>. All Rights Reserved. | Gali No. 4, Balaji Mandir Road • October 2026 Festive Rates</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="pricing-data.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
