@@ -3600,6 +3600,9 @@ button {
 }
 
 .device-brand-badge.brand-apple { background: #000000; color: #ffffff; border-color: #000; }
+.device-brand-badge.brand-samsung { background: #1428a0; color: #ffffff; border-color: #1428a0; }
+.device-brand-badge.brand-oneplus { background: #eb0028; color: #ffffff; border-color: #eb0028; }
+.device-brand-badge.brand-google-pixel, .device-brand-badge.brand-google { background: #4285f4; color: #ffffff; border-color: #4285f4; }
 .device-brand-badge.brand-nothing { background: #171717; color: #e2e8f0; border-color: #333; }
 .device-brand-badge.brand-xiaomi---redmi { background: #ff6900; color: #ffffff; border-color: #ff6900; }
 .device-brand-badge.brand-poco { background: #ffde00; color: #000000; border-color: #ffd400; }
@@ -3617,9 +3620,9 @@ button {
 
 .device-card-visual {
     width: 100%;
-    height: 180px;
+    height: 190px;
     border-radius: 10px;
-    background: var(--silver-bg);
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.95), rgba(241, 245, 249, 0.9));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3627,17 +3630,24 @@ button {
     overflow: hidden;
     cursor: pointer;
     margin-bottom: 14px;
+    padding: 12px;
+}
+
+[data-theme="dark"] .device-card-visual {
+    background: radial-gradient(circle at center, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
 }
 
 .device-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
 }
 
 .pricing-device-card:hover .device-img {
-    transform: scale(1.06);
+    transform: scale(1.08);
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
 }
 
 .device-badge-tag {

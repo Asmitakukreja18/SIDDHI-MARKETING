@@ -13,6 +13,7 @@ const STORE_DATA = {
 };
 
 // Electronics Catalog Dataset
+// Electronics Catalog Dataset (100% Genuine Electronics & Home Appliances)
 const PRODUCTS = [
     {
         id: "p1",
@@ -38,7 +39,7 @@ const PRODUCTS = [
         discount: "32% OFF",
         badge: "BEST SELLER",
         rating: 4.8,
-        image: "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?w=600&auto=format&fit=crop&q=80",
         specs: ["1.5 Ton Split AC", "5 Star Energy Rating", "100% Copper Coil", "4-in-1 Adjustable Cooling", "Anti-Dust Filter"],
         description: "High ambient cooling up to 52°C. Low power consumption with Inverter tech and instant turbo cooling mode. Free installation support available."
     },
@@ -80,7 +81,7 @@ const PRODUCTS = [
         discount: "33% OFF",
         badge: "HIGH RATED",
         rating: 5.0,
-        image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1601944179066-29786cb9d32a?w=600&auto=format&fit=crop&q=80",
         specs: ["43 Inch 4K HDR", "Google TV OS", "X1 4K Processor", "Dolby Atmos 20W Sound", "Chromecast Built-in"],
         description: "Vibrant colors with Sony Live Colour technology and X1 Processor. Smooth gaming experience with Motionflow XR 100."
     },
@@ -100,16 +101,16 @@ const PRODUCTS = [
     },
     {
         id: "p7",
-        name: "OnePlus 12 5G Smartphone (12GB RAM, 256GB Storage)",
+        name: "OnePlus 15 5G Smartphone (12GB RAM, 256GB Storage)",
         category: "gadgets",
         categoryLabel: "Mobiles & Laptops",
-        price: 64999,
-        originalPrice: 69999,
-        discount: "7% OFF",
-        badge: "FLAGSHIP",
+        price: 69999,
+        originalPrice: 74999,
+        discount: "₹5,000 OFF",
+        badge: "2026 FLAGSHIP",
         rating: 4.9,
-        image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
-        specs: ["Snapdragon 8 Gen 3", "50MP Hasselblad Camera", "100W SUPERVOOC Charge", "5400 mAh Battery", "2K 120Hz ProXDR Display"],
+        image: "assets/assets/oneplus-15.png",
+        specs: ["Snapdragon 8 Elite", "Hasselblad Camera Studio", "100W SUPERVOOC Charge", "6000 mAh Battery", "2K 120Hz ProXDR Display"],
         description: "Smooth beyond belief. Hasselblad camera system with 4K Dolby Vision recording. Official Indian warranty with Siddhi Marketing invoice."
     },
     {
@@ -136,7 +137,7 @@ const PRODUCTS = [
         discount: "33% OFF",
         badge: "AI SMART",
         rating: 4.9,
-        image: "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=600&auto=format&fit=crop&q=80",
         specs: ["1.5 Ton AI Inverter", "5 Star Rating", "6-in-1 Convertible", "HD Filter with Anti-Virus", "Ocean Black Protection"],
         description: "AI Dual Inverter automatically senses room temperature and adjusts cooling capacity. Ultra quiet operation and high energy savings."
     },
@@ -150,7 +151,7 @@ const PRODUCTS = [
         discount: "25% OFF",
         badge: "NO FROST",
         rating: 4.7,
-        image: "https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=600&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600&auto=format&fit=crop&q=80",
         specs: ["240 Litres 3-Door", "Protton World Series", "6th Sense ActiveFresh", "Moisture Retention Tech", "Separate Active Fresh Zone"],
         description: "Unique 3-door design prevents odor mixing between vegetables and freezer items while keeping veggies fresh for up to 2x longer."
     },
@@ -170,7 +171,7 @@ const PRODUCTS = [
     },
     {
         id: "p12",
-        name: "Smart TV Wall Mounting & Fitting Service",
+        name: "Smart TV Wall Mounting & Heavy Duty Bracket Fitting Service",
         category: "services",
         categoryLabel: "Repair & Services",
         price: 299,
@@ -184,21 +185,21 @@ const PRODUCTS = [
     },
     {
         id: "p13",
-        name: "Apple iPhone 16 (128GB, Dynamic Island)",
+        name: "Apple iPhone 17 (128GB, Dynamic Island & 120Hz)",
         category: "gadgets",
         categoryLabel: "Mobiles & Laptops",
-        price: 69900,
-        originalPrice: 89900,
-        discount: "₹20,000 OFF",
-        badge: "FESTIVE DEAL",
+        price: 82900,
+        originalPrice: 99900,
+        discount: "₹17,000 OFF",
+        badge: "120Hz OLED",
         rating: 5.0,
-        image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&auto=format&fit=crop&q=80",
-        specs: ["A18 Chip & Apple Intelligence", "48MP Fusion Camera + Control", "Super Retina XDR OLED", "USB-C MagSafe Fast Charging", "128GB Storage"],
-        description: "Experience Apple's latest generation flagship with Camera Control button and Apple Intelligence. Verified authorized showroom rate from Mobile Station."
+        image: "assets/assets/iphone-17.png",
+        specs: ["A19 Chip & Apple Intelligence", "48MP Fusion Dual Camera", "120Hz ProMotion Super Retina", "USB-C Fast Charging", "128GB Storage"],
+        description: "Experience Apple's latest generation flagship with 120Hz ProMotion display and Apple Intelligence. Verified authorized showroom rate from Mobile Station."
     },
     {
         id: "p14",
-        name: "Apple iPhone 17 Pro Max (256GB Titanium)",
+        name: "Apple iPhone 17 Pro Max (256GB Grade 5 Titanium)",
         category: "gadgets",
         categoryLabel: "Mobiles & Laptops",
         price: 149900,
@@ -206,12 +207,96 @@ const PRODUCTS = [
         discount: "SHOWROOM SPECIAL",
         badge: "PRO MAX",
         rating: 5.0,
-        image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600&auto=format&fit=crop&q=80",
+        image: "assets/assets/iphone-17-pro-max.png",
         specs: ["6.9\" Super Retina XDR 120Hz", "Grade 5 Titanium & A19 Pro", "48MP Pro Triple Camera", "Periscope Telephoto 5x Zoom", "256GB Fast Storage"],
         description: "The pinnacle of smartphone innovation. Grade 5 titanium chassis, ultra-fast A19 Pro silicon, and industry-leading cinematic 4K Dolby Vision video."
     },
     {
         id: "p15",
+        name: "Apple iPhone 18 Pro Max (256GB Burgundy Titanium)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 179900,
+        originalPrice: 179900,
+        discount: "CROWN FLAGSHIP",
+        badge: "18 PRO MAX",
+        rating: 5.0,
+        image: "assets/assets/iphone-18-pro-max.png",
+        specs: ["A20 Pro 2nm Silicon", "6.9\" Dynamic Titanium Screen", "Triple 48MP Next-Gen Optics", "Micro-Lens OLED Display", "256GB Fast NVMe"],
+        description: "The ultimate 2026 Apple flagship in rare Burgundy finish. Maximum performance, ultra-fast neural engine, and pristine battery life."
+    },
+    {
+        id: "p16",
+        name: "Apple iPhone Air (256GB Ultra-Thin 5mm Titanium)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 119900,
+        originalPrice: 149900,
+        discount: "₹30,000 OFF",
+        badge: "ULTRA THIN",
+        rating: 4.9,
+        image: "assets/assets/iphone-air.png",
+        specs: ["Impossibly Thin 5mm Profile", "Grade 5 Featherweight Titanium", "A19 Bionic Silicon", "6.6\" Liquid Retina 120Hz", "MagSafe Wireless Turbo"],
+        description: "Apple's slimmest smartphone ever made. Impossibly light in hand with all-day battery efficiency and titanium precision."
+    },
+    {
+        id: "p17",
+        name: "Samsung Galaxy S26 Ultra 5G (12GB RAM, 256GB, S-Pen)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 129999,
+        originalPrice: 139999,
+        discount: "₹10,000 OFF",
+        badge: "200MP S-PEN",
+        rating: 5.0,
+        image: "assets/assets/samsung-s26-ultra.png",
+        specs: ["Snapdragon 8 Elite Galaxy", "200MP Quad Camera Zoom", "Built-in S-Pen Stylus", "6.8\" Dynamic AMOLED 2X", "5000 mAh 45W Charge"],
+        description: "Samsung's supreme camera and productivity powerhouse with integrated S-Pen stylus, Galaxy AI 2.0, and titanium armor."
+    },
+    {
+        id: "p18",
+        name: "Samsung Galaxy Z Fold 8 5G (12GB RAM, 512GB)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 164999,
+        originalPrice: 179999,
+        discount: "₹15,000 OFF",
+        badge: "FOLDABLE MASTER",
+        rating: 4.9,
+        image: "assets/assets/samsung-z-fold8.png",
+        specs: ["7.6\" Foldable Dynamic AMOLED", "Zero-Gap Armor Hinge", "Under-Display Camera", "12GB RAM + 512GB Storage", "Triple Pro OIS Optics"],
+        description: "Tablet-sized canvas folds seamlessly into your pocket. Enhanced multitasking with Samsung DeX and IP48 water resistance."
+    },
+    {
+        id: "p19",
+        name: "Samsung Galaxy Z Flip 8 5G (8GB RAM, 256GB)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 99999,
+        originalPrice: 109999,
+        discount: "₹10,000 OFF",
+        badge: "POCKET FLIP",
+        rating: 4.8,
+        image: "assets/assets/samsung-z-flip8.png",
+        specs: ["Large Flex Window Cover Screen", "Ultra Compact Clamshell Fold", "Dual 50MP FlexCam", "8GB RAM + 256GB Storage", "Armor Aluminum Frame"],
+        description: "Iconic clamshell foldable with expanded outer Flex Window for hands-free selfies, messaging, and quick controls."
+    },
+    {
+        id: "p20",
+        name: "Google Pixel 11 Pro 5G (12GB RAM, 256GB Tensor G5)",
+        category: "gadgets",
+        categoryLabel: "Mobiles & Laptops",
+        price: 109999,
+        originalPrice: 119999,
+        discount: "₹10,000 OFF",
+        badge: "TENSOR G5 AI",
+        rating: 4.9,
+        image: "assets/assets/pixel-11-pro.png",
+        specs: ["Google Tensor G5 3nm Chip", "Pro Triple Camera System", "Super Actua 120Hz OLED", "Gemini AI Built-in", "7 Years OS & Security Updates"],
+        description: "The purest Google Android experience with breakthrough computational photography and on-device Gemini intelligence."
+    },
+    {
+        id: "p21",
         name: "Nothing Phone 3 (5G) (12GB RAM, 256GB)",
         category: "gadgets",
         categoryLabel: "Mobiles & Laptops",
@@ -220,12 +305,12 @@ const PRODUCTS = [
         discount: "₹10,000 OFF",
         badge: "TRUE FLAGSHIP",
         rating: 4.9,
-        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80",
+        image: "assets/assets/phone.png",
         specs: ["Snapdragon 8s Flagship Chip", "2026 Glyph Matrix LED Interface", "50MP Dual OIS Optics", "12GB RAM + 256GB Storage", "120Hz LTPO OLED Display"],
         description: "Nothing's flagship powerhouse with iconic transparent design and responsive Glyph Matrix lights. Complete brand warranty with authorized dealer invoice."
     },
     {
-        id: "p16",
+        id: "p22",
         name: "Nothing CMF Phone 1 (6GB RAM, 128GB)",
         category: "gadgets",
         categoryLabel: "Mobiles & Laptops",
@@ -234,12 +319,12 @@ const PRODUCTS = [
         discount: "20% OFF",
         badge: "MODULAR ICON",
         rating: 4.8,
-        image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+        image: "assets/assets/user_phone_1.jpg",
         specs: ["Interchangeable Back Case", "MediaTek Dimensity 7300 5G", "50MP Sony Ultra-Clear Cam", "120Hz Super AMOLED Screen", "5000 mAh 33W Fast Charge"],
         description: "Unique modular back cover with accessory attachment point. Vibrant 120Hz AMOLED display and powerful 5G MediaTek processing."
     },
     {
-        id: "p17",
+        id: "p23",
         name: "Xiaomi Redmi Note 15 Pro+ 5G (12GB/256GB)",
         category: "gadgets",
         categoryLabel: "Mobiles & Laptops",
@@ -248,12 +333,12 @@ const PRODUCTS = [
         discount: "₹6,000 OFF",
         badge: "120W HYPER",
         rating: 4.9,
-        image: "https://images.unsplash.com/photo-1567581935884-3349723552ca?w=600&auto=format&fit=crop&q=80",
+        image: "assets/assets/user_phone_4.jpg",
         specs: ["120W HyperCharge (19 Mins)", "200MP OIS Camera System", "1.5K 120Hz Curved AMOLED", "12GB RAM + 256GB Storage", "IP68 Water Resistance"],
         description: "Unmatched performance with 120W blazing charge and 200MP detail. Includes official 1-year brand warranty and free tempered glass application."
     },
     {
-        id: "p18",
+        id: "p24",
         name: "POCO M8 5G (8GB RAM, 256GB Storage)",
         category: "gadgets",
         categoryLabel: "Mobiles & Laptops",
@@ -262,12 +347,12 @@ const PRODUCTS = [
         discount: "15% OFF",
         badge: "2026 FLAGSHIP",
         rating: 4.9,
-        image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop&q=80",
+        image: "assets/assets/user_phone_5.jpg",
         specs: ["2026 M8 Turbo 5G Chipset", "120Hz Fluid AMOLED Display", "64MP OIS Dual Camera", "8GB RAM + 256GB Storage", "67W Fast Turbo Charger"],
         description: "2026 POCO Flagship speed monster with huge storage and vibrant high refresh AMOLED screen. October festive scheme rate."
     },
     {
-        id: "p19",
+        id: "p25",
         name: "POCO C75 5G (4GB RAM, 128GB Storage)",
         category: "gadgets",
         categoryLabel: "Mobiles & Laptops",
@@ -276,12 +361,12 @@ const PRODUCTS = [
         discount: "21% OFF",
         badge: "5G POPULAR",
         rating: 4.7,
-        image: "https://images.unsplash.com/photo-1533228100845-08145b01de14?w=600&auto=format&fit=crop&q=80",
+        image: "assets/assets/user_phone_6.jpg",
         specs: ["Fast 5G Dual SIM", "50MP AI Dual Camera", "6.88\" 120Hz Eye-Care Screen", "4GB RAM + 128GB Storage", "5160 mAh Massive Battery"],
         description: "Affordable 5G speed with large immersive display and all-day battery life. Ideal budget smartphone with reliable service support."
     },
     {
-        id: "p20",
+        id: "p26",
         name: "Lava Blaze Dragon 5G (6GB RAM, 128GB)",
         category: "gadgets",
         categoryLabel: "Mobiles & Laptops",
@@ -290,12 +375,12 @@ const PRODUCTS = [
         discount: "16% OFF",
         badge: "DRAGON 5G",
         rating: 4.8,
-        image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=600&auto=format&fit=crop&q=80",
+        image: "assets/assets/user_phone_7.jpg",
         specs: ["Blaze Fast 5G Speed", "Clean Bloatware-Free Android", "50MP AI Clear Night Camera", "6GB RAM + 128GB Storage", "Premium Glass Back Finish"],
         description: "Proudly Indian crafted with zero bloatware and clean pure Android experience. High quality glass finish and smooth performance."
     },
     {
-        id: "p21",
+        id: "p27",
         name: "itel Color Pro 5G (6GB RAM, 128GB)",
         category: "gadgets",
         categoryLabel: "Mobiles & Laptops",
@@ -304,12 +389,12 @@ const PRODUCTS = [
         discount: "20% OFF",
         badge: "COLOR PRO 5G",
         rating: 4.6,
-        image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=80",
+        image: "assets/assets/user_phone_8.jpg",
         specs: ["Color-Changing Sun-Sensitive Back", "Fast 5G Dual Standby", "50MP Ultra Clear Camera", "6GB RAM + 128GB Storage", "18W Fast USB-C Charging"],
         description: "Unique chameleon color-changing back panel under sunlight. Most affordable 6GB+128GB 5G smartphone in town."
     },
     {
-        id: "p22",
+        id: "p28",
         name: "Apple 13\" MacBook Air M5 (16GB RAM, 512GB SSD)",
         category: "gadgets",
         categoryLabel: "Mobiles & Laptops",
@@ -1666,49 +1751,106 @@ let pricingSearchQuery = '';
 let pricingSort = 'featured';
 let pricingViewMode = 'cards'; // 'cards' or 'table'
 
-// Helper for device fallback images based on brand & type
+// Helper for device visual images based on brand & type (uses local showroom assets from assets/assets/)
 function getPricingDeviceImage(item) {
     const brand = (item.brand || '').toLowerCase();
     const cat = (item.category || '').toLowerCase();
     const model = (item.model || '').toLowerCase();
 
+    // 1. Apple Ecosystem
     if (brand.includes('apple')) {
-        if (model.includes('macbook') || model.includes('mbp') || model.includes('mac mini')) {
+        if (model.includes('macbook') || model.includes('mbp') || model.includes('mac mini') || cat === 'laptops') {
             return 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80';
         }
-        if (model.includes('ipad')) {
+        if (model.includes('ipad') || cat === 'tablets') {
             return 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop&q=80';
         }
-        if (model.includes('watch')) {
+        if (model.includes('watch') || cat === 'wearables') {
             return 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop&q=80';
         }
-        if (model.includes('airpods')) {
+        if (model.includes('airpods') || cat === 'audio') {
             return 'https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&auto=format&fit=crop&q=80';
         }
-        return 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&auto=format&fit=crop&q=80';
+        // iPhone Local Assets
+        if (model.includes('18 pro max')) return 'assets/assets/iphone-18-pro-max.png';
+        if (model.includes('18 pro')) return 'assets/assets/iphone-18-pro.png';
+        if (model.includes('17 pro max')) return 'assets/assets/iphone-17-pro-max.png';
+        if (model.includes('17 pro')) return 'assets/assets/iphone-17-pro.png';
+        if (model.includes('air')) return 'assets/assets/iphone-air.png';
+        return 'assets/assets/iphone-17.png';
     }
-    if (brand.includes('nothing') || brand.includes('cmf')) {
-        return 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80';
+
+    // 2. Samsung Galaxy Ecosystem
+    if (brand.includes('samsung')) {
+        if (model.includes('fold')) return 'assets/assets/samsung-z-fold8.png';
+        if (model.includes('flip')) return 'assets/assets/samsung-z-flip8.png';
+        if (model.includes('ultra')) return 'assets/assets/samsung-s26-ultra.png';
+        if (model.includes('plus') || model.includes('+')) return 'assets/assets/samsung-s26-plus.png';
+        if (model.includes('fe')) return 'assets/assets/samsung-s26-fe.png';
+        return 'assets/assets/samsung-s26.png';
     }
+
+    // 3. OnePlus Series
+    if (brand.includes('oneplus') || brand.includes('one plus')) {
+        if (model.includes('15r')) return 'assets/assets/oneplus-15r.png';
+        if (model.includes('15')) return 'assets/assets/oneplus-15.png';
+        if (model.includes('6x') || model.includes('n6x')) return 'assets/assets/oneplus-n6x.png';
+        return 'assets/assets/oneplus-n6.png';
+    }
+
+    // 4. Google Pixel Series
+    if (brand.includes('pixel') || brand.includes('google')) {
+        if (model.includes('11 pro')) return 'assets/assets/pixel-11-pro.png';
+        if (model.includes('11')) return 'assets/assets/pixel-11.png';
+        if (model.includes('10 pro xl')) return 'assets/assets/pixel-10-pro-xl.png';
+        if (model.includes('10 pro')) return 'assets/assets/pixel-10-pro.png';
+        return 'assets/assets/pixel-10.png';
+    }
+
+    // 5. Nothing & CMF
+    if (brand.includes('nothing') || brand.includes('cmf') || (item.subBrand && item.subBrand.toLowerCase().includes('cmf'))) {
+        if (model.includes('cmf')) return 'assets/assets/user_phone_1.jpg';
+        if (model.includes('4a') || model.includes('4b')) return 'assets/assets/user_phone_2.jpg';
+        if (model.includes('3a')) return 'assets/assets/user_phone_3.jpg';
+        return 'assets/assets/phone.png';
+    }
+
+    // 6. Xiaomi & Redmi
     if (brand.includes('xiaomi') || brand.includes('redmi')) {
         if (cat === 'tablets') {
             return 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop&q=80';
         }
-        return 'https://images.unsplash.com/photo-1567581935884-3349723552ca?w=600&auto=format&fit=crop&q=80';
+        if (model.includes('note 17') || model.includes('note 15 pro')) return 'assets/assets/user_phone_4.jpg';
+        if (model.includes('17') || model.includes('15') || model.includes('turbo')) return 'assets/assets/user_phone_5.jpg';
+        return 'assets/assets/user_phone_6.jpg';
     }
+
+    // 7. POCO Series
     if (brand.includes('poco')) {
-        return 'https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop&q=80';
+        if (model.includes('m8')) return 'assets/assets/user_phone_5.jpg';
+        if (model.includes('c75') || model.includes('c85') || model.includes('m7')) return 'assets/assets/user_phone_6.jpg';
+        return 'assets/assets/phone.png';
     }
+
+    // 8. Lava Mobiles
     if (brand.includes('lava')) {
-        return 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=600&auto=format&fit=crop&q=80';
+        if (model.includes('dragon')) return 'assets/assets/user_phone_7.jpg';
+        if (model.includes('shark') || model.includes('play')) return 'assets/assets/user_phone_8.jpg';
+        return 'assets/assets/user_phone_1.jpg';
     }
+
+    // 9. itel Mobiles & Tablets
     if (brand.includes('itel')) {
         if (cat === 'tablets') {
             return 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop&q=80';
         }
-        return 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=80';
+        if (model.includes('color pro')) return 'assets/assets/user_phone_8.jpg';
+        if (model.includes('s23') || model.includes('f30') || model.includes('x50')) return 'assets/assets/user_phone_9.jpg';
+        return 'assets/assets/user_phone_2.jpg';
     }
-    return 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80';
+
+    // Fallback: Local authentic transparent smartphone asset
+    return 'assets/assets/phone.png';
 }
 
 function initPricingSection() {
@@ -1814,6 +1956,9 @@ function renderPricingList() {
             const b = (item.brand || '').toLowerCase();
             const target = pricingActiveBrand.toLowerCase();
             if (target === 'apple' && !b.includes('apple')) return false;
+            if (target === 'samsung' && !b.includes('samsung')) return false;
+            if (target === 'oneplus' && !b.includes('oneplus')) return false;
+            if (target === 'pixel' && !(b.includes('pixel') || b.includes('google'))) return false;
             if (target === 'nothing' && !(b.includes('nothing') || (item.subBrand && item.subBrand.toLowerCase().includes('cmf')))) return false;
             if (target === 'xiaomi' && !(b.includes('xiaomi') || b.includes('redmi'))) return false;
             if (target === 'poco' && !b.includes('poco')) return false;

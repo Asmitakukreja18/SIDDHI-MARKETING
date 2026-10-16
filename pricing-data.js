@@ -207,7 +207,37 @@ const OFFICIAL_PRICE_LIST_2026 = [
   { id: "watch-se-2-gps-40", brand: "Apple", subBrand: "Apple Watch", category: "wearables", model: "Watch SE 2 GPS 40mm Aluminium Case", specs: "Retina Display, Crash Detection, 40mm", mop: 20900, mrp: 20900, schemePeriod: "Festive Season 2026", badge: "Value Watch" },
   { id: "watch-se-3-gps-40", brand: "Apple", subBrand: "Apple Watch", category: "wearables", model: "Watch SE 3 GPS 40mm Aluminium Case", specs: "2026 All-New SE 3, Always-On Display, 40mm", mop: 25900, mrp: 25900, schemePeriod: "Festive Season 2026", badge: "✨ 2026 SE 3" },
   { id: "watch-series-11-gps-42", brand: "Apple", subBrand: "Apple Watch", category: "wearables", model: "Series 11 GPS 42mm Aluminium Case", specs: "2026 Series 11, Blood Pressure Sensor, 42mm", mop: 46900, mrp: 46900, schemePeriod: "Festive Season 2026", badge: "✨ 2026 Series 11" },
-  { id: "watch-ultra-3", brand: "Apple", subBrand: "Apple Watch Ultra", category: "wearables", model: "Watch Ultra 3", specs: "Titanium 49mm, Satellite SOS, 3000 nits, Depth Gauge", mop: 89900, mrp: 89900, schemePeriod: "Festive Season 2026", badge: "👑 Ultra 3 Rugged" }
+  { id: "watch-ultra-3", brand: "Apple", subBrand: "Apple Watch Ultra", category: "wearables", model: "Watch Ultra 3", specs: "Titanium 49mm, Satellite SOS, 3000 nits, Depth Gauge", mop: 89900, mrp: 89900, schemePeriod: "Festive Season 2026", badge: "👑 Ultra 3 Rugged" },
+
+  // =========================================================================
+  // 11. SAMSUNG GALAXY FLAGSHIP & FOLDABLES (01-OCT-26 TO 31-OCT-26)
+  // =========================================================================
+  { id: "samsung-s26-ultra-256", brand: "Samsung", subBrand: "Galaxy S", category: "smartphones", model: "Samsung Galaxy S26 Ultra 5G 12GB_256GB", specs: "Snapdragon 8 Elite, 200MP Quad Zoom, Built-in S-Pen, 256GB", mop: 129999, mrp: 139999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "👑 200MP S-Pen Ultra" },
+  { id: "samsung-s26-ultra-512", brand: "Samsung", subBrand: "Galaxy S", category: "smartphones", model: "Samsung Galaxy S26 Ultra 5G 12GB_512GB", specs: "Snapdragon 8 Elite, 200MP Quad Zoom, Built-in S-Pen, 512GB", mop: 139999, mrp: 149999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "👑 Ultra 512GB" },
+  { id: "samsung-s26-plus-256", brand: "Samsung", subBrand: "Galaxy S", category: "smartphones", model: "Samsung Galaxy S26+ 5G 12GB_256GB", specs: "6.7\" QHD+ Dynamic AMOLED 2X, Armor Aluminum, 256GB", mop: 99999, mrp: 109999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "Dynamic AMOLED+" },
+  { id: "samsung-s26-256", brand: "Samsung", subBrand: "Galaxy S", category: "smartphones", model: "Samsung Galaxy S26 5G 8GB_256GB", specs: "Compact Flagship 6.2\", Galaxy AI 2.0, 256GB", mop: 79999, mrp: 89999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "Compact Flagship" },
+  { id: "samsung-s26-fe-128", brand: "Samsung", subBrand: "Galaxy FE", category: "smartphones", model: "Samsung Galaxy S26 FE 5G 8GB_128GB", specs: "Fan Edition Flagship Features, 120Hz AMOLED, 128GB", mop: 54999, mrp: 64999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "Fan Edition 5G" },
+  { id: "samsung-z-fold8-512", brand: "Samsung", subBrand: "Galaxy Z Fold", category: "smartphones", model: "Samsung Galaxy Z Fold 8 5G 12GB_512GB", specs: "7.6\" Foldable Screen, Zero-Gap Titanium Hinge, 512GB", mop: 164999, mrp: 179999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "✨ Foldable Master" },
+  { id: "samsung-z-flip8-256", brand: "Samsung", subBrand: "Galaxy Z Flip", category: "smartphones", model: "Samsung Galaxy Z Flip 8 5G 8GB_256GB", specs: "Large Flex Window Screen, Hands-Free FlexCam, 256GB", mop: 99999, mrp: 109999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "✨ Pocket Flip" },
+
+  // =========================================================================
+  // 12. ONEPLUS FLAGSHIP & NORD (01-OCT-26 TO 31-OCT-26)
+  // =========================================================================
+  { id: "oneplus-15-12-256", brand: "OnePlus", subBrand: "OnePlus", category: "smartphones", model: "OnePlus 15 5G 12GB_256GB", specs: "Snapdragon 8 Elite, Hasselblad Studio, 100W SUPERVOOC, 256GB", mop: 69999, mrp: 74999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "⚡ 2026 Flagship" },
+  { id: "oneplus-15-16-512", brand: "OnePlus", subBrand: "OnePlus", category: "smartphones", model: "OnePlus 15 5G 16GB_512GB", specs: "Snapdragon 8 Elite, 16GB RAM, 6000mAh Glacier Battery, 512GB", mop: 77999, mrp: 82999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "⚡ 16GB Extreme" },
+  { id: "oneplus-15r-8-128", brand: "OnePlus", subBrand: "OnePlus R", category: "smartphones", model: "OnePlus 15R 5G 8GB_128GB", specs: "Flagship Killer Speed, 1.5K 120Hz ProXDR, 128GB", mop: 44999, mrp: 49999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "15R Speed" },
+  { id: "oneplus-15r-12-256", brand: "OnePlus", subBrand: "OnePlus R", category: "smartphones", model: "OnePlus 15R 5G 12GB_256GB", specs: "Flagship Killer Speed, 12GB RAM, 100W Fast Charge, 256GB", mop: 49999, mrp: 54999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "15R Pro" },
+  { id: "oneplus-nord-6-8-128", brand: "OnePlus", subBrand: "Nord", category: "smartphones", model: "OnePlus Nord 6 5G 8GB_128GB", specs: "Sony 50MP OIS Camera, All-Day Battery, 8GB + 128GB", mop: 29999, mrp: 34999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "Nord 6 Hit" },
+  { id: "oneplus-nord-6x-8-256", brand: "OnePlus", subBrand: "Nord", category: "smartphones", model: "OnePlus Nord 6X 5G 8GB_256GB", specs: "Nord 6X Turbo Performance, 120Hz AMOLED, 8GB + 256GB", mop: 32999, mrp: 37999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "Nord 6X Turbo" },
+
+  // =========================================================================
+  // 13. GOOGLE PIXEL (01-OCT-26 TO 31-OCT-26)
+  // =========================================================================
+  { id: "pixel-11-pro-16-256", brand: "Google Pixel", subBrand: "Pixel", category: "smartphones", model: "Google Pixel 11 Pro 5G 16GB_256GB", specs: "Google Tensor G5 3nm, Pro Triple Camera Studio, 256GB", mop: 109999, mrp: 119999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "👑 Tensor G5 Pro" },
+  { id: "pixel-11-12-128", brand: "Google Pixel", subBrand: "Pixel", category: "smartphones", model: "Google Pixel 11 5G 12GB_128GB", specs: "Google Tensor G5, Super Actua 120Hz, Gemini Nano AI, 128GB", mop: 79999, mrp: 89999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "AI Magic Flagship" },
+  { id: "pixel-10-pro-xl-16-256", brand: "Google Pixel", subBrand: "Pixel", category: "smartphones", model: "Google Pixel 10 Pro XL 5G 16GB_256GB", specs: "6.8\" Super Actua Display, 30x Super Res Zoom, 256GB", mop: 124999, mrp: 134999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "Pro XL Display" },
+  { id: "pixel-10-pro-12-128", brand: "Google Pixel", subBrand: "Pixel", category: "smartphones", model: "Google Pixel 10 Pro 5G 12GB_128GB", specs: "Compact Pro Optics, 5x Telephoto Zoom, 128GB", mop: 99999, mrp: 109999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "Pro Super Res" },
+  { id: "pixel-10-8-128", brand: "Google Pixel", subBrand: "Pixel", category: "smartphones", model: "Google Pixel 10 5G 8GB_128GB", specs: "Pure Google Android, 7 Years Feature Drops, 128GB", mop: 69999, mrp: 79999, schemePeriod: "01-Oct-26 to 31-Oct-26", badge: "Clean Pixel AI" }
 ];
 
 // Helper to format Indian currency
