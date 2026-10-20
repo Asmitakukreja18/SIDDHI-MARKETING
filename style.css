@@ -3357,17 +3357,60 @@ section[id], header[id], div[id$="Section"], .products-section, .about-section, 
 }
 
 /* Responsive Media Queries */
+/* Always keep navbar visible - NO DRAWER */
+.mobile-menu-btn {
+    display: none !important;
+}
+
+.mobile-nav-drawer,
+.mobile-nav-overlay {
+    display: none !important;
+}
+
 @media (max-width: 1260px) {
-    .nav-link { padding: 6px 9px; font-size: 0.85rem; gap: 5px; }
-    .search-box { max-width: 220px; }
+    .nav-link { padding: 6px 10px; font-size: 0.84rem; gap: 5px; }
+    .search-box { max-width: 200px; }
     .brand-name-siddhi { font-size: 1.25rem; }
     .brand-name-marketing { font-size: 0.95rem; }
 }
 
 @media (max-width: 1120px) {
-    .main-nav { display: none; }
-    .mobile-menu-btn { display: flex; }
-    .search-box { max-width: 280px; }
+    .header-container {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+    .brand-logo {
+        order: 1;
+    }
+    .header-actions {
+        order: 2;
+    }
+    .search-box {
+        order: 3;
+        flex: 1;
+        min-width: 220px;
+    }
+    .main-nav {
+        order: 4;
+        display: flex !important;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 5px 8px;
+        gap: 6px;
+        background: rgba(15, 23, 42, 0.04);
+        border: 1px solid var(--border-light);
+    }
+    .main-nav::-webkit-scrollbar {
+        display: none;
+    }
+    .nav-link {
+        flex-shrink: 0;
+        padding: 6px 12px;
+        font-size: 0.84rem;
+    }
 }
 
 @media (max-width: 992px) {
@@ -3379,8 +3422,54 @@ section[id], header[id], div[id$="Section"], .products-section, .about-section, 
 }
 
 @media (max-width: 768px) {
-    .header-container { flex-wrap: wrap; }
-    .search-box { order: 3; max-width: 100%; width: 100%; margin-top: 4px; }
+    .header-container {
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+    .main-header {
+        padding: 8px 0;
+    }
+    .brand-logo .brand-name-siddhi {
+        font-size: 1.2rem;
+    }
+    .brand-logo .brand-name-marketing {
+        font-size: 0.9rem;
+    }
+    .logo-img {
+        width: 38px;
+        height: 38px;
+    }
+    .header-icon-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+    }
+    .btn-header-wa {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    .search-box {
+        order: 3;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 2px;
+    }
+    .main-nav {
+        order: 4;
+        display: flex !important;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 4px 6px;
+        gap: 5px;
+    }
+    .nav-link {
+        padding: 6px 11px;
+        font-size: 0.8rem;
+        border-radius: 16px;
+    }
     .hero-title { font-size: 1.85rem; }
     .top-contacts { display: none; }
     .product-modal-grid { grid-template-columns: 1fr; }
