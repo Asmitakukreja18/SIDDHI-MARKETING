@@ -263,8 +263,94 @@ button {
     font-size: 0.82rem;
 }
 
-.top-contacts a:hover {
-    color: #ff4d6d;
+/* Universal Section Scroll Margin to prevent sticky header clipping */
+section[id], header[id], div[id$="Section"], .products-section, .about-section, .pricing-section, .services-banner, .reviews-section, .contact-section {
+    scroll-margin-top: 85px;
+}
+
+/* Inner Page Hero Banner for Dedicated Pages */
+.inner-page-banner {
+    background: linear-gradient(135deg, rgba(214, 0, 28, 0.04) 0%, rgba(15, 23, 42, 0.02) 100%);
+    border-bottom: 1.5px solid var(--border-light);
+    padding: 36px 0 28px;
+    margin-bottom: 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .inner-page-banner {
+    background: linear-gradient(135deg, rgba(214, 0, 28, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%);
+}
+
+.inner-page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary-gradient);
+}
+
+.inner-page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.inner-page-title-wrap h1 {
+    font-family: var(--font-heading);
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--heading-color);
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.inner-page-title-wrap p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    max-width: 680px;
+    margin: 0;
+}
+
+.breadcrumb-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.breadcrumb-nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb-nav a:hover {
+    color: var(--primary-red);
+}
+
+.breadcrumb-nav .separator {
+    color: var(--border-light);
+    font-size: 0.75rem;
+}
+
+.breadcrumb-nav .current-crumb {
+    color: var(--primary-red);
+    font-weight: 700;
+}
+
+.inner-page-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 /* Main Header */
@@ -362,12 +448,12 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    padding: 8px 14px;
+    padding: 7px 13px;
     font-family: var(--font-heading);
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-main);
-    border-radius: var(--radius-sm);
+    border-radius: 8px;
     position: relative;
     transition: var(--transition);
     text-decoration: none;
@@ -393,6 +479,7 @@ button {
     color: var(--primary-red);
     font-weight: 700;
     background: var(--primary-red-light);
+    box-shadow: inset 0 -2.5px 0 var(--primary-red);
 }
 
 .nav-link.active i {
@@ -400,14 +487,7 @@ button {
 }
 
 .nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -11px;
-    left: 14px;
-    right: 14px;
-    height: 3px;
-    background: var(--primary-red);
-    border-radius: 3px 3px 0 0;
+    display: none;
 }
 
 .nav-pill-badge {
@@ -3234,10 +3314,17 @@ button {
 }
 
 /* Responsive Media Queries */
-@media (max-width: 1080px) {
+@media (max-width: 1260px) {
+    .nav-link { padding: 6px 9px; font-size: 0.85rem; gap: 5px; }
+    .search-box { max-width: 220px; }
+    .brand-name-siddhi { font-size: 1.25rem; }
+    .brand-name-marketing { font-size: 0.95rem; }
+}
+
+@media (max-width: 1120px) {
     .main-nav { display: none; }
     .mobile-menu-btn { display: flex; }
-    .search-box { max-width: 240px; }
+    .search-box { max-width: 280px; }
 }
 
 @media (max-width: 992px) {

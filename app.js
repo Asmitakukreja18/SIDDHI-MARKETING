@@ -492,7 +492,26 @@ function setupNavigation() {
         mobileNavOverlay.addEventListener('click', () => toggleMobileMenu(false));
     }
 
-    // Smooth Scroll & Active Indicator
+    // Determine active page based on current URL path
+    const currentPath = window.location.pathname.toLowerCase();
+    let currentPage = 'home';
+    if (currentPath.includes('about.html')) currentPage = 'about';
+    else if (currentPath.includes('products.html')) currentPage = 'products';
+    else if (currentPath.includes('pricing.html')) currentPage = 'pricing';
+    else if (currentPath.includes('services.html')) currentPage = 'services';
+    else if (currentPath.includes('reviews.html')) currentPage = 'reviews';
+    else if (currentPath.includes('contact.html')) currentPage = 'contact';
+
+    // Set active link initially
+    document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+        if (link.getAttribute('data-nav') === currentPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+
+    // Smooth Scroll & Drawer Close
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const targetId = link.getAttribute('href');
@@ -506,7 +525,6 @@ function setupNavigation() {
                     toggleMobileMenu(false);
                     targetEl.scrollIntoView({ behavior: 'smooth' });
 
-                    // Set active link
                     const navKey = link.getAttribute('data-nav');
                     document.querySelectorAll(`.nav-link, .mobile-nav-link`).forEach(l => {
                         if (l.getAttribute('data-nav') === navKey) {
@@ -516,44 +534,49 @@ function setupNavigation() {
                         }
                     });
                 }
+            } else {
+                toggleMobileMenu(false);
             }
         });
     });
 
-    // ScrollSpy to highlight active tab as user scrolls
-    const sections = [
-        { id: 'mainHeader', nav: 'home' },
-        { id: 'aboutSection', nav: 'about' },
-        { id: 'productsSection', nav: 'products' },
-        { id: 'pricingSection', nav: 'pricing' },
-        { id: 'servicesSection', nav: 'services' },
-        { id: 'googleReviewsSection', nav: 'reviews' },
-        { id: 'contactSection', nav: 'contact' }
-    ];
+    // ScrollSpy to highlight active tab only when browsing home page sections
+    const isHomePage = currentPage === 'home' && (!currentPath.includes('.html') || currentPath.endsWith('index.html') || currentPath.endsWith('siddhi-index.html'));
+    if (isHomePage) {
+        const sections = [
+            { id: 'mainHeader', nav: 'home' },
+            { id: 'aboutSection', nav: 'about' },
+            { id: 'productsSection', nav: 'products' },
+            { id: 'pricingSection', nav: 'pricing' },
+            { id: 'servicesSection', nav: 'services' },
+            { id: 'googleReviewsSection', nav: 'reviews' },
+            { id: 'contactSection', nav: 'contact' }
+        ];
 
-    window.addEventListener('scroll', () => {
-        let currentNav = 'home';
-        const scrollPos = window.scrollY + 220;
+        window.addEventListener('scroll', () => {
+            let currentNav = 'home';
+            const scrollPos = window.scrollY + 220;
 
-        sections.forEach(sec => {
-            const el = document.getElementById(sec.id);
-            if (el) {
-                const top = el.offsetTop;
-                const height = el.offsetHeight;
-                if (scrollPos >= top && scrollPos < top + height) {
-                    currentNav = sec.nav;
+            sections.forEach(sec => {
+                const el = document.getElementById(sec.id);
+                if (el) {
+                    const top = el.offsetTop;
+                    const height = el.offsetHeight;
+                    if (scrollPos >= top && scrollPos < top + height) {
+                        currentNav = sec.nav;
+                    }
                 }
-            }
-        });
+            });
 
-        document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
-            if (link.getAttribute('data-nav') === currentNav) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-    }, { passive: true });
+            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+                if (link.getAttribute('data-nav') === currentNav) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }, { passive: true });
+    }
 }
 
 // Theme Toggle Functionality (Light / Dark mode)
@@ -724,6 +747,13 @@ function setupEventListeners() {
 
     const handleSearch = () => {
         const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+        const prodGrid = document.getElementById('productsGrid');
+        if (!prodGrid) {
+            if (query) {
+                window.location.href = `products.html?search=${encodeURIComponent(query)}`;
+            }
+            return;
+        }
         if (!query) {
             filterCategory(activeCategory);
             return;
@@ -742,11 +772,27 @@ function setupEventListeners() {
         }
     };
 
-    if (searchInput) searchInput.addEventListener('keyup', (e) => {
-        if (e.key === 'Enter') handleSearch();
-        else handleSearch();
-    });
+    if (searchInput) {
+        searchInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') handleSearch();
+            else {
+                const prodGrid = document.getElementById('productsGrid');
+                if (prodGrid) handleSearch();
+            }
+        });
+    }
     if (searchBtn) searchBtn.addEventListener('click', handleSearch);
+
+    // Auto-filter if search or cat query param is in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchParam = urlParams.get('search');
+    const catParam = urlParams.get('cat');
+    if (searchParam && searchInput) {
+        searchInput.value = searchParam;
+        setTimeout(handleSearch, 100);
+    } else if (catParam) {
+        setTimeout(() => filterCategory(catParam), 100);
+    }
 
     // Sorting Dropdown
     const sortSelect = document.getElementById('sortSelect');
@@ -1231,6 +1277,7 @@ function setupEmiCalculator() {
     }
 
     const calculateEMI = () => {
+        if (!amountInput || !monthsSelect) return;
         const amt = parseFloat(amountInput.value) || 0;
         const months = parseInt(monthsSelect.value) || 6;
 
