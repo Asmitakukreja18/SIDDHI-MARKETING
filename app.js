@@ -1294,6 +1294,32 @@ function setupEmiCalculator() {
     if (amountInput) amountInput.addEventListener('input', calculateEMI);
     if (monthsSelect) monthsSelect.addEventListener('change', calculateEMI);
     calculateEMI();
+
+    // Old Appliance Trade-In Valuation Calculator
+    const tradeinCat = document.getElementById('tradeinCategory');
+    const tradeinCond = document.getElementById('tradeinCondition');
+    const tradeinEst = document.getElementById('tradeinEstValue');
+
+    if (tradeinCat && tradeinCond && tradeinEst) {
+        const updateTradeInValue = () => {
+            const cat = tradeinCat.value;
+            const cond = tradeinCond.value;
+
+            const matrix = {
+                'old-tv': { working: '₹3,500 – ₹5,500', partially: '₹2,000 – ₹3,500', scrap: '₹800 – ₹1,500' },
+                'old-ac': { working: '₹5,500 – ₹8,500', partially: '₹3,500 – ₹5,500', scrap: '₹2,000 – ₹3,000' },
+                'old-fridge': { working: '₹3,500 – ₹6,000', partially: '₹2,200 – ₹3,800', scrap: '₹1,200 – ₹2,000' },
+                'old-washing': { working: '₹2,800 – ₹4,500', partially: '₹1,500 – ₹2,800', scrap: '₹800 – ₹1,500' }
+            };
+
+            const val = matrix[cat] && matrix[cat][cond] ? matrix[cat][cond] : '₹3,000 – ₹6,000';
+            tradeinEst.textContent = val;
+        };
+
+        tradeinCat.addEventListener('change', updateTradeInValue);
+        tradeinCond.addEventListener('change', updateTradeInValue);
+        updateTradeInValue();
+    }
 }
 
 /* ==========================================================================

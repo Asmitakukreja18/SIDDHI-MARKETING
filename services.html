@@ -54,9 +54,9 @@
                 <a href="index.html" class="nav-link" data-nav="home"><i class="fa-solid fa-house"></i> <span>Home</span></a>
                 <a href="about.html" class="nav-link" data-nav="about"><i class="fa-solid fa-store"></i> <span>About Us</span></a>
                 <a href="products.html" class="nav-link" data-nav="products"><i class="fa-solid fa-tv"></i> <span>Products</span></a>
-                <a href="pricing.html" class="nav-link" data-nav="pricing"><i class="fa-solid fa-tags"></i> <span>Brand Pricing</span> <span class="nav-pill-badge" style="background:var(--primary-red);color:#fff;font-weight:700;">Festive</span></a>
+                <a href="pricing.html" class="nav-link" data-nav="pricing"><i class="fa-solid fa-tags"></i> <span>Brand Pricing</span> <span class="nav-pill-badge festive-pulse">Festive</span></a>
                 <a href="services.html" class="nav-link active" data-nav="services"><i class="fa-solid fa-screwdriver-wrench"></i> <span>Services &amp; EMI</span></a>
-                <a href="reviews.html" class="nav-link" data-nav="reviews"><i class="fa-brands fa-google"></i> <span>Reviews</span> <span class="nav-pill-badge">4.9★</span></a>
+                <a href="reviews.html" class="nav-link" data-nav="reviews"><i class="fa-brands fa-google"></i> <span>Reviews</span> <span class="nav-rating-badge"><i class="fa-solid fa-star"></i> 4.9</span></a>
                 <a href="contact.html" class="nav-link" data-nav="contact"><i class="fa-solid fa-location-dot"></i> <span>Contact</span></a>
             </nav>
 
@@ -179,42 +179,133 @@
         </div>
     </section>
 
-    <!-- Detailed 4-Service Cards Grid -->
-    <section class="container" style="margin-bottom: 50px;">
+    <!-- Detailed Specialized Service Offerings Grid -->
+    <section class="container" style="margin-bottom: 55px;">
         <div class="section-header" style="margin-bottom: 25px;">
             <div>
-                <span class="section-tag">OUR SPECIALIZED SERVICES</span>
-                <h2 class="section-title">Home Appliance Service Solutions</h2>
+                <span class="section-tag"><i class="fa-solid fa-screwdriver-wrench text-red"></i> VERIFIED SERVICE RATES</span>
+                <h2 class="section-title">Home Appliance Repair &amp; Maintenance Solutions</h2>
+                <p style="color: var(--text-muted); font-size: 0.92rem; margin-top: 6px;">Genuine brand spare parts, certified technician visits, and 90-day service warranty on all jobs.</p>
             </div>
         </div>
 
-        <div class="about-pillars-grid">
-            <div class="about-pillar-card">
-                <div class="pillar-icon"><i class="fa-solid fa-tv"></i></div>
+        <div class="service-cards-detailed">
+            <!-- Service 1: Smart TV -->
+            <div class="service-card-pro">
                 <div>
-                    <h4>Smart TV Installation &amp; Display Repair</h4>
-                    <p>Screen panel diagnosis, backlight replacement, power board repairs and professional fixed/swivel wall mounting with warranty.</p>
+                    <div class="service-top-row">
+                        <div class="service-icon-wrap"><i class="fa-solid fa-tv"></i></div>
+                        <span class="service-price-tag">Starting ₹399</span>
+                    </div>
+                    <h3>Smart TV Repair &amp; Installation</h3>
+                    <p>Expert diagnosis for OLED, QLED &amp; 4K LED TVs. Includes power supply board replacement, LED backlight repair, audio card fixes, and secure wall mounting.</p>
+                    <ul class="service-perks-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Standard &amp; full-motion wall bracket mounting</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Motherboard &amp; T-CON board repair</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Same-day doorstep inspection</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 90-day repair service warranty</li>
+                    </ul>
                 </div>
+                <a href="https://wa.me/919876543210?text=Hi%20Siddhi%20Marketing,%20I%20need%20Smart%20TV%20Repair%20or%20Installation%20service." target="_blank" class="btn btn-secondary btn-block"><i class="fa-brands fa-whatsapp"></i> Book TV Technician</a>
             </div>
-            <div class="about-pillar-card">
-                <div class="pillar-icon"><i class="fa-solid fa-snowflake"></i></div>
+
+            <!-- Service 2: AC Servicing -->
+            <div class="service-card-pro">
                 <div>
-                    <h4>Inverter AC Servicing &amp; Gas Refilling</h4>
-                    <p>Jet pump deep cleaning, R32 / R410A gas top-up, PCB board repair, copper pipe leak fix and compressor servicing.</p>
+                    <div class="service-top-row">
+                        <div class="service-icon-wrap" style="color: #0284c7; background: rgba(2, 132, 199, 0.1);"><i class="fa-solid fa-snowflake"></i></div>
+                        <span class="service-price-tag">Starting ₹499</span>
+                    </div>
+                    <h3>Inverter AC Deep Jet Servicing</h3>
+                    <p>Comprehensive high-pressure jet pump coil washing, indoor blower cleaning, drain tray antibacterial flush, and eco-friendly R32/R410A gas leak detection.</p>
+                    <ul class="service-perks-list">
+                        <li><i class="fa-solid fa-circle-check"></i> 2x faster cooling restore with pressure wash</li>
+                        <li><i class="fa-solid fa-circle-check"></i> R32 / R410A refrigerant gas top-up</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Inverter PCB board troubleshooting</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Reduces electricity bills by up to 20%</li>
+                    </ul>
                 </div>
+                <a href="https://wa.me/919876543210?text=Hi%20Siddhi%20Marketing,%20I%20need%20AC%20Jet%20Service%20or%20Gas%20Top-up." target="_blank" class="btn btn-secondary btn-block"><i class="fa-brands fa-whatsapp"></i> Book AC Service</a>
             </div>
-            <div class="about-pillar-card">
-                <div class="pillar-icon"><i class="fa-solid fa-kitchen-set"></i></div>
+
+            <!-- Service 3: Refrigerator -->
+            <div class="service-card-pro">
                 <div>
-                    <h4>Refrigerator Cooling &amp; Gas Service</h4>
-                    <p>Double door frost-free cooling troubleshooting, thermostat calibration, compressor relay fix and inverter diagnosis.</p>
+                    <div class="service-top-row">
+                        <div class="service-icon-wrap" style="color: #10b981; background: rgba(16, 185, 129, 0.1);"><i class="fa-solid fa-kitchen-set"></i></div>
+                        <span class="service-price-tag">Starting ₹349</span>
+                    </div>
+                    <h3>Refrigerator Cooling &amp; Gas Refill</h3>
+                    <p>Double door &amp; frost-free cooling troubleshooting, thermostat sensor calibration, inverter compressor relay replacement, and door gasket sealing.</p>
+                    <ul class="service-perks-list">
+                        <li><i class="fa-solid fa-circle-check"></i> No-cooling / over-freezing resolution</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 100% genuine brand compressor parts</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Sealed system gas brazing &amp; vacuuming</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Multi-brand: LG, Samsung, Whirlpool, Haier</li>
+                    </ul>
                 </div>
+                <a href="https://wa.me/919876543210?text=Hi%20Siddhi%20Marketing,%20I%20need%20Refrigerator%20repair%20service." target="_blank" class="btn btn-secondary btn-block"><i class="fa-brands fa-whatsapp"></i> Book Fridge Service</a>
             </div>
-            <div class="about-pillar-card">
-                <div class="pillar-icon"><i class="fa-solid fa-soap"></i></div>
+
+            <!-- Service 4: Washing Machine -->
+            <div class="service-card-pro">
                 <div>
-                    <h4>Washing Machine Motor &amp; Drum Repairs</h4>
-                    <p>Top load &amp; front load drum alignment, water inlet valve fix, drainage pump repair and digital control board replacement.</p>
+                    <div class="service-top-row">
+                        <div class="service-icon-wrap" style="color: #f59e0b; background: rgba(245, 158, 11, 0.1);"><i class="fa-solid fa-soap"></i></div>
+                        <span class="service-price-tag">Starting ₹399</span>
+                    </div>
+                    <h3>Washing Machine Drum &amp; Motor</h3>
+                    <p>Front-load and top-load drum vibration balance, inlet water solenoid valve replacement, spin cycle drain pump unclogging, and motor belt repairs.</p>
+                    <ul class="service-perks-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Drum noise &amp; heavy vibration rectification</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Digital sensor error codes (dE, IE, OE, UE) fix</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Original shock absorbers &amp; tub bearings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Certified technicians for Bosch, LG, IFB &amp; Samsung</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/919876543210?text=Hi%20Siddhi%20Marketing,%20I%20need%20Washing%20Machine%20repair%20service." target="_blank" class="btn btn-secondary btn-block"><i class="fa-brands fa-whatsapp"></i> Book Washer Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Old Appliance Trade-In & Exchange Calculator -->
+    <section class="container" style="margin-bottom: 55px;">
+        <div class="tradein-calc-card">
+            <div class="tradein-calc-grid">
+                <div>
+                    <span class="section-tag"><i class="fa-solid fa-recycle text-red"></i> APPLIANCE EXCHANGE OFFER</span>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--heading-color); margin-bottom: 10px;">Trade-In Old Appliance for New</h3>
+                    <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px;">Upgrade your home! Exchange any old working or non-working TV, AC, Refrigerator, or Washing Machine for an instant exchange bonus discount on new purchases at Siddhi Marketing.</p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 14px;">
+                        <div class="form-group" style="margin: 0;">
+                            <label style="font-size: 0.88rem; font-weight: 700;">Select Old Appliance Category</label>
+                            <select id="tradeinCategory" class="custom-select" style="width: 100%;">
+                                <option value="old-tv">Old CRT / LCD / LED TV (Up to ₹5,500)</option>
+                                <option value="old-ac" selected>Old Split / Window AC (Up to ₹8,500)</option>
+                                <option value="old-fridge">Old Single / Double Door Refrigerator (Up to ₹6,000)</option>
+                                <option value="old-washing">Old Semi / Fully Automatic Washer (Up to ₹4,500)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" style="margin: 0;">
+                            <label style="font-size: 0.88rem; font-weight: 700;">Working Condition</label>
+                            <select id="tradeinCondition" class="custom-select" style="width: 100%;">
+                                <option value="working" selected>Working Condition (Maximum Value)</option>
+                                <option value="partially">Partially Working / Minor Defect</option>
+                                <option value="scrap">Dead / Not Working (Scrap Value Guaranteed)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tradein-result-display">
+                    <span style="font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Estimated Exchange Value</span>
+                    <div class="tradein-est-amount" id="tradeinEstValue">₹4,500 - ₹8,500</div>
+                    <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 20px;">Instant deduction on your new appliance bill + Free doorstep pickup of old unit.</p>
+                    <a href="https://wa.me/919876543210?text=Hello%20Siddhi%20Marketing,%20I%20want%20to%20exchange%20my%20old%20appliance%20for%20a%20new%20one." target="_blank" class="btn btn-primary btn-block">
+                        <i class="fa-brands fa-whatsapp"></i> Claim Exchange Bonus Now
+                    </a>
                 </div>
             </div>
         </div>

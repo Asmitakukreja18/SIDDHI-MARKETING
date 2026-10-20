@@ -54,9 +54,9 @@
                 <a href="index.html" class="nav-link" data-nav="home"><i class="fa-solid fa-house"></i> <span>Home</span></a>
                 <a href="about.html" class="nav-link" data-nav="about"><i class="fa-solid fa-store"></i> <span>About Us</span></a>
                 <a href="products.html" class="nav-link active" data-nav="products"><i class="fa-solid fa-tv"></i> <span>Products</span></a>
-                <a href="pricing.html" class="nav-link" data-nav="pricing"><i class="fa-solid fa-tags"></i> <span>Brand Pricing</span> <span class="nav-pill-badge" style="background:var(--primary-red);color:#fff;font-weight:700;">Festive</span></a>
+                <a href="pricing.html" class="nav-link" data-nav="pricing"><i class="fa-solid fa-tags"></i> <span>Brand Pricing</span> <span class="nav-pill-badge festive-pulse">Festive</span></a>
                 <a href="services.html" class="nav-link" data-nav="services"><i class="fa-solid fa-screwdriver-wrench"></i> <span>Services &amp; EMI</span></a>
-                <a href="reviews.html" class="nav-link" data-nav="reviews"><i class="fa-brands fa-google"></i> <span>Reviews</span> <span class="nav-pill-badge">4.9★</span></a>
+                <a href="reviews.html" class="nav-link" data-nav="reviews"><i class="fa-brands fa-google"></i> <span>Reviews</span> <span class="nav-rating-badge"><i class="fa-solid fa-star"></i> 4.9</span></a>
                 <a href="contact.html" class="nav-link" data-nav="contact"><i class="fa-solid fa-location-dot"></i> <span>Contact</span></a>
             </nav>
 
@@ -181,6 +181,194 @@
         <div class="products-grid" id="productsGrid">
             <!-- Dynamically populated by app.js -->
         </div>
+
+        <!-- Section: Smart Appliance Buyer Guides -->
+        <section class="products-buyer-guides-section" style="margin-top: 65px;">
+            <div class="section-header" style="text-align: left; margin-bottom: 20px;">
+                <div>
+                    <span class="section-tag"><i class="fa-solid fa-lightbulb"></i> EXPERT ADVICE</span>
+                    <h3 class="section-title" style="font-size: 1.8rem;">Showroom Appliance Selection Guide</h3>
+                    <p style="color: var(--text-muted); font-size: 0.92rem; margin-top: 6px;">Confused about which size or capacity fits your home? Use our in-store expert sizing matrix.</p>
+                </div>
+            </div>
+
+            <div class="buyer-guides-grid">
+                <!-- Guide 1: Smart TV Size -->
+                <div class="buyer-guide-card">
+                    <h4><i class="fa-solid fa-tv text-red"></i> TV Screen Sizing Chart</h4>
+                    <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 12px;">Recommended diagonal screen size according to your seating distance.</p>
+                    <table class="guide-table">
+                        <thead>
+                            <tr style="font-weight: 700; color: var(--heading-color); border-bottom: 1.5px solid var(--border-light);">
+                                <td style="padding: 6px 8px;">Room Distance</td>
+                                <td style="padding: 6px 8px;">Ideal Screen Size</td>
+                                <td style="padding: 6px 8px;">Resolution</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>4 - 6 Feet</td>
+                                <td><strong>32 Inch</strong></td>
+                                <td>HD Ready / FHD</td>
+                            </tr>
+                            <tr>
+                                <td>6 - 8 Feet</td>
+                                <td><strong>43 Inch</strong></td>
+                                <td>4K Ultra HD</td>
+                            </tr>
+                            <tr>
+                                <td>8 - 10 Feet</td>
+                                <td><strong>50 - 55 Inch</strong></td>
+                                <td>4K UHD / QLED</td>
+                            </tr>
+                            <tr>
+                                <td>10 - 13 Feet</td>
+                                <td><strong>65 Inch</strong></td>
+                                <td>4K OLED / QLED</td>
+                            </tr>
+                            <tr>
+                                <td>14+ Feet</td>
+                                <td><strong>75 - 85 Inch</strong></td>
+                                <td>4K Cinema OLED</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Guide 2: AC Tonnage -->
+                <div class="buyer-guide-card" style="border-left-color: #0284c7;">
+                    <h4><i class="fa-solid fa-snowflake" style="color: #0284c7;"></i> AC Room Area &amp; Tonnage</h4>
+                    <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 12px;">Avoid overworking your compressor: pick the exact tonnage needed for your room size.</p>
+                    <table class="guide-table">
+                        <thead>
+                            <tr style="font-weight: 700; color: var(--heading-color); border-bottom: 1.5px solid var(--border-light);">
+                                <td style="padding: 6px 8px;">Room Area</td>
+                                <td style="padding: 6px 8px;">Cooling Capacity</td>
+                                <td style="padding: 6px 8px;">Star Rating</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Up to 120 sq ft</td>
+                                <td><strong>1.0 Ton Split</strong></td>
+                                <td>3-Star / 5-Star</td>
+                            </tr>
+                            <tr>
+                                <td>120 - 180 sq ft</td>
+                                <td><strong>1.5 Ton Inverter</strong></td>
+                                <td>5-Star High ISEER</td>
+                            </tr>
+                            <tr>
+                                <td>180 - 260 sq ft</td>
+                                <td><strong>2.0 Ton Inverter</strong></td>
+                                <td>Heavy Duty Split</td>
+                            </tr>
+                            <tr>
+                                <td>Top Floor / Sun Facing</td>
+                                <td><strong>+0.5 Ton Extra</strong></td>
+                                <td>Copper Condenser</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Guide 3: Refrigerator & Washing Machine -->
+                <div class="buyer-guide-card" style="border-left-color: #10b981;">
+                    <h4><i class="fa-solid fa-kitchen-set" style="color: #10b981;"></i> Fridge &amp; Washer Guide</h4>
+                    <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 12px;">Capacity matching for singles, nuclear families, and joint families.</p>
+                    <table class="guide-table">
+                        <thead>
+                            <tr style="font-weight: 700; color: var(--heading-color); border-bottom: 1.5px solid var(--border-light);">
+                                <td style="padding: 6px 8px;">Family Size</td>
+                                <td style="padding: 6px 8px;">Refrigerator</td>
+                                <td style="padding: 6px 8px;">Washing Machine</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1 - 2 Persons</td>
+                                <td>190L - 215L Single Door</td>
+                                <td>6.0 kg - 6.5 kg Top Load</td>
+                            </tr>
+                            <tr>
+                                <td>3 - 4 Persons</td>
+                                <td>240L - 340L Double Door</td>
+                                <td>7.0 kg - 7.5 kg Front/Top</td>
+                            </tr>
+                            <tr>
+                                <td>5+ Persons</td>
+                                <td>400L+ Frost-Free / Side-by-Side</td>
+                                <td>8.0 kg - 9.0 kg Front Load</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Why Purchase From Siddhi Marketing -->
+        <section class="products-perks-section" style="margin-top: 50px;">
+            <div style="background: var(--bg-card); border: 1.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-card);">
+                <div style="text-align: center; max-width: 650px; margin: 0 auto 25px auto;">
+                    <span class="section-tag"><i class="fa-solid fa-gift text-red"></i> EXCLUSIVE SHOWROOM BENEFITS</span>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--heading-color);">Showroom Purchase Perks</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">Get superior service and perks that online marketplaces cannot match.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
+                    <div style="text-align: center; padding: 18px; background: var(--silver-bg); border-radius: var(--radius-md);">
+                        <i class="fa-solid fa-truck-fast" style="font-size: 1.8rem; color: var(--primary-red); margin-bottom: 10px; display: inline-block;"></i>
+                        <h4 style="font-size: 0.95rem; margin-bottom: 4px; color: var(--heading-color);">Free Local Delivery</h4>
+                        <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Careful doorstep delivery right to your room floor with zero transit scratches.</p>
+                    </div>
+
+                    <div style="text-align: center; padding: 18px; background: var(--silver-bg); border-radius: var(--radius-md);">
+                        <i class="fa-solid fa-tools" style="font-size: 1.8rem; color: #0284c7; margin-bottom: 10px; display: inline-block;"></i>
+                        <h4 style="font-size: 0.95rem; margin-bottom: 4px; color: var(--heading-color);">Brand Certified Setup</h4>
+                        <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Company engineer scheduled for genuine wall-mounting and demo explanation.</p>
+                    </div>
+
+                    <div style="text-align: center; padding: 18px; background: var(--silver-bg); border-radius: var(--radius-md);">
+                        <i class="fa-solid fa-hand-holding-dollar" style="font-size: 1.8rem; color: #10b981; margin-bottom: 10px; display: inline-block;"></i>
+                        <h4 style="font-size: 0.95rem; margin-bottom: 4px; color: var(--heading-color);">Old Appliance Exchange</h4>
+                        <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Trade-in old working or non-working TVs, fridges &amp; ACs for up to ₹8,000 instant discount.</p>
+                    </div>
+
+                    <div style="text-align: center; padding: 18px; background: var(--silver-bg); border-radius: var(--radius-md);">
+                        <i class="fa-solid fa-clock" style="font-size: 1.8rem; color: #f59e0b; margin-bottom: 10px; display: inline-block;"></i>
+                        <h4 style="font-size: 0.95rem; margin-bottom: 4px; color: var(--heading-color);">Instant 0% EMI Approval</h4>
+                        <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">10-minute digital approval with Aadhaar and PAN on all appliances above ₹9,999.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Products FAQ -->
+        <section class="products-faq-section" style="margin-top: 50px; margin-bottom: 40px;">
+            <div class="section-header" style="text-align: left; margin-bottom: 15px;">
+                <div>
+                    <span class="section-tag"><i class="fa-solid fa-circle-question"></i> FREQUENTLY ASKED QUESTIONS</span>
+                    <h3 class="section-title" style="font-size: 1.7rem;">Product &amp; Purchase FAQs</h3>
+                </div>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question"><i class="fa-solid fa-check-circle"></i> Are all electronic products 100% brand new and covered under manufacturer warranty?</div>
+                    <p class="faq-answer">Yes, 100%. Siddhi Marketing is an authorized multi-brand retailer. Every item comes in original factory-sealed packaging with official GST bills valid for comprehensive brand warranties at all service centers across India.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question"><i class="fa-solid fa-check-circle"></i> Can I view and test the appliance in the showroom before completing my payment?</div>
+                    <p class="faq-answer">Absolutely! We encourage you to visit our Balaji Mandir Road showroom to inspect picture clarity on TVs, test AC cooling power, and inspect refrigerator compartments in person before making your purchase decision.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question"><i class="fa-solid fa-check-circle"></i> How soon can I get delivery and installation after ordering?</div>
+                    <p class="faq-answer">Local deliveries within city limits are completed on the same day or within 24 hours. Brand installation engineers are dispatched within 24-48 hours for authorized wall mounting and live demonstration.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
